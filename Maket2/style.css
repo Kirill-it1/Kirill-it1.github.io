@@ -1,0 +1,95 @@
+		@font-face{
+			src: local('OpenSans'), url(OpenSans/OpenSans.ttf);
+		}
+		*{margin: 0; padding: 0;font-family: "OpenSans", sans-serif;}
+		div{display: block;}
+		a{font-size: 16px; text-decoration: none;color: #fff; }
+		h1{font-size:30px; font-weight: 300; color: #999999; font-weight: 300; text-align: center;line-height: 50px}
+		h2{font-size: 24px; text-align: center;color: #fff; font-weight: 300}
+		h3{font-size: 22px; color: #fff;text-align: center;}
+		p{font-size: 14px; text-align: center;color: #999999}
+		.header__hidden-menu-icon{display: none;}
+		.container{max-width: 1024px;margin: 0 auto;padding-top: 1px;width: 100%; }
+		.header-container{
+			display: grid;
+			grid-auto-rows: auto;
+			grid-template-columns: 270px minmax(300px, 900px);
+			min-height: 554px;
+
+		}
+		.logos-container{display: flex;align-items: center;height: 100% }
+		.text-container{max-width: 90%}
+		.updates-container{display: flex;align-items: center;height: 100%;min-height: 300px}
+		header{width: 100%; min-height: 554px; background: #33a38a;}
+			.header__menu-block{width: 230px; margin: 0 20px;  display: block;transition: .5s;z-index: 10}
+
+			.header__menu{height: 419px; width: 100%; background: #ffffff; padding-top: 1px;box-shadow: 1px 1px 100px 10px rgba(0,0,0,0.1)}
+				.header__logo{display: flex;width: 100%; height: 126px; border-bottom: 1px solid #30a58c; justify-content: center;align-items: center;}
+				.header-menu{display: block;margin-left: 45px}
+					.header-menu__list{text-decoration: none;color: #7e7e7e; display: block;margin-top: 22px;}
+					.header-menu__list:hover{color: #1e1e1e}
+			.header__menu_down{width: 0; height: 0; border: 115px solid transparent;border-top: 38px solid #ffffff;top:0;}
+				.header-banner__block-img{margin: 0 auto 0;max-width: 450px;display: flex;}
+				.header-banner__img{margin: 0 auto;display: block;}
+				.header-banner__text{max-width: 670px; margin: 70px auto 0;text-align: center;}
+				.header-banner__btn{display: flex;justify-content: center; align-items: center;width: 190px; height: 48px; border: 3px solid #fff;border-radius: 8px; margin: 80px auto 0;font-size: 22px}
+
+			.slider{ display: flex; align-items: center;margin: 40px auto 0;width: 100%;}
+				.slider-container{ overflow: hidden;width: 100%;height: 100%}
+					.slider-track{  display: flex;transition: .3s;min-height: 430px }
+						.slider__item{ max-height: 430px}
+					.slider__markers{width: 110px; height: 20px; margin: 15px auto;display: flex;}
+						.slider__marker{display: block;width: 15px; height: 15px; border-radius: 50%; background: #fff; margin: auto;}
+				.slider__btn{width: 30px; height: 90px; margin: 0 10px;display: flex;justify-content: center;align-items: center;}
+				.slider__btn:hover .slider-btn__line{background: #008170}
+					.slider-btn__line{width: 40px; height: 7px; background: #fff; display: block;position: absolute;border-radius: 5px}
+					.slider-btn__line_top-left{transform: rotate(-65deg); margin-top: -30px;}
+					.slider-btn__line_bottom-left{transform: rotate(65deg); margin-top: 30px}
+					.slider-btn__line_top-right{transform: rotate(65deg); margin-top: -30px}
+					.slider-btn__line_bottom-right{transform: rotate(-65deg); margin-top: 30px}
+
+			.logos{display: block;width: 100%; max-height: 122px; background: #f4f4f4;}
+				.logos__logo{margin:10px auto;display: block;max-width: 22%}
+
+			.text{display: block;width: 100%; min-height: 375px; background: #fff;}
+				.text__title{ max-width: 650px; margin: 60px auto 40px;}
+				.text-block__text{max-width: 880px; margin: 0 auto;}
+				.text-block__thanks{width: 166px; height: 45px; margin: 56px auto 20px;display: flex;background: #1dc896; justify-content: center;align-items: center;font-size: 23px; font-weight: 300; border-radius: 4px}
+
+			.updates{min-height: 300px; width: 100%; display: block;background: #1dc896}
+				.updates__article{max-width: 400px;margin: 10px auto 0;display: block;padding: 0 10px;}
+				.updates__title{text-align: left;line-height: 30px}
+				.updates__text{text-align: left;color: #fff;margin-top: 20px}
+
+			.contact{height: 502px; width: 100%; display: block;background: url(img/contact/map.png); background-size: cover; background-position: bottom left;position: relative;}
+			.contact__container{position: relative;}
+				.contact__address{display: block;position: absolute;max-width: 302px;width: 93%; min-height: 175px; background: #fff;box-shadow: 0 0px 0px 2px rgba(0,0,0,0.1);border-radius: 4px;top:238px;left: 45px;padding-top: 0.1px}
+				.contact__title{text-align: left;margin: 10px 25px 5px;font-weight: 300}
+				.contact__text{text-align: left;margin: 0 25px;line-height: 25px}
+				.contact__contact-form{position:absolute;width: 424px; height: 420px; display: block;background: #fff;right:40px;top: 72px; border-radius: 7px 7px 0 0; border-top: 9px solid #38e2b0;box-shadow: 0px 4px 3px 3px rgba(0,0,0,0.2)}
+					.contact-form__input{max-width: 338px; height: 30px; width: 90%; display: block;margin: 15px auto;border: 2px solid #d8d8d8;padding-left: 17px;font-size: 14px;border-radius: 1px;outline: none; }
+					.contact-form__input::placeholder{color: #999999}
+					.contact-form__message{max-width: 338px;height: 69px;border: 2px solid #d8d8d8;margin: 15px auto;display: block;outline: none;resize: none;width: 90%;padding: 13px 0 0 17px;font-size: 14px}
+					.contact-form__message::placeholder{color: #999999}
+					.contact-form__submit{width: 126px; height: 35px;background: #1dc896;color: #fff;font-weight: 300; font-size: 15px; border: 0px;border-radius: 3px;margin: 10px 35px 0 auto;display: block;}
+
+		@media screen and (max-width: 850px){
+			.header__hidden-menu-icon{display: block;width: 70px; height: 60px; margin: 5px 5px 5px auto;position: relative;padding-top: 0.1px}
+				.hidden-menu-icon__line{display: block;width: 68px; height: 8px; background: #fff; margin: 10px auto;border-radius: 2px;position: relative;transition: .3s}
+
+			.header-container{display: block;}
+					.header-banner__img{max-width: 27%}
+					.header-banner__text{margin: 30px auto;}
+				.header__menu-block{position: absolute;top:-700px;}
+			.updates-container{display: block;}
+				.updates__article{padding:40px 10px}
+
+
+				.contact__contact-form{position: relative;margin-top: 120px;top:0; left: 0;margin-left: auto;width: 100%;max-width: 424px}
+					.contact-form__submit{margin: 10px auto;}
+			.contact{ background-position: bottom center; height: 900px; background-size: initial;}
+				.contact__address{position: relative;margin: 30px 0 30px 15px;top:0; left: 0}
+			
+
+		}
+		
