@@ -40,7 +40,7 @@
 						.slider__item{ max-height: 430px}
 					.slider__markers{width: 110px; height: 20px; margin: 15px auto;display: flex;}
 						.slider__marker{display: block;width: 15px; height: 15px; border-radius: 50%; background: #fff; margin: auto;}
-				.slider__btn{width: 30px; height: 90px; margin: 0 10px;display: flex;justify-content: center;align-items: center;}
+				.slider__btn{width: 40px; height: 90px; margin: 0 10px;display: flex;justify-content: center;align-items: center;}
 				.slider__btn:hover .slider-btn__line{background: #008170}
 					.slider-btn__line{width: 40px; height: 7px; background: #fff; display: block;position: absolute;border-radius: 5px}
 					.slider-btn__line_top-left{transform: rotate(-65deg); margin-top: -30px;}
@@ -74,12 +74,15 @@
 					.contact-form__submit{width: 126px; height: 35px;background: #1dc896;color: #fff;font-weight: 300; font-size: 15px; border: 0px;border-radius: 3px;margin: 10px 35px 0 auto;display: block;}
 
 		@media screen and (max-width: 850px){
-			.header__hidden-menu-icon{display: block;width: 70px; height: 60px; margin: 5px 5px 5px auto;position: relative;padding-top: 0.1px}
+			.header__hidden-menu-icon{display: block;width: 70px; height: 60px; margin: 5px 5px 5px auto;position: relative;padding-top: 0.1px;z-index: 10}
 				.hidden-menu-icon__line{display: block;width: 68px; height: 8px; background: #fff; margin: 10px auto;border-radius: 2px;position: relative;transition: .3s}
+			.header__menu-block{width: 170px}
+			.header__menu_down{width: 0; height: 0; border: 85px solid transparent;border-top: 38px solid #ffffff;}
 
 			.header-container{display: block;}
 					.header-banner__img{max-width: 27%}
-					.header-banner__text{margin: 30px auto;}
+					.header-banner__text{margin: 30px auto;font-size: 20px}
+					.header-banner__btn{margin-top: 30px; width: 160px;font-size: 20px}
 				.header__menu-block{position: absolute;top:-700px;}
 			.updates-container{display: block;}
 				.updates__article{padding:40px 10px}
