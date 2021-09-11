@@ -4,9 +4,9 @@
 		*{margin: 0; padding: 0;font-family: "OpenSans", sans-serif;}
 		div{display: block;}
 		a{font-size: 16px; text-decoration: none;color: #fff; }
-		h1{font-size:30px; font-weight: 300; color: #999999; font-weight: 300; text-align: center;line-height: 50px}
+		h1{font-size:30px; font-weight: 300; color: #999999; text-align: center;line-height: 50px}
 		h2{font-size: 24px; text-align: center;color: #fff; font-weight: 300}
-		h3{font-size: 22px; color: #fff;text-align: center;}
+		h3{font-size: 22px; color: #fff;text-align: center;font-weight: 300}
 		p{font-size: 14px; text-align: center;color: #999999}
 		.header__hidden-menu-icon{display: none;}
 		.container{max-width: 1024px;margin: 0 auto;padding-top: 1px;width: 100%; }
@@ -14,13 +14,12 @@
 			display: grid;
 			grid-auto-rows: auto;
 			grid-template-columns: 270px minmax(300px, 900px);
-			min-height: 554px;
 
 		}
 		.logos-container{display: flex;align-items: center;height: 100% }
 		.text-container{max-width: 90%}
 		.updates-container{display: flex;align-items: center;height: 100%;min-height: 300px}
-		header{width: 100%; min-height: 554px; background: #33a38a;}
+		header{width: 100%; min-height: 454px; background: #33a38a;}
 			.header__menu-block{width: 230px; margin: 0 20px;  display: block;transition: .5s;z-index: 10}
 
 			.header__menu{height: 419px; width: 100%; background: #ffffff; padding-top: 1px;box-shadow: 1px 1px 100px 10px rgba(0,0,0,0.1)}
@@ -31,12 +30,12 @@
 			.header__menu_down{width: 0; height: 0; border: 115px solid transparent;border-top: 38px solid #ffffff;top:0;}
 				.header-banner__block-img{margin: 0 auto 0;max-width: 450px;display: flex;}
 				.header-banner__img{margin: 0 auto;display: block;}
-				.header-banner__text{max-width: 670px; margin: 70px auto 0;text-align: center;}
+				.header-banner__text{max-width: 670px; margin: 70px auto 0;text-align: center;min-height: 90px;display: flex;align-items: center;}
 				.header-banner__btn{display: flex;justify-content: center; align-items: center;width: 190px; height: 48px; border: 3px solid #fff;border-radius: 8px; margin: 80px auto 0;font-size: 22px}
 
-			.slider{ display: flex; align-items: center;margin: 40px auto 0;width: 100%;}
-				.slider-container{ overflow: hidden;width: 100%;height: 100%}
-					.slider-track{  display: flex;transition: .3s;min-height: 430px }
+			.slider{ display: flex; align-items: center;margin: 0px auto 0;width: 100%;}
+				.slider-container{ overflow: hidden;width: 100%;}
+					.slider-track{  display: flex;transition: .3s;min-height: 220px; }
 						.slider__item{ max-height: 430px}
 					.slider__markers{width: 110px; height: 20px; margin: 15px auto;display: flex;}
 						.slider__marker{display: block;width: 15px; height: 15px; border-radius: 50%; background: #fff; margin: auto;}
@@ -76,13 +75,13 @@
 		@media screen and (max-width: 850px){
 			.header__hidden-menu-icon{display: block;width: 70px; height: 60px; margin: 5px 5px 5px auto;position: relative;padding-top: 0.1px;z-index: 10}
 				.hidden-menu-icon__line{display: block;width: 68px; height: 8px; background: #fff; margin: 10px auto;border-radius: 2px;position: relative;transition: .3s}
-			.header__menu-block{width: 170px}
-			.header__menu_down{width: 0; height: 0; border: 85px solid transparent;border-top: 38px solid #ffffff;}
-
+			.header__menu-block{width: 160px;margin-left: 0}
+			.header__menu_down{width: 0; height: 0; border: 80px solid transparent;border-top: 38px solid #ffffff;}
+			.text__title{font-size: 26px}
 			.header-container{display: block;}
 					.header-banner__img{max-width: 27%}
 					.header-banner__text{margin: 30px auto;font-size: 20px}
-					.header-banner__btn{margin-top: 30px; width: 160px;font-size: 20px}
+					.header-banner__btn{margin-top: 30px; width: 140px;height: 46px;font-size: 18px}
 				.header__menu-block{position: absolute;top:-700px;}
 			.updates-container{display: block;}
 				.updates__article{padding:40px 10px}
