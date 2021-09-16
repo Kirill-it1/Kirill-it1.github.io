@@ -1,5 +1,6 @@
 @font-face{
-  src: local('OpenSans'), url(OpenSans/OpenSans.ttf);
+  src: local('OpenSans'),
+  url(OpenSans/OpenSans.ttf);
 }
 *{
   margin: 0;
@@ -334,22 +335,23 @@ header{
   width: 100%;
 
   background-size: cover;
-  background-position: bottom left;
-  background: url(img/contact/map.png);
+  background-image: url(img/contact/map.png);
 }
 .contact__container{
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(400px, auto));
+  grid-gap: 24px;
+
+  height: 100%;
 }
 .contact__address{
   display: block;
-  position: absolute;
-  top:238px;
-  left: 45px;
 
   max-width: 302px;
   width: 93%;
-  min-height: 175px;
+  height: 175px;
   padding-top: 0.1px;
+  margin: 238px 65px 0;
   
   background: #fff;
   box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
@@ -358,7 +360,6 @@ header{
   
 }
 .contact__title{
-
   margin: 10px 25px 5px;
 
   text-align: left;
@@ -371,17 +372,17 @@ header{
 }
 .contact__contact-form{
   display: block;
-  position:absolute;
-  right:40px;
-  top: 72px;
+  position: relative;
+  bottom: 0;
 
   width: 424px;
   height: 420px;  
+  margin-top: 70px;
 
   border-radius: 7px 7px 0 0;
   border-top: 9px solid #38e2b0;
   background: #fff;
-  box-shadow: 0 4px 3px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0px 3px 1px rgba(0,0,0,0.2);
 }
 .contact-form__input{
   display: block;
@@ -516,11 +517,15 @@ header{
   background-position: bottom center; 
   background-size: initial;
 }
+.contact__container{
+  grid-template-columns: auto;
+}
 .contact__address{
   position: relative;
   top:0;
   left: 0;
 
+  height: 200px;
   margin: 30px 0 30px 15px;
   
 }
