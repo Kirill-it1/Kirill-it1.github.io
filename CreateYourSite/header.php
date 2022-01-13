@@ -175,7 +175,7 @@
 				<img class="logo__img" src="logo.png">
 			</div>
 			<div class="header__menu">
-				<a class="menu__link" href="index.php">Главная</a>
+				<a class="menu__link" href="index1.php">Главная</a>
 				<a class="menu__link" href="main.php">Создание сайта</a>
 				<a class="menu__link" href="contacts.php">Контакты</a>
 				<a class="menu__link" href="links.php">Ссылки</a>
