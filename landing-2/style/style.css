@@ -76,7 +76,7 @@ img {
     max-width: 100%;
 }
 body{
-	width: 100%;
+	width: 1920px;
 }
 .hidden{
 	visibility: hidden;
