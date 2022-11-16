@@ -324,12 +324,16 @@ $text-2: $white;
 
 .header{
 
+	height: 63px;
+
 
 	&__container{
 	}
 
 	&__logo{
 		margin: 0 auto;
+		width: 114px;
+		height: 31px;
 
 	}
 	&-logo__pic{
@@ -391,7 +395,7 @@ $text-2: $white;
 }
 
 .footer{
-	
+	height: 300px;
 
 	&__container{
 		
@@ -401,7 +405,9 @@ $text-2: $white;
 	}
 	&__logo{
 		margin: 0 auto;
-		
+		margin: 0 auto;
+		width: 114px;
+		height: 31px;
 	}
 	&-logo__pic{
 		
@@ -410,7 +416,7 @@ $text-2: $white;
 
 	}
 	&__down-text{
-		font-size: 26px;
+		font-size: 17px;
 
 	}
 }

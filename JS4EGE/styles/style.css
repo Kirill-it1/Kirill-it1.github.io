@@ -245,8 +245,13 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .header {
+    height: 63px;
+  }
   .header__logo {
     margin: 0 auto;
+    width: 114px;
+    height: 31px;
   }
   .main .file-btn__text {
     font-size: 20px;
@@ -260,10 +265,16 @@
   .main .output-block .console__text {
     font-size: 22px;
   }
+  .footer {
+    height: 300px;
+  }
   .footer__logo {
     margin: 0 auto;
+    margin: 0 auto;
+    width: 114px;
+    height: 31px;
   }
   .footer__down-text {
-    font-size: 26px;
+    font-size: 17px;
   }
 }
