@@ -24,7 +24,6 @@
 
 	}
 	array.pop();
-	console.log(array);
 	for(i = 0; i < array.length; i++){
 		first.push(array[i][0]);
 		sumFirst += array[i][0];
