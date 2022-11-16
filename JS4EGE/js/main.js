@@ -58,8 +58,9 @@ const btn_text_js = document.querySelector('#text_js');
 			output = '';
 			input = fileText;
 			eval(fileJs);
-			if(output.length > 0)
-				myConsole.write(output, true);
+			out = output.toString();
+			if(out.length > 0)
+				myConsole.write(out, true);
 		}
 
 	}
