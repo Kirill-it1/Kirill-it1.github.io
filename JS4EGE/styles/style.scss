@@ -171,6 +171,14 @@ $text-2: $white;
 				&_green{
 					color: $green;
 				}
+
+				&_comment{
+					color: gray;
+					font-size: 19px;
+					b{
+						font-size: 19px;
+					}
+				}
 			}
 		}
 	}

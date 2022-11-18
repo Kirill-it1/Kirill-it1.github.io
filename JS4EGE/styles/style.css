@@ -185,6 +185,13 @@
 .main .output-block .console__text_green {
   color: #24FF00;
 }
+.main .output-block .console__text_comment {
+  color: gray;
+  font-size: 19px;
+}
+.main .output-block .console__text_comment b {
+  font-size: 19px;
+}
 
 .footer {
   width: 100%;
