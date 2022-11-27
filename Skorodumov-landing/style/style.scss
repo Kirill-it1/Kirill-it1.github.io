@@ -46,6 +46,7 @@ $blue: #0A2349;;
 	}
 	&__logo {
 		display: block;
+		z-index: 100;
 	}
 	&__nav {
 	}
@@ -404,12 +405,12 @@ $blue: #0A2349;;
 	}
 	&__menu{
 		position: fixed;
-		top: 80px;
 		display: block;
 		width: 100%;
 		height: 100vh;
+		top: 0;
 		left: 0;
-		padding: 0 15px;
+		padding: 80px 15px 0;
 		overflow: hidden;
 		background: $blue;
 		opacity: 0;
