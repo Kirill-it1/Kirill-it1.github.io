@@ -305,6 +305,7 @@
 }
 
 .intro-next__btn {
+  cursor: pointer;
   height: 68px;
   width: 54px;
   display: block;

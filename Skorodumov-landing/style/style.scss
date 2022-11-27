@@ -266,6 +266,7 @@ $blue: #0A2349;;
 	&__next {
 		margin: 15px auto;
 
+
 	}
 }
 .intro-button {
@@ -288,6 +289,7 @@ $blue: #0A2349;;
 
 .intro-next {
 	&__btn {
+		cursor: pointer;
 		height: 68px;
 		width: 54px;
 		display: block;
