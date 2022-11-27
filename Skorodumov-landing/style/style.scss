@@ -92,11 +92,11 @@ $blue: #0A2349;;
 }
 .header-lang {
 	margin-left: auto;
-	width: 127px;
+	width: 128px;
 	height: 63px;
 	overflow: hidden;
 	align-self: flex-start;
-	padding: 9.5px 20px 9.5px 9.5px;
+	padding: 10px;
 	border-radius: 30px;
 	transition: .2s;
 	cursor: pointer;
@@ -149,11 +149,12 @@ $blue: #0A2349;;
 }
 .header-lang-btn {
 	background: url('../img/icons/arrow-small.svg') no-repeat;
-	background-size: contain;
+	background-size: 100%;
 	background-position: center;
-	width: 12px;
-	height: 7px;
+	width: 10px;
+	height: 5px;
 	margin-left: 10px;
+	margin-right: 10px;
 	flex-shrink: 0;
 
 }
@@ -380,7 +381,7 @@ $blue: #0A2349;;
 	&__desc {
 	}
 	&__button {
-		margin-bottom: 30px;
+		margin-bottom: 0;
 	}
 	&__next {
 		display: none;
@@ -676,6 +677,7 @@ $blue: #0A2349;;
 		display: block;
 		flex-direction: row;
 		width: 100%;
+		padding-top: 32px;
 
 	}
 	.intro-social__link{

@@ -91,12 +91,12 @@
 
 .header-lang {
   margin-left: auto;
-  width: 127px;
+  width: 128px;
   height: 63px;
   overflow: hidden;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding: 9.5px 20px 9.5px 9.5px;
+  padding: 10px;
   border-radius: 30px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -157,11 +157,12 @@
 
 .header-lang-btn {
   background: url("../img/icons/arrow-small.svg") no-repeat;
-  background-size: contain;
+  background-size: 100%;
   background-position: center;
-  width: 12px;
-  height: 7px;
+  width: 10px;
+  height: 5px;
   margin-left: 10px;
+  margin-right: 10px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -388,7 +389,7 @@
     display: none;
   }
   .intro__button {
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
   .intro__next {
     display: none;
@@ -505,6 +506,7 @@
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
+    padding-top: 32px;
   }
   .intro-social__link {
     display: inline-block;
