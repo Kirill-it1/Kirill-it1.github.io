@@ -510,6 +510,7 @@
   .header-lang {
     margin-right: 12px;
     width: 72px;
+    border-radius: 25px;
   }
   .header-lang__item:not(:last-child) {
     margin-bottom: 0;
@@ -554,7 +555,6 @@
   }
   .header__burger {
     width: 28px;
-    height: 15px;
   }
   .header-logo {
     width: 44px;

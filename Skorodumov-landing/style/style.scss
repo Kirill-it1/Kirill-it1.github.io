@@ -507,6 +507,7 @@ $blue: #0A2349;;
 .header-lang {
 	margin-right: 12px;
 	width: 72px;
+	border-radius: 25px;
 
 	&__item {
 		&:not(:last-child){
@@ -674,7 +675,6 @@ $blue: #0A2349;;
 	}
 	&__burger{
 		width: 28px;
-		height: 15px;
 	}
 }
 
