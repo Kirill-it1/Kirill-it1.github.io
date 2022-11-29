@@ -7,6 +7,7 @@ const header = document.querySelector('.header');
 
 
 
+
 links.forEach((link)=>{
 
   link.addEventListener('click', (e) => {
@@ -15,10 +16,8 @@ links.forEach((link)=>{
     
     location.hash = hash;
     active_link(hash);
-    menu.classList.remove('header__menu_active');
-	header.classList.remove('header_active');
-	burger.classList.remove('header__burger_active');
-	document.querySelector('body').style.overflow = '';
+    hideMenu();
+    
   }, false);
 });
 
@@ -34,16 +33,20 @@ let active_link = (hr) => {
 			link.classList.remove(CLASS_ACTIVE_LINK);
 		}
 	});
-	if(something === false) {
-		links[0].classList.add(CLASS_ACTIVE_LINK);
-		something = true;
-	}
 }	
 
 active_link(location.hash);
 
+menu.addEventListener('click', () => {
+	hideMenu();
+});
 
-
+let hideMenu = () => {
+	menu.classList.remove('header__menu_active');
+	header.classList.remove('header_active');
+	burger.classList.remove('header__burger_active');
+	document.querySelector('body').style.overflow = '';
+}
 
 
 
