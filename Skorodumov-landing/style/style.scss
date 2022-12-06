@@ -829,7 +829,13 @@ br{
 	&__title {
 		margin-bottom: 54px;
 	}
+	&_hidden{
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+	}
 	&__slider {
+		height: 400px;
 		&:before{
 			content: '';
 			left: 50%;
@@ -872,6 +878,7 @@ br{
 		line-height: 138%;
 		color: white;
 		margin-bottom: 16px;
+		min-height: 66px;
 	}
 	&__desc {
 		font-weight: 200;
@@ -927,7 +934,7 @@ br{
 		max-width: 466px;
 		padding: 60px;
 		list-style-type: none;
-		transition: .2s;
+		transition: .1s;
 		&:hover, &_active{
 			box-shadow: 0px 0px 30px rgba(49, 196, 248, 0.3), inset 0px 0px 30px rgba(49, 196, 248, 0.3);
 		}
@@ -1000,6 +1007,8 @@ br{
 	}
 }
 .slider-wrapper {
+	transition: 0s, .3s opacity, .3s visibility;
+	position: absolute;
 }
 .slider-track {
 	display: flex;
@@ -1027,7 +1036,6 @@ br{
 		background-image: url('../img/background-svg/rect-finance.svg');
 		background-repeat: no-repeat;
 		background-size: 105% auto;
-		z-index: 103;
 }
 	&__container {
 	}
@@ -1036,17 +1044,26 @@ br{
 		margin-bottom: 54px;
 	}
 	&__slider {
+		position: relative;
+		z-index: 106;
 	}
 	&__buttons {
 		max-width: 260px;
 		margin: 0 auto;
 	}
 	&__date {
+		position: relative;
+		z-index: 10000;
 		color: white;
 		font-weight: 700;
 		font-size: 40px;
 		line-height: 80%;
 		text-align: center;
+		transition: .2s;
+		opacity: .8;
+		&:hover{
+			color: $active
+		}
 	}
 	&__item{
 		flex-shrink: 0;
@@ -1056,8 +1073,9 @@ br{
 		text-align: center;
 		padding: 40px 0;
 		width: 207px;
-		border-bottom: 1px solid $active;
 		z-index: -1;
+		
+
 		&::after{
 			position: absolute;
 			width: 60px;
@@ -1082,6 +1100,18 @@ br{
 				transition: .4s;
 			}
 		}
+
+		&_light{
+			.finance__date{
+				opacity: 1;
+			}
+		}
+		&_o9{
+			.finance__date{
+				opacity: .9;
+			}
+		}
+
 	}
 	&__track{
 		display: flex;
@@ -1093,27 +1123,17 @@ br{
 	&__wrapper{
 		position: relative;
 		overflow: hidden;
-		padding-bottom: 5px;
+		padding-bottom: 40px;
 		height: 171px;
 		
-		&::after{
-			content: '';
-			display: block;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top:0;
-			left: 0;
-			z-index: 102;
-			background: linear-gradient(
-				to right,
-				$blue 0%,
-				rgba(0,0,0,0) 35%,
-				rgba(0,0,0,0) 65%,
-				$blue 100% 
-
-				);
-		}
+		
+	}
+	&__subline{
+		position: relative;
+		margin-top: 0px;
+		width: 100%;
+		height: 1px;
+		background: linear-gradient(to right, #31C4F800, $active, #31C4F800);
 	}
 	&__bottom {
 		height: 350px;
@@ -1127,7 +1147,8 @@ br{
 		margin: 0 auto 0 ;
 	}
 	.star{
-		margin: -30px auto -17px;
+		position: relative;
+		margin: -65px auto -17px;
 		width: 50px;
 		height: 50px;
 		background-repeat: no-repeat;

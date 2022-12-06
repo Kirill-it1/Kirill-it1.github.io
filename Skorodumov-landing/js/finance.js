@@ -27,7 +27,7 @@ let slider = document.querySelector('#slider-finance'),
   first = true;
 
 
-  console.log(slideWidth);
+console.log(slideWidth);
 let finance_desc = slider.querySelectorAll('.finance__desc');
 slideWidth = parseFloat(slides[0].offsetWidth);
 
@@ -47,6 +47,8 @@ function slide(w) {
   setTimeout(() => {
     slides.forEach((elem) =>{
       elem.classList.remove('finance__item_active');
+      elem.classList.remove('finance__item_o9');
+      elem.classList.remove('finance__item_light');
     });
     console.log(slideIndex);
     finance_desc.forEach((desc, index) => {
@@ -57,9 +59,19 @@ function slide(w) {
       }
       
     });
-    
+
     finance_desc[slideIndex].classList.add('finance__desc_active');
-    slides[slideIndex+4].classList.add('finance__item_active');
+    slides[slideIndex + 4].classList.add('finance__item_active');
+    slides[slideIndex + 3].classList.add('finance__item_light');
+    slides[slideIndex + 4].classList.add('finance__item_light');
+    slides[slideIndex + 5].classList.add('finance__item_light');
+
+    slides[slideIndex + 2].classList.add('finance__item_o9');
+    slides[slideIndex + 6].classList.add('finance__item_o9');
+
+
+
+
     sliderTrack.style.transition = 'transform .4s';
     sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + slideWidth}px, 0px, 0px)`;
   }, 10);
@@ -92,3 +104,29 @@ prev.addEventListener('click', () => {
   } 
 });
 slide('next');
+
+
+slides.forEach((item, index) => {
+
+  item.addEventListener('click', () => {
+    if(index - 4 < 0) {
+      slideIndex = 9;
+      sliderTrack.style.transition = 'transform 0s';
+      sliderTrack.style.transform = `translate3d(-${slideWidth * slideIndex + slideWidth}px, 0px, 0px)`;
+      sliderList.classList.add('grab');
+      slideIndex = 9 - (4 - index);
+    } else if(index - 4 > 8) {
+      slideIndex = -1;
+      sliderTrack.style.transition = 'transform 0s';
+      sliderTrack.style.transform = `translate3d(-${slideWidth * slideIndex + slideWidth}px, 0px, 0px)`;
+      sliderList.classList.add('grab');
+      slideIndex = index - 4 - 9;
+    }
+     else {
+      slideIndex = index - 4;
+    }
+    setTimeout(slide, 10);
+    console.log(slideIndex);
+  });
+
+});
