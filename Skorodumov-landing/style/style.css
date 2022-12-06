@@ -914,6 +914,7 @@ br {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   opacity: 0.8;
+  cursor: pointer;
 }
 .finance__date:hover {
   color: #26AEE8;

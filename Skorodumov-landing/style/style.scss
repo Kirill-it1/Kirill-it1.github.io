@@ -1061,8 +1061,10 @@ br{
 		text-align: center;
 		transition: .2s;
 		opacity: .8;
+		cursor: pointer;
 		&:hover{
-			color: $active
+			color: $active;
+
 		}
 	}
 	&__item{
