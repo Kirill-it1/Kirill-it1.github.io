@@ -816,6 +816,7 @@ br {
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
   font-variant: small-caps;
   padding: 0 24px;
 }
