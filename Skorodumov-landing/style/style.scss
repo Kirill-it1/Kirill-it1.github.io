@@ -791,6 +791,12 @@ br{
 		text-fill-color: transparent;
 
 		transform: rotate(-90deg) translate(0, 300%);
+		
+	}
+	@media screen and (max-width: 1850px) {
+		&::after{
+			display: none;
+		}
 	}
 	&::before{
 		content: '';
@@ -963,6 +969,7 @@ br{
 		opacity: 0.3;
 		color: $active;
 		text-decoration: none;
+		transition: .2s;
 
 
 		font-variant: small-caps;
@@ -971,7 +978,7 @@ br{
 			padding: 0 24px 0 0;
 			border-right: 1px solid rgba(255, 255, 255, 0.1);
 		}
-		&_active{
+		&_active, &:hover{
 			opacity: 1;
 		}
 	}
@@ -1051,22 +1058,6 @@ br{
 		max-width: 260px;
 		margin: 0 auto;
 	}
-	&__date {
-		position: relative;
-		z-index: 10000;
-		color: white;
-		font-weight: 700;
-		font-size: 40px;
-		line-height: 80%;
-		text-align: center;
-		transition: .2s;
-		opacity: .8;
-		cursor: pointer;
-		&:hover{
-			color: $active;
-
-		}
-	}
 	&__item{
 		flex-shrink: 0;
 		display: block;
@@ -1076,7 +1067,7 @@ br{
 		padding: 40px 0;
 		width: 207px;
 		z-index: -1;
-		
+
 
 		&::after{
 			position: absolute;
@@ -1105,16 +1096,34 @@ br{
 
 		&_light{
 			.finance__date{
+				color: white;
 				opacity: 1;
 			}
 		}
 		&_o9{
 			.finance__date{
-				opacity: .9;
+				opacity: 1;
 			}
 		}
 
 	}
+	&__date {
+		position: relative;
+		z-index: 10000;
+		color:#8097B9;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 80%;
+		text-align: center;
+		transition: .2s;
+		opacity: .4;
+		cursor: pointer;
+		&:hover, &_active.finance__date{
+			color: $active;
+
+		}
+	}
+
 	&__track{
 		display: flex;
 		justify-content: flex-start;
@@ -1139,13 +1148,12 @@ br{
 	}
 	&__bottom {
 		height: 350px;
-		
 	}
 	&__line{
 		display: block;
 		width: 1px;
 		height: 117px;
-		background: $active;
+		background: linear-gradient(to bottom, #26AEE8, #3B4F6D);
 		margin: 0 auto 0 ;
 	}
 	.star{
@@ -1175,10 +1183,12 @@ br{
 
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		
+		box-shadow: 0px 0px 30px rgba(49, 196, 248, 0.3), inset 0px 0px 30px rgba(49, 196, 248, 0.3);
+		
 		border-radius: 10px;
+		cursor: pointer;
 		&:hover{
-			border: 1px solid $active;
-			box-shadow: 0px 0px 30px rgba(49, 196, 248, 0.3), inset 0px 0px 30px rgba(49, 196, 248, 0.3);
+			
 
 			.finance-desc__dates {
 				color: $active;
@@ -1474,14 +1484,13 @@ br{
 		position: absolute;
 		opacity: 0;
 		visibility: hidden;
-		transition: .5s, .3s box-shadow, 3s border;
+		transition: .5s, .3s box-shadow, .3s border;
 		padding: 40px;
 		background: #0A2349;
 
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		border-radius: 10px;
 		&:hover {
-			border: 1px solid #26AEE8;
 			box-shadow: 0px 0px 30px rgba(49, 196, 248, 0.3), inset 0px 0px 30px rgba(49, 196, 248, 0.3);
 		}
 		&_active{
@@ -1565,8 +1574,9 @@ br{
 		margin-bottom: 24px;
 	}
 	&__desc {
+		font-weight: 300;
 		font-size: 30px;
-		line-height: 130%;
+		line-height: 150%;
 		margin-bottom: 72px;
 	}
 	&__social-title {

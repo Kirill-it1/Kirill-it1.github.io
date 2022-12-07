@@ -50,7 +50,6 @@ function slide(w) {
       elem.classList.remove('finance__item_o9');
       elem.classList.remove('finance__item_light');
     });
-    console.log(slideIndex);
     finance_desc.forEach((desc, index) => {
       if(index == slideIndex) {
         desc.classList.add('finance__desc_active');
@@ -126,7 +125,18 @@ slides.forEach((item, index) => {
       slideIndex = index - 4;
     }
     setTimeout(slide, 10);
-    console.log(slideIndex);
   });
 
 });
+
+finance_desc.forEach((elem) => {
+  elem.addEventListener('mouseover', () => {
+    slider.querySelector('.finance__item_active').querySelector('.finance__date').classList.add('finance__date_active');
+  });
+  elem.addEventListener('mouseout', () => {
+    slider.querySelector('.finance__item_active').querySelector('.finance__date').classList.remove('finance__date_active');
+  });
+});
+  
+
+
