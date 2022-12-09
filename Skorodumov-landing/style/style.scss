@@ -20,7 +20,7 @@ br{
 .container {
 	width: 100%;
 	height: 100%;
-	max-width: 1480px;
+	max-width: 1510px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -841,7 +841,8 @@ br{
 		position: absolute;
 	}
 	&__slider {
-		height: 400px;
+		height: 550px;
+		position: relative;
 		&:before{
 			content: '';
 			left: 50%;
@@ -854,8 +855,8 @@ br{
 				url('../img/publications/vector-2.svg');
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: 703px auto;
-			transform: translate(-50%, -10%);
+			background-size: 650px auto;
+			transform: translate(-50%, -30%);
 		}
 		&:after{
 			content: '';
@@ -872,6 +873,10 @@ br{
 			background-size: contain;
 		}
 	}
+	&__finance, &__physics {
+		margin-left: -30px;
+		padding: 0 30px;
+	}
 	&__social{
 		margin-left: 200px;
 	}
@@ -885,6 +890,7 @@ br{
 		color: white;
 		margin-bottom: 16px;
 		min-height: 66px;
+		letter-spacing: -0.011em;
 	}
 	&__desc {
 		font-weight: 200;
@@ -897,6 +903,7 @@ br{
 		line-height: 1.33em;
 		max-height: 6.65em;
 		padding-right: 0.5em;
+
 
 		&::before {
 			content: '...';
@@ -937,10 +944,10 @@ br{
 		background: #0A2349;
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		border-radius: 10px;
-		max-width: 466px;
-		padding: 60px;
+		padding: 60px 55px 60px 55px;
 		list-style-type: none;
 		transition: .1s;
+		min-height: 384px;
 		&:hover, &_active{
 			box-shadow: 0px 0px 30px rgba(49, 196, 248, 0.3), inset 0px 0px 30px rgba(49, 196, 248, 0.3);
 		}
@@ -991,6 +998,7 @@ br{
 	margin-left: auto;
 }
 .slider {
+
 	&__button {
 		width: 50px;
 		height: 50px;
@@ -1015,8 +1023,12 @@ br{
 	}
 }
 .slider-wrapper {
+	box-sizing: content-box;
+	width: 100%;
 	transition: 0s, .3s opacity, .3s visibility;
 	position: absolute;
+	overflow-x: hidden;
+
 }
 .slider-track {
 	display: flex;
@@ -1135,8 +1147,9 @@ br{
 	&__wrapper{
 		position: relative;
 		overflow: hidden;
-		padding-bottom: 40px;
+		padding: 0 15px 40px;
 		height: 171px;
+
 		
 		
 	}
@@ -1395,6 +1408,7 @@ br{
 		background-position: center;
 		background-size: contain;
 		z-index: 104;
+		cursor: pointer;
 		&:hover{
 			transition: .1s;
 			background-image: url('../img/icons/star.svg');
@@ -1665,7 +1679,11 @@ br{
 		display: block;
 		width: 70px;
 		height: 78px;
-		margin: 0 auto 20px
+		margin: 0 auto 20px;
+		transition: .2s;
+		&:hover{
+			filter: drop-shadow(0px 10px 20px rgba(22, 185, 255, 0.4));
+		}
 	}
 	&-logo__pic{
 		object-fit: contain;

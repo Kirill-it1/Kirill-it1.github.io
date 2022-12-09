@@ -13,16 +13,21 @@ stars.forEach((star, index) => {
 				descs[0].classList.add('physics__desc_active');
 				break;
 			case 1: descs[1].classList.add('physics__desc_active'); break;
-			case 2: ;
-			case 3: 
+			case 2: 
 				stars[2].classList.add('physics__star_active');
 				stars[3].classList.add('physics__star_active');
 				descs[2].classList.add('physics__desc_active');
 				break;
-			case 4: 
+			case 3: 
 				stars[3].classList.add('physics__star_active');
+				stars[4].classList.add('physics__star_active');
 				descs[3].classList.add('physics__desc_active');
 				break;
+			case 4: 
+				stars[4].classList.add('physics__star_active');
+				descs[4].classList.add('physics__desc_active');
+				break;
+				
 		}
 	});
 });

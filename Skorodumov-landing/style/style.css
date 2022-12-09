@@ -19,7 +19,7 @@ br {
 .container {
   width: 100%;
   height: 100%;
-  max-width: 1480px;
+  max-width: 1510px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -680,7 +680,8 @@ br {
   position: absolute;
 }
 .publications__slider {
-  height: 400px;
+  height: 550px;
+  position: relative;
 }
 .publications__slider:before {
   content: "";
@@ -693,9 +694,9 @@ br {
   background-image: url("../img/publications/vector-2.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 703px auto;
-  -webkit-transform: translate(-50%, -10%);
-          transform: translate(-50%, -10%);
+  background-size: 650px auto;
+  -webkit-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
 }
 .publications__slider:after {
   content: "";
@@ -710,6 +711,10 @@ br {
   background-position: center;
   background-size: contain;
 }
+.publications__finance, .publications__physics {
+  margin-left: -30px;
+  padding: 0 30px;
+}
 .publications__social {
   margin-left: 200px;
 }
@@ -723,6 +728,7 @@ br {
   color: white;
   margin-bottom: 16px;
   min-height: 66px;
+  letter-spacing: -0.011em;
 }
 .publications__desc {
   font-weight: 200;
@@ -781,11 +787,11 @@ br {
   background: #0A2349;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  max-width: 466px;
-  padding: 60px;
+  padding: 60px 55px 60px 55px;
   list-style-type: none;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  min-height: 384px;
 }
 .publications__item:hover, .publications__item_active {
   -webkit-box-shadow: 0px 0px 30px rgba(49, 196, 248, 0.3), inset 0px 0px 30px rgba(49, 196, 248, 0.3);
@@ -863,9 +869,13 @@ br {
   background-image: url("../img/icons/arrow-right.svg");
 }
 .slider-wrapper {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 100%;
   -webkit-transition: 0s, 0.3s opacity, 0.3s visibility;
   transition: 0s, 0.3s opacity, 0.3s visibility;
   position: absolute;
+  overflow-x: hidden;
 }
 
 .slider-track {
@@ -981,7 +991,7 @@ br {
 .finance__wrapper {
   position: relative;
   overflow: hidden;
-  padding-bottom: 40px;
+  padding: 0 15px 40px;
   height: 171px;
 }
 .finance__subline {
@@ -1216,6 +1226,7 @@ br {
   background-position: center;
   background-size: contain;
   z-index: 104;
+  cursor: pointer;
 }
 .physics__star:hover {
   -webkit-transition: 0.1s;
@@ -1470,6 +1481,12 @@ br {
   width: 70px;
   height: 78px;
   margin: 0 auto 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.footer__logo:hover {
+  -webkit-filter: drop-shadow(0px 10px 20px rgba(22, 185, 255, 0.4));
+          filter: drop-shadow(0px 10px 20px rgba(22, 185, 255, 0.4));
 }
 .footer-logo__pic {
   -o-object-fit: contain;
