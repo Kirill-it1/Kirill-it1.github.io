@@ -1,17 +1,12 @@
-let qwe = 0;
-function slider_init(q) {
+function slider_init(q, ind) {
   let slid = document.querySelector('#publications-slider');
-  if(q == 0) {
-    slider = slid.querySelector('.publications__finance');
-  } else {
-    slider = slid.querySelector('.publications__physics');
-  }
-  let sliderList = slider,
+  let slider = q,
+  sliderList = slider,
   sliderTrack = slider.querySelector('.slider-track'),
   slides = slider.querySelectorAll('.slider__item'),
-  arrows = slid.querySelector('.slider__button'),
-  prev = slid.querySelector('.slider__button_prev'),
-  next = slid.querySelector('.slider__button_next'),
+  arrows = slid.querySelectorAll('.slider-buttons')[ind],
+  prev = arrows.querySelector('.slider__button_prev'),
+  next = arrows.querySelector('.slider__button_next'),
   slideIndex = 0,
   posInit = 0,
   posX1 = 0,
@@ -48,11 +43,10 @@ function slider_init(q) {
     swipeStartTime,
     swipeEndTime,
     margin = 40;
-    console.log(slideWidth);
+  let getEvent = function() {
+    return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+  }
   function slide() {
-    if(q != qwe) {
-      return;
-    }
 
     if (transition) {
       sliderTrack.style.transition = 'transform .5s';
@@ -80,8 +74,147 @@ function slider_init(q) {
    
   }
 
+  function swipeStart() {
+  let evt = getEvent();
+
+
+  if (allowSwipe && window.innerWidth<1500) {
+
+    swipeStartTime = Date.now();
+    
+    transition = true;
+
+    nextTrf = (slideIndex + 1) * -slideWidth;
+    prevTrf = (slideIndex - 1) * -slideWidth;
+
+
+
+    posInit = posX1 = evt.clientX;
+    posY1 = evt.clientY;
+
+
+    sliderTrack.style.transition = '';
+
+    slider.addEventListener('touchmove', swipeAction);
+    slider.addEventListener('mousemove', swipeAction);
+    slider.addEventListener('touchend', swipeEnd);
+    slider.addEventListener('mouseup', swipeEnd);
+
+    sliderList.classList.remove('grab');
+    sliderList.classList.add('grabbing');
+  }
+}
+function swipeAction() {
+  let evt = getEvent(),
+    style = sliderTrack.style.transform,
+    transform = +style.match(trfRegExp)[0];
+
+  posX2 = posX1 - evt.clientX;
+  posX1 = evt.clientX;
+
+
+
+  posY2 = posY1 - evt.clientY;
+  posY1 = evt.clientY;
+
+  if (!isSwipe && !isScroll) {
+    let posY = Math.abs(posY2);
+    if (posY > 7 || posX2 === 0) {
+      isScroll = true;
+      allowSwipe = false;
+    } else if (posY < 7) {
+      isSwipe = true;
+    }
+  }
+
+  if (isSwipe) {
+    if (slideIndex === 0) {
+      if (posInit < posX1) {
+        setTransform(transform, 0);
+        return;
+      } else {
+        allowSwipe = true;
+      }
+    }
+
+    // запрет ухода вправо на последнем слайде
+    if (slideIndex === slides.length - th) {
+      if (posInit > posX1) {
+        setTransform(transform, lastTrf);
+        return;
+      } else {
+        allowSwipe = true;
+      }
+    }
+
+    if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
+      reachEdge();
+      return;
+    }
+
+    sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
+  }
+
+}
+
+
+function swipeEnd() {
+  posFinal = posInit - posX1;
+
+  isScroll = false;
+  isSwipe = false;
+
+  slider.removeEventListener('touchmove', swipeAction);
+  slider.removeEventListener('mousemove', swipeAction);
+  slider.removeEventListener('touchend', swipeEnd);
+  slider.removeEventListener('mouseup', swipeEnd);
+
+  sliderList.classList.add('grab');
+  sliderList.classList.remove('grabbing');
+
+  if (allowSwipe) {
+    swipeEndTime = Date.now();
+    if (Math.abs(posFinal) > posThreshold || swipeEndTime - swipeStartTime < 300) {
+      if (posInit < posX1) {
+        slideIndex--;
+
+      } else if (posInit > posX1) {
+        slideIndex++;
+      }
+    }
+
+    if (posInit !== posX1) {
+      allowSwipe = false;
+      slide();
+    } else {
+      allowSwipe = true;
+    }
+
+  } else {
+    allowSwipe = true;
+  }
+
+}
+
+let setTransform = function(transform, comapreTransform) {
+  if (transform >= comapreTransform) {
+    if (transform > comapreTransform) {
+      sliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
+    }
+  }
+  allowSwipe = false;
+}
+reachEdge = function() {
+  transition = false;
+  swipeEnd();
+  allowSwipe = true;
+}
+
+sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
+slider.addEventListener('touchstart', swipeStart);
+slider.addEventListener('mousedown', swipeStart);
+
   next.addEventListener('click', () => {
-  console.log('next');
   if(!next.classList.contains('slider__button_disabled')){
     slideIndex++;
     slide();
@@ -94,9 +227,18 @@ function slider_init(q) {
     } 
   });
   slide();
+
+
 } 
 
-
+let slid = document.querySelector('#publications-slider'),
+  s = slid.querySelectorAll('.slider-wrapper');
+s.forEach((sl, index) => {
+  slider_init(sl, index);
+});
+window.addEventListener('resize', () => {
+  location.reload();
+});
 
 for(i = 0; i < 2; i++){
 
@@ -132,17 +274,27 @@ for(i = 0; i < 2; i++){
 
     let finance_desc = slider.querySelectorAll('.finance__desc');
     slideWidth = parseFloat(slides[0].offsetWidth);
-
+    let consta = slideWidth + (7 * slideWidth - sliderTrack.offsetWidth) / 2;
+    window.addEventListener('resize', () => {
+      slideWidth = parseFloat(slides[0].offsetWidth);
+      consta = slideWidth + (7 * slideWidth - sliderTrack.offsetWidth) / 2;
+      slide();
+    });
     function slide(w) {
       if(w == 'next' && slideIndex - 1 == 8){
         slideIndex = -1;
         sliderTrack.style.transition = 'transform 0s';
-        sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + slideWidth}px, 0px, 0px)`;
+        if(Math.abs(Math.ceil(slideIndex * slideWidth + consta)) == 0){
+          sliderTrack.style.transform = `translate3d(0px, 0px, 0px)`;
+        } else {
+          sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + consta}px, 0px, 0px)`;
+        }
+
         slideIndex++;
       } else if(w == 'prev' && slideIndex + 1 == 0){
         slideIndex = 9;
         sliderTrack.style.transition = 'transform 0s';
-        sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + slideWidth}px, 0px, 0px)`;
+        sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + consta}px, 0px, 0px)`;
         slideIndex--;
       }
 
@@ -162,8 +314,8 @@ for(i = 0; i < 2; i++){
         });
 
         finance_desc[slideIndex].classList.add('finance__desc_active');
-        slides[slideIndex + 4].classList.add('finance__item_active');
         slides[slideIndex + 3].classList.add('finance__item_light');
+        slides[slideIndex + 4].classList.add('finance__item_active');
         slides[slideIndex + 4].classList.add('finance__item_light');
         slides[slideIndex + 5].classList.add('finance__item_light');
 
@@ -173,9 +325,13 @@ for(i = 0; i < 2; i++){
 
 
 
-        sliderTrack.style.transition = 'transform .4s';
-        sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + slideWidth}px, 0px, 0px)`;
-      }, 10);
+        sliderTrack.style.transition = 'transform .3s ';
+        if(Math.abs(Math.ceil(slideIndex * slideWidth + consta)) == 0) {
+          sliderTrack.style.transform = `translate3d(0px, 0px, 0px)`;
+        } else {
+          sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + consta}px, 0px, 0px)`;
+        }
+      }, 0);
       
       
       
@@ -187,7 +343,7 @@ for(i = 0; i < 2; i++){
      
     }
     sliderTrack.style.transition = 'transform 0s';
-    sliderTrack.style.transform = `translate3d(${slideWidth}, 0px, 0px)`;
+    sliderTrack.style.transform = `translate3d(-${consta}px, 0px, 0px)`;
     sliderList.classList.add('grab');
 
     sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
@@ -210,23 +366,69 @@ for(i = 0; i < 2; i++){
     slides.forEach((item, index) => {
 
       item.addEventListener('click', () => {
-        if(index - 4 < 0) {
-          slideIndex = 9;
-          sliderTrack.style.transition = 'transform 0s';
-          sliderTrack.style.transform = `translate3d(-${slideWidth * slideIndex + slideWidth}px, 0px, 0px)`;
-          sliderList.classList.add('grab');
-          slideIndex = 9 - (4 - index);
-        } else if(index - 4 > 8) {
-          slideIndex = -1;
-          sliderTrack.style.transition = 'transform 0s';
-          sliderTrack.style.transform = `translate3d(-${slideWidth * slideIndex + slideWidth}px, 0px, 0px)`;
-          sliderList.classList.add('grab');
-          slideIndex = index - 4 - 9;
-        }
-         else {
-          slideIndex = index - 4;
-        }
-        setTimeout(slide, 10);
+
+
+          if(index < 4) {
+            if(slideIndex != 0) {
+              slideIndex = 0;
+              slide('prev');
+              setTimeout(() => {
+                slideIndex = 13 - 4;
+                sliderTrack.style.transition = 'transform 0s';
+                sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + consta}px, 0px, 0px)`;
+              }, 0);
+              setTimeout(() => {
+                slideIndex = index + 9 - 4;
+                slide('prev');
+              }, 20);
+            } else {
+              slideIndex = 13 - 4;
+              sliderTrack.style.transition = 'transform 0s';
+              sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + consta}px, 0px, 0px)`;
+              setTimeout(() => {
+                slideIndex = index + 9 - 4;
+                slide('prev');
+
+              }, 0);
+            }
+            
+          } else if(index > 12) {
+            if(slideIndex != 8) {
+              slideIndex = 8;
+              slide('next');
+              setTimeout(() => {
+                slideIndex = 3 - 4;
+                sliderTrack.style.transition = 'transform 0s';
+                if(Math.abs(Math.ceil(slideIndex * slideWidth + consta)) == 0) {
+                  sliderTrack.style.transform = `translate3d(0px, 0px, 0px)`;
+                } else {
+                  sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + consta}px, 0px, 0px)`;
+                }
+              }, 0);
+              setTimeout(() => {
+                slideIndex = index - 9 - 4;
+                slide('next');
+              }, 20);
+            } else {
+              slideIndex = 3 - 4;
+              sliderTrack.style.transition = 'transform 0s';
+              if(Math.abs(Math.ceil(slideIndex * slideWidth + consta)) == 0) {
+                sliderTrack.style.transform = `translate3d(0px, 0px, 0px)`;
+              } else {
+                sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + consta}px, 0px, 0px)`;
+              }
+              
+              setTimeout(() => {
+                slideIndex = index - 9 - 4;
+                slide('next');
+              }, 0);
+            }
+          }
+           else {
+            slideIndex = index - 4;
+            slide();
+          }    
+
       });
 
     });
@@ -239,12 +441,7 @@ for(i = 0; i < 2; i++){
         slider.querySelector('.finance__item_active').querySelector('.finance__date').classList.remove('finance__date_active');
       });
     });
-  } else {
-
-    slider_init(0);
-
-     
-  }
+  } 
 
 
 
@@ -252,7 +449,8 @@ for(i = 0; i < 2; i++){
 
 let publications = document.querySelector('.publications'),
   publ_btns = publications.querySelectorAll('.slider-nav__link'),
-  publ_grids = publications.querySelectorAll('.slider-wrapper');
+  publ_grids = publications.querySelectorAll('.slider-wrapper'),
+  publ_buttons = publications.querySelectorAll('.slider-buttons');
 
 publ_btns.forEach((link, index) => {
   link.addEventListener(('click'), () => {
@@ -262,11 +460,16 @@ publ_btns.forEach((link, index) => {
     publ_btns.forEach((btn) => {
       btn.classList.remove('slider-nav__link_active');
     });
+    publ_buttons.forEach((buttons, ind) => {
+      if(index != ind) {
+        buttons.style.display = 'none';
+      } else {
+        buttons.style.display = '';
+      }
+    });
+    
     link.classList.add('slider-nav__link_active');
     publ_grids[index].classList.remove('publications_hidden');
-    qwe = index;
-    slider_init(index);
-    
   });
   
 });

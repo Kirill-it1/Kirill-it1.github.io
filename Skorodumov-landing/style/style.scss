@@ -356,6 +356,17 @@ br{
 .main{
 	position: relative;
 }
+@media screen and (max-width: 1800px){
+	.intro {
+	background:
+		url('../img/background-svg/intro-2.svg'),
+		radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%),
+		url('../img/intro.png');
+	background-repeat: no-repeat;
+	background-position:  60% center, right, right;
+	background-size: contain, cover, cover;
+	}
+}
 @media screen and (min-width: 1025px){
 	.link{
 		&:hover{
@@ -568,6 +579,7 @@ br{
 .main {
 }
 .intro {
+	min-height: 100vh;
 	
 	&__container {
 	}
@@ -583,6 +595,10 @@ br{
 		margin-right: 10px;
 	}
 	&__next {
+	}
+	&__bottom{
+		display: block;
+		margin-top: 41px;
 	}
 }
 .header {
@@ -770,6 +786,19 @@ br{
 	color: $link;
 }
 
+.slider-wrapper {
+	box-sizing: content-box;
+	width: 100%;
+	transition: 0s, .3s opacity, .3s visibility;
+	position: absolute;
+	overflow-x: hidden;
+
+}
+.slider-track {
+	display: flex;
+	align-items: stretch;
+}
+
 .publications {
 	width: 100%;
 	min-height: 100vh;
@@ -819,7 +848,7 @@ br{
 		&:before{
 			content: '';
 			left: 50%;
-			bottom: 0;
+			bottom:5%;
 			position: absolute;
 			display: block;
 			width: 100%;
@@ -834,6 +863,22 @@ br{
 	}
 	&__title {
 		margin-bottom: 54px;
+		&:after{
+			content: '';
+			right: 0;
+			top: 0;
+			position: absolute;
+			display: block;
+			width: 556px;
+			height: 512px;
+			transform: translateY(0);
+			background-image: 
+				url('../img/publications/vector-3.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
 	}
 	&_hidden{
 		opacity: 0;
@@ -846,7 +891,7 @@ br{
 		&:before{
 			content: '';
 			left: 50%;
-			bottom: 0;
+			bottom: 10%;
 			position: absolute;
 			display: block;
 			width: 100%;
@@ -858,24 +903,11 @@ br{
 			background-size: 650px auto;
 			transform: translate(-50%, -30%);
 		}
-		&:after{
-			content: '';
-			right: 0;
-			top: 0;
-			position: absolute;
-			display: block;
-			width: 556px;
-			height: 512px;
-			background-image: 
-				url('../img/publications/vector-3.svg');
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: contain;
-		}
+		
 	}
 	&__finance, &__physics {
-		margin-left: -30px;
-		padding: 0 30px;
+		padding: 0 15px;
+		box-sizing: border-box;
 	}
 	&__social{
 		margin-left: 200px;
@@ -891,6 +923,11 @@ br{
 		margin-bottom: 16px;
 		min-height: 66px;
 		letter-spacing: -0.011em;
+
+
+		& sup{
+			color: white
+		}
 	}
 	&__desc {
 		font-weight: 200;
@@ -904,6 +941,9 @@ br{
 		max-height: 6.65em;
 		padding-right: 0.5em;
 
+		& sup {
+			color: white;
+		}
 
 		&::before {
 			content: '...';
@@ -1022,18 +1062,7 @@ br{
 
 	}
 }
-.slider-wrapper {
-	box-sizing: content-box;
-	width: 100%;
-	transition: 0s, .3s opacity, .3s visibility;
-	position: absolute;
-	overflow-x: hidden;
 
-}
-.slider-track {
-	display: flex;
-	align-items: flex-start;
-}
 
 
 
@@ -1062,6 +1091,7 @@ br{
 	&__title {
 		text-align: center;
 		margin-bottom: 54px;
+
 	}
 	&__slider {
 		position: relative;
@@ -1149,19 +1179,21 @@ br{
 		overflow: hidden;
 		padding: 0 15px 40px;
 		height: 171px;
+		width: calc(100% - 30px);
 
 		
 		
 	}
 	&__subline{
 		position: relative;
-		margin-top: 0px;
+		margin-top: 1px;
 		width: 100%;
 		height: 1px;
 		background: linear-gradient(to right, #31C4F800, $active, #31C4F800);
+		z-index: 100;
 	}
 	&__bottom {
-		height: 350px;
+		height: 400px;
 	}
 	&__line{
 		display: block;
@@ -1191,6 +1223,7 @@ br{
 		transform: translateX(-50%);
 		flex-direction: column;
 		padding: 60px;
+		margin-right: 60px;
 		background: $blue;
 
 		transition: .3s box-shadow, .3s border;
@@ -1384,6 +1417,7 @@ br{
 	}
 	&__title {
 		text-align: center;
+		padding-right: 110px;
 	}
 	&__main {
 		position: relative;
@@ -1558,7 +1592,7 @@ br{
 		width: 130%;
 		height: 600px;
 		bottom: -300px;
-		left: 15%;
+		left: -15%;
 		background: #0A2349;
 		filter: blur(100px);
 		z-index: -1;
@@ -1637,6 +1671,143 @@ br{
 
 }
 	
+
+
+
+}
+@media screen and (max-width: 1024px) {
+	.contact {
+		position: relative;
+		min-height: 100vh;
+		width: 100%;
+		background:
+			linear-gradient(180deg, #0A2349 3.6%, rgba(10, 35, 73, 0.6) 74.98%),
+			radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%),
+			url('../img/contact/contact.png');
+		background-repeat: no-repeat;
+		background-size: cover, cover,  cover;
+		background-position: center, center, center;
+	}
+}
+@media screen and (max-width: 750px) {
+	.title{
+		font-size: 80px;
+	}
+	.contact {
+	
+	&::after{
+		content: '';
+		position: absolute;
+		width: 180%;
+		height: 300px;
+		bottom: -150px;
+		left: -40%;
+		background: #0A2349;
+		filter: blur(50px);
+		z-index: -1;
+	}
+	&::before{
+		background-size: 300px;
+	}
+	
+	&__container {
+		
+
+	}
+	&__title {
+		
+	}
+	&__desc {
+	
+	}
+	&__social-title {
+		
+	}
+	&__text {
+		
+	}
+	.social-block{
+		
+	}
+	&__social{
+		
+
+		&__link{
+			
+		}
+		&__pic{
+			
+		}
+
+}
+	
+
+
+	
+}
+}
+
+@media screen and (max-width: 500px){
+	.title{
+		font-size: 40px;
+	}
+	.contact {
+	background-position: 35%;
+	&::after{
+		bottom: -177px;
+	}
+	&::before{
+		background-size: 223px;
+	}
+	
+	&__container {
+		
+
+	}
+	&__title {
+		
+	}
+	&__desc {
+		font-size: 16px;
+		line-height: 162%;
+		margin-bottom: 48px;
+	
+	}
+	&__social-title {
+		margin-bottom: 8px;
+		
+	}
+	&__text {
+		font-size: 18px;
+		
+	}
+	.social-block{
+		
+	}
+	&__social{
+		margin-top: 16px;
+	}
+	&-social{
+		
+
+		&__link{
+
+			width: 20px;
+
+			
+		}
+		&__pic{
+			
+		}
+
+}
+	
+
+
+	
+}
+
+
 }
 .container {
 }
@@ -1692,4 +1863,673 @@ br{
 	}
 }
 .container {
+}
+
+
+@media screen and (max-width: 500px){
+	.footer{
+		min-height: 230px;
+
+		&__allrights {
+			font-size: 14px;
+			line-height: 171%;
+			margin-bottom: 16px;
+		}
+		&__logo{
+			width: 44px;
+			height: 48px;
+		}
+
+	}
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+	.physics {
+	position: relative;
+	min-height: 1600px;
+	width: 100%;
+	padding-left: 110px;
+	background-image: url('../img/background-svg/physics.svg');
+	background-size: 150% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	z-index: 1040;
+	&::before{
+		display: none;	
+	}
+	&::after{
+		
+	}
+	&__minititle{
+		display: none;
+		
+	}
+	&__ellipse{
+		
+	}
+	&__title {
+		text-align: center;
+	}
+	&__main {
+		
+	}
+	&__star {
+		
+		&:hover{
+			
+			&::after{
+				
+			}
+		}
+		&::after{
+			
+
+		}
+		&_active{
+			&::after{
+				
+			}
+		}
+		&:nth-child(1){
+			right: 17.58%;
+			top: 21.5px;
+			&::after{
+				content: '1989';
+			}
+		}
+		&:nth-child(2){
+			top: 150px;
+			right: 56.57%;
+			&::after{
+				content: '1995';
+			}
+		}
+		&:nth-child(3){
+			top: 205px;
+			right: 67.2%;
+			&::after{
+				content: '1996';
+			}
+		}
+		&:nth-child(4){
+			bottom: 171px;
+			left: -25px;
+			&::after{
+				content: '2002';
+				left: 0;
+				transform: translateX(-80%);
+			}
+		}
+		&:nth-child(5){
+			bottom: -26px;
+			left: 25.75%;
+			&::after{
+				content: '2007';
+			}
+		}
+	}
+	&__wrapper{
+
+		margin-right: 5px;
+		max-width: 40%;
+		height: 100%;
+		margin-top: 400px;
+
+		
+		&::after{
+			
+		}
+		
+	}
+	&__desc{
+		
+		
+		&_active{
+			
+		}
+	}
+	&__text{
+		
+		&:nth-child(1){
+			
+		}
+		&:last-child{
+			
+		}
+	}
+	&__container {
+	}
+}
+}
+
+@media screen and (max-width: 790px) {
+	.physics {
+		padding-left: 15px;
+		position: relative;
+	min-height: 90vh;
+	width: 100%;
+	background-image: url('../img/background-svg/physics.svg');
+	background-size: 150% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	z-index: 1040;
+	
+	&::before{
+		display: none;	
+	}
+	&::after{
+		
+	}
+	&__minititle{
+		
+	}
+	&__ellipse{
+		
+	}
+	&__title {
+		text-align: center;
+		padding-right: 15px;
+	}
+	&__main {
+		
+	}
+	&__star {
+		
+		&:hover{
+			
+			&::after{
+				
+			}
+		}
+		&::after{
+			
+
+		}
+		&_active{
+			&::after{
+				
+			}
+		}
+		&:nth-child(1){
+			right: 17.58%;
+			top: 21.5px;
+			&::after{
+				content: '1989';
+			}
+		}
+		&:nth-child(2){
+			top: 150px;
+			right: 56.57%;
+			&::after{
+				content: '1995';
+			}
+		}
+		&:nth-child(3){
+			top: 205px;
+			right: 67.2%;
+			&::after{
+				content: '1996';
+			}
+		}
+		&:nth-child(4){
+			bottom: 55px;
+			left: 20px;
+			&::after{
+				top: 80px;
+				content: '2002';
+				left: 0;
+				transform: translateX(-30%);
+			}
+		}
+		&:nth-child(5){
+			bottom: -26px;
+			left: 25.35%;
+			&::after{
+				content: '2007';
+			}
+		}
+	}
+	&__wrapper{
+
+		max-width: 55%;
+		margin-top: 300px;
+
+
+		
+		&::after{
+			
+		}
+		
+	}
+	&__desc{
+
+		padding: 20px;
+		
+		
+		&_active{
+			
+		}
+	}
+	&__text{
+
+		font-size: 12px;
+		line-height: 167%;
+		
+		&:nth-child(1){
+			
+		}
+		&:last-child{
+			
+		}
+	}
+	&__container {
+	}
+}
+}
+
+@media screen and (max-width: 625px) {
+
+	.physics {
+		
+	min-height: 900px;
+	&::before{
+		
+	}
+	&::after{
+		
+	}
+	&__minititle{
+		
+	}
+	&__ellipse{
+		
+	}
+	&__title {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	&__main {
+		height: 307px;
+		position: relative;
+		display: flex;
+		width: 100%;
+		max-width: 1559px;
+		margin-bottom: 60px;
+		margin-left: auto;
+		background-image: url('../img/physics/arc-mb.png');
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		z-index: 104;
+	}
+	&__star {
+		
+		&:hover{
+			
+			&::after{
+				
+			}
+		}
+		&::after{
+			top: 50px;
+			font-size: 18px;
+			transform: translateX(-50%);
+
+		}
+		&_active{
+			&::after{
+				
+			}
+		}
+		&:nth-child(1){
+			right: 17.58%;
+			top: -7.5px;
+			&::after{
+				content: '1989';
+			}
+		}
+		&:nth-child(2){
+			top: 45px;
+			right: 56.57%;
+			&::after{
+				content: '1995';
+			}
+		}
+		&:nth-child(3){
+			top: 94px;
+			right: 77.2%;
+			&::after{
+				content: '1996';
+			}
+		}
+		&:nth-child(4){
+			bottom: 8px;
+			left: 9px;
+			&::after{
+				top: 40px;
+				content: '2002';
+				left: 0;
+				transform: translateX(0);
+			}
+		}
+		&:nth-child(5){
+			bottom: -26px;
+			left: 23.35%;
+			&::after{
+				content: '2007';
+			}
+		}
+	}
+	&__wrapper{
+
+		margin-top: 250px;
+		
+		&::after{
+			
+		}
+		
+	}
+	&__desc{
+
+		padding: 20px;
+		
+		
+		&_active{
+			
+		}
+	}
+	&__text{
+
+		font-size: 12px;
+		line-height: 167%;
+		
+		&:nth-child(1){
+			
+		}
+		&:last-child{
+			
+		}
+	}
+	&__container {
+	}
+}
+}
+
+
+@media screen and (max-width: 500px) {
+
+	.physics {
+		
+	
+	&::before{
+		
+	}
+	&::after{
+		
+	}
+	&__minititle{
+		
+	}
+	&__ellipse{
+		
+	}
+	&__title {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	&__main {
+		height: 307px;
+		position: relative;
+		display: flex;
+		width: 100%;
+		max-width: 1559px;
+		margin-bottom: 60px;
+		margin-left: auto;
+		background-image: url('../img/physics/arc-mb.png');
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		z-index: 104;
+	}
+	&__star {
+		
+		&:hover{
+			
+			&::after{
+				
+			}
+		}
+		&::after{
+			top: 50px;
+			font-size: 18px;
+			transform: translateX(-50%);
+
+		}
+		&_active{
+			&::after{
+				
+			}
+		}
+		&:nth-child(1){
+			right: 17.58%;
+			top: -7.5px;
+			&::after{
+				content: '1989';
+			}
+		}
+		&:nth-child(2){
+			top: 48px;
+			right: 56.57%;
+			&::after{
+				content: '1995';
+			}
+		}
+		&:nth-child(3){
+			top: 97px;
+			right: 77.2%;
+			&::after{
+				content: '1996';
+			}
+		}
+		&:nth-child(4){
+			bottom: 5px;
+			left: 9px;
+			&::after{
+				top: 40px;
+				content: '2002';
+				left: 0;
+				transform: translateX(0);
+			}
+		}
+		&:nth-child(5){
+			bottom: -26px;
+			left: 23.35%;
+			&::after{
+				content: '2007';
+			}
+		}
+	}
+	&__wrapper{
+		height: 650px;
+		margin-top: 150px;
+		align-items: flex-start;
+		&::after{
+			
+		}
+		
+	}
+	&__desc{
+
+		padding: 20px;
+		
+		
+		&_active{
+			
+		}
+	}
+	&__text{
+
+		font-size: 12px;
+		line-height: 167%;
+		
+		&:nth-child(1){
+			
+		}
+		&:last-child{
+			
+		}
+	}
+	&__container {
+	}
+}
+}
+
+@media screen and (max-width: 400px) {
+
+	.physics {
+		
+	
+	&::before{
+		
+	}
+	&::after{
+		
+	}
+	&__minititle{
+		
+	}
+	&__ellipse{
+		
+	}
+	&__title {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	&__main {
+		height: 307px;
+		position: relative;
+		display: flex;
+		width: 100%;
+		max-width: 1559px;
+		margin-bottom: 60px;
+		margin-left: auto;
+		background-image: url('../img/physics/arc-mb.png');
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		z-index: 104;
+	}
+	&__star {
+		
+		&:hover{
+			
+			&::after{
+				
+			}
+		}
+		&::after{
+			top: 50px;
+			font-size: 18px;
+			transform: translateX(-50%);
+
+		}
+		&_active{
+			&::after{
+				
+			}
+		}
+		&:nth-child(1){
+			right: 17.58%;
+			top: -3.5px;
+			&::after{
+				content: '1989';
+			}
+		}
+		&:nth-child(2){
+			top: 52px;
+			right: 56.57%;
+			&::after{
+				content: '1995';
+			}
+		}
+		&:nth-child(3){
+			top: 107px;
+			right: 77.2%;
+			&::after{
+				content: '1996';
+			}
+		}
+		&:nth-child(4){
+			bottom: -5px;
+			left: 9px;
+			&::after{
+				top: 40px;
+				content: '2002';
+				left: 0;
+				transform: translateX(0);
+			}
+		}
+		&:nth-child(5){
+			bottom: -26px;
+			left: 19%;
+			&::after{
+				content: '2007';
+			}
+		}
+	}
+	&__wrapper{
+
+		
+		&::after{
+			
+		}
+		
+	}
+	&__desc{
+
+		padding: 20px;
+		
+		
+		&_active{
+			
+		}
+	}
+	&__text{
+
+		font-size: 12px;
+		line-height: 167%;
+		
+		&:nth-child(1){
+			
+		}
+		&:last-child{
+			
+		}
+	}
+	&__container {
+	}
+}
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+	.finance{
+		&::after{
+			display: none;
+		}
+
+		&__date{
+			&:hover{
+				color: white;
+			}
+		}
+	}
 }

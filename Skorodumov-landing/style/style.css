@@ -388,6 +388,14 @@ br {
   position: relative;
 }
 
+@media screen and (max-width: 1800px) {
+  .intro {
+    background: url("../img/background-svg/intro-2.svg"), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.png");
+    background-repeat: no-repeat;
+    background-position: 60% center, right, right;
+    background-size: contain, cover, cover;
+  }
+}
 @media screen and (min-width: 1025px) {
   .link:hover {
     color: #26AEE8;
@@ -548,11 +556,18 @@ br {
   }
 }
 @media screen and (max-width: 736px) {
+  .intro {
+    min-height: 100vh;
+  }
   .intro__title {
     font-size: 80px;
   }
   .intro__button {
     margin-right: 10px;
+  }
+  .intro__bottom {
+    display: block;
+    margin-top: 41px;
   }
   .intro__social {
     margin-top: 20px;
@@ -607,6 +622,25 @@ br {
   color: #8097B9;
 }
 
+.slider-wrapper {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 100%;
+  -webkit-transition: 0s, 0.3s opacity, 0.3s visibility;
+  transition: 0s, 0.3s opacity, 0.3s visibility;
+  position: absolute;
+  overflow-x: hidden;
+}
+
+.slider-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
 .publications {
   width: 100%;
   min-height: 100vh;
@@ -659,7 +693,7 @@ br {
 .publications__container:before {
   content: "";
   left: 50%;
-  bottom: 0;
+  bottom: 5%;
   position: absolute;
   display: block;
   width: 100%;
@@ -674,6 +708,21 @@ br {
 .publications__title {
   margin-bottom: 54px;
 }
+.publications__title:after {
+  content: "";
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 556px;
+  height: 512px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  background-image: url("../img/publications/vector-3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 .publications_hidden {
   opacity: 0;
   visibility: hidden;
@@ -686,7 +735,7 @@ br {
 .publications__slider:before {
   content: "";
   left: 50%;
-  bottom: 0;
+  bottom: 10%;
   position: absolute;
   display: block;
   width: 100%;
@@ -698,22 +747,10 @@ br {
   -webkit-transform: translate(-50%, -30%);
           transform: translate(-50%, -30%);
 }
-.publications__slider:after {
-  content: "";
-  right: 0;
-  top: 0;
-  position: absolute;
-  display: block;
-  width: 556px;
-  height: 512px;
-  background-image: url("../img/publications/vector-3.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
 .publications__finance, .publications__physics {
-  margin-left: -30px;
-  padding: 0 30px;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .publications__social {
   margin-left: 200px;
@@ -730,6 +767,9 @@ br {
   min-height: 66px;
   letter-spacing: -0.011em;
 }
+.publications__subtitle sup {
+  color: white;
+}
 .publications__desc {
   font-weight: 200;
   font-size: 18px;
@@ -740,6 +780,9 @@ br {
   line-height: 1.33em;
   max-height: 6.65em;
   padding-right: 0.5em;
+}
+.publications__desc sup {
+  color: white;
 }
 .publications__desc::before {
   content: "...";
@@ -868,25 +911,6 @@ br {
 .slider__button_next {
   background-image: url("../img/icons/arrow-right.svg");
 }
-.slider-wrapper {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  width: 100%;
-  -webkit-transition: 0s, 0.3s opacity, 0.3s visibility;
-  transition: 0s, 0.3s opacity, 0.3s visibility;
-  position: absolute;
-  overflow-x: hidden;
-}
-
-.slider-track {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
 .main {
   background: #0A2349;
 }
@@ -993,17 +1017,19 @@ br {
   overflow: hidden;
   padding: 0 15px 40px;
   height: 171px;
+  width: calc(100% - 30px);
 }
 .finance__subline {
   position: relative;
-  margin-top: 0px;
+  margin-top: 1px;
   width: 100%;
   height: 1px;
   background: -webkit-gradient(linear, left top, right top, from(rgba(49, 196, 248, 0)), color-stop(#26AEE8), to(rgba(49, 196, 248, 0)));
   background: linear-gradient(to right, rgba(49, 196, 248, 0), #26AEE8, rgba(49, 196, 248, 0));
+  z-index: 100;
 }
 .finance__bottom {
-  height: 350px;
+  height: 400px;
 }
 .finance__line {
   display: block;
@@ -1040,6 +1066,7 @@ br {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 60px;
+  margin-right: 60px;
   background: #0A2349;
   -webkit-transition: 0.3s border, 0.3s -webkit-box-shadow;
   transition: 0.3s border, 0.3s -webkit-box-shadow;
@@ -1200,6 +1227,7 @@ br {
 }
 .physics__title {
   text-align: center;
+  padding-right: 110px;
 }
 .physics__main {
   position: relative;
@@ -1371,7 +1399,7 @@ br {
   width: 130%;
   height: 600px;
   bottom: -300px;
-  left: 15%;
+  left: -15%;
   background: #0A2349;
   -webkit-filter: blur(100px);
           filter: blur(100px);
@@ -1446,6 +1474,69 @@ br {
      object-fit: contain;
 }
 
+@media screen and (max-width: 1024px) {
+  .contact {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(3.6%, #0A2349), color-stop(74.98%, rgba(10, 35, 73, 0.6))), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.png");
+    background: linear-gradient(180deg, #0A2349 3.6%, rgba(10, 35, 73, 0.6) 74.98%), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.png");
+    background-repeat: no-repeat;
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+  }
+}
+@media screen and (max-width: 750px) {
+  .title {
+    font-size: 80px;
+  }
+  .contact::after {
+    content: "";
+    position: absolute;
+    width: 180%;
+    height: 300px;
+    bottom: -150px;
+    left: -40%;
+    background: #0A2349;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    z-index: -1;
+  }
+  .contact::before {
+    background-size: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 40px;
+  }
+  .contact {
+    background-position: 35%;
+  }
+  .contact::after {
+    bottom: -177px;
+  }
+  .contact::before {
+    background-size: 223px;
+  }
+  .contact__desc {
+    font-size: 16px;
+    line-height: 162%;
+    margin-bottom: 48px;
+  }
+  .contact__social-title {
+    margin-bottom: 8px;
+  }
+  .contact__text {
+    font-size: 18px;
+  }
+  .contact__social {
+    margin-top: 16px;
+  }
+  .contact-social__link {
+    width: 20px;
+  }
+}
 .contact-block {
   max-width: 756px;
 }
@@ -1493,4 +1584,400 @@ br {
      object-fit: contain;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    min-height: 230px;
+  }
+  .footer__allrights {
+    font-size: 14px;
+    line-height: 171%;
+    margin-bottom: 16px;
+  }
+  .footer__logo {
+    width: 44px;
+    height: 48px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .physics {
+    position: relative;
+    min-height: 1600px;
+    width: 100%;
+    padding-left: 110px;
+    background-image: url("../img/background-svg/physics.svg");
+    background-size: 150% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 1040;
+  }
+  .physics::before {
+    display: none;
+  }
+  .physics__minititle {
+    display: none;
+  }
+  .physics__title {
+    text-align: center;
+  }
+  .physics__star:nth-child(1) {
+    right: 17.58%;
+    top: 21.5px;
+  }
+  .physics__star:nth-child(1)::after {
+    content: "1989";
+  }
+  .physics__star:nth-child(2) {
+    top: 150px;
+    right: 56.57%;
+  }
+  .physics__star:nth-child(2)::after {
+    content: "1995";
+  }
+  .physics__star:nth-child(3) {
+    top: 205px;
+    right: 67.2%;
+  }
+  .physics__star:nth-child(3)::after {
+    content: "1996";
+  }
+  .physics__star:nth-child(4) {
+    bottom: 171px;
+    left: -25px;
+  }
+  .physics__star:nth-child(4)::after {
+    content: "2002";
+    left: 0;
+    -webkit-transform: translateX(-80%);
+            transform: translateX(-80%);
+  }
+  .physics__star:nth-child(5) {
+    bottom: -26px;
+    left: 25.75%;
+  }
+  .physics__star:nth-child(5)::after {
+    content: "2007";
+  }
+  .physics__wrapper {
+    margin-right: 5px;
+    max-width: 40%;
+    height: 100%;
+    margin-top: 400px;
+  }
+}
+@media screen and (max-width: 790px) {
+  .physics {
+    padding-left: 15px;
+    position: relative;
+    min-height: 90vh;
+    width: 100%;
+    background-image: url("../img/background-svg/physics.svg");
+    background-size: 150% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 1040;
+  }
+  .physics::before {
+    display: none;
+  }
+  .physics__title {
+    text-align: center;
+    padding-right: 15px;
+  }
+  .physics__star:nth-child(1) {
+    right: 17.58%;
+    top: 21.5px;
+  }
+  .physics__star:nth-child(1)::after {
+    content: "1989";
+  }
+  .physics__star:nth-child(2) {
+    top: 150px;
+    right: 56.57%;
+  }
+  .physics__star:nth-child(2)::after {
+    content: "1995";
+  }
+  .physics__star:nth-child(3) {
+    top: 205px;
+    right: 67.2%;
+  }
+  .physics__star:nth-child(3)::after {
+    content: "1996";
+  }
+  .physics__star:nth-child(4) {
+    bottom: 55px;
+    left: 20px;
+  }
+  .physics__star:nth-child(4)::after {
+    top: 80px;
+    content: "2002";
+    left: 0;
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
+  .physics__star:nth-child(5) {
+    bottom: -26px;
+    left: 25.35%;
+  }
+  .physics__star:nth-child(5)::after {
+    content: "2007";
+  }
+  .physics__wrapper {
+    max-width: 55%;
+    margin-top: 300px;
+  }
+  .physics__desc {
+    padding: 20px;
+  }
+  .physics__text {
+    font-size: 12px;
+    line-height: 167%;
+  }
+}
+@media screen and (max-width: 625px) {
+  .physics {
+    min-height: 900px;
+  }
+  .physics__title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .physics__main {
+    height: 307px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1559px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    background-image: url("../img/physics/arc-mb.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 104;
+  }
+  .physics__star::after {
+    top: 50px;
+    font-size: 18px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .physics__star:nth-child(1) {
+    right: 17.58%;
+    top: -7.5px;
+  }
+  .physics__star:nth-child(1)::after {
+    content: "1989";
+  }
+  .physics__star:nth-child(2) {
+    top: 45px;
+    right: 56.57%;
+  }
+  .physics__star:nth-child(2)::after {
+    content: "1995";
+  }
+  .physics__star:nth-child(3) {
+    top: 94px;
+    right: 77.2%;
+  }
+  .physics__star:nth-child(3)::after {
+    content: "1996";
+  }
+  .physics__star:nth-child(4) {
+    bottom: 8px;
+    left: 9px;
+  }
+  .physics__star:nth-child(4)::after {
+    top: 40px;
+    content: "2002";
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .physics__star:nth-child(5) {
+    bottom: -26px;
+    left: 23.35%;
+  }
+  .physics__star:nth-child(5)::after {
+    content: "2007";
+  }
+  .physics__wrapper {
+    margin-top: 250px;
+  }
+  .physics__desc {
+    padding: 20px;
+  }
+  .physics__text {
+    font-size: 12px;
+    line-height: 167%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .physics__title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .physics__main {
+    height: 307px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1559px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    background-image: url("../img/physics/arc-mb.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 104;
+  }
+  .physics__star::after {
+    top: 50px;
+    font-size: 18px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .physics__star:nth-child(1) {
+    right: 17.58%;
+    top: -7.5px;
+  }
+  .physics__star:nth-child(1)::after {
+    content: "1989";
+  }
+  .physics__star:nth-child(2) {
+    top: 48px;
+    right: 56.57%;
+  }
+  .physics__star:nth-child(2)::after {
+    content: "1995";
+  }
+  .physics__star:nth-child(3) {
+    top: 97px;
+    right: 77.2%;
+  }
+  .physics__star:nth-child(3)::after {
+    content: "1996";
+  }
+  .physics__star:nth-child(4) {
+    bottom: 5px;
+    left: 9px;
+  }
+  .physics__star:nth-child(4)::after {
+    top: 40px;
+    content: "2002";
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .physics__star:nth-child(5) {
+    bottom: -26px;
+    left: 23.35%;
+  }
+  .physics__star:nth-child(5)::after {
+    content: "2007";
+  }
+  .physics__wrapper {
+    height: 650px;
+    margin-top: 150px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .physics__desc {
+    padding: 20px;
+  }
+  .physics__text {
+    font-size: 12px;
+    line-height: 167%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .physics__title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .physics__main {
+    height: 307px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1559px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    background-image: url("../img/physics/arc-mb.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 104;
+  }
+  .physics__star::after {
+    top: 50px;
+    font-size: 18px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .physics__star:nth-child(1) {
+    right: 17.58%;
+    top: -3.5px;
+  }
+  .physics__star:nth-child(1)::after {
+    content: "1989";
+  }
+  .physics__star:nth-child(2) {
+    top: 52px;
+    right: 56.57%;
+  }
+  .physics__star:nth-child(2)::after {
+    content: "1995";
+  }
+  .physics__star:nth-child(3) {
+    top: 107px;
+    right: 77.2%;
+  }
+  .physics__star:nth-child(3)::after {
+    content: "1996";
+  }
+  .physics__star:nth-child(4) {
+    bottom: -5px;
+    left: 9px;
+  }
+  .physics__star:nth-child(4)::after {
+    top: 40px;
+    content: "2002";
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .physics__star:nth-child(5) {
+    bottom: -26px;
+    left: 19%;
+  }
+  .physics__star:nth-child(5)::after {
+    content: "2007";
+  }
+  .physics__desc {
+    padding: 20px;
+  }
+  .physics__text {
+    font-size: 12px;
+    line-height: 167%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .finance::after {
+    display: none;
+  }
+  .finance__date:hover {
+    color: white;
+  }
 }
