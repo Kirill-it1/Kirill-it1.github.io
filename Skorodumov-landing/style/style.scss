@@ -2392,6 +2392,7 @@ br{
 }
 }
 
+
 @media screen and (max-width: 400px) {
 
 	.physics {
@@ -2461,7 +2462,135 @@ br{
 			}
 		}
 		&:nth-child(3){
-			top: 107px;
+			top: 102px;
+			right: 77.2%;
+			&::after{
+				content: '1996';
+			}
+		}
+		&:nth-child(4){
+			bottom: -1px;
+			left: 9px;
+			&::after{
+				top: 40px;
+				content: '2002';
+				left: 0;
+				transform: translateX(0);
+			}
+		}
+		&:nth-child(5){
+			bottom: -26px;
+			left: 19%;
+			&::after{
+				content: '2007';
+			}
+		}
+	}
+	&__wrapper{
+
+		
+		&::after{
+			
+		}
+		
+	}
+	&__desc{
+
+		padding: 20px;
+		
+		
+		&_active{
+			
+		}
+	}
+	&__text{
+
+		font-size: 12px;
+		line-height: 167%;
+		
+		&:nth-child(1){
+			
+		}
+		&:last-child{
+			
+		}
+	}
+	&__container {
+	}
+}
+}
+
+
+@media screen and (max-width: 350px) {
+
+	.physics {
+		
+	
+	&::before{
+		
+	}
+	&::after{
+		
+	}
+	&__minititle{
+		
+	}
+	&__ellipse{
+		
+	}
+	&__title {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	&__main {
+		height: 307px;
+		position: relative;
+		display: flex;
+		width: 100%;
+		max-width: 1559px;
+		margin-bottom: 60px;
+		margin-left: auto;
+		background-image: url('../img/physics/arc-mb.png');
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		z-index: 104;
+	}
+	&__star {
+		
+		&:hover{
+			
+			&::after{
+				
+			}
+		}
+		&::after{
+			top: 50px;
+			font-size: 18px;
+			transform: translateX(-50%);
+
+		}
+		&_active{
+			&::after{
+				
+			}
+		}
+		&:nth-child(1){
+			right: 17.58%;
+			top: -3.5px;
+			&::after{
+				content: '1989';
+			}
+		}
+		&:nth-child(2){
+			top: 52px;
+			right: 56.57%;
+			&::after{
+				content: '1995';
+			}
+		}
+		&:nth-child(3){
+			top: 105px;
 			right: 77.2%;
 			&::after{
 				content: '1996';
@@ -2518,10 +2647,6 @@ br{
 	}
 }
 }
-
-
-
-
 
 @media screen and (max-width: 1024px) {
 	.finance{

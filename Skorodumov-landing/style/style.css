@@ -1955,7 +1955,81 @@ br {
     content: "1995";
   }
   .physics__star:nth-child(3) {
-    top: 107px;
+    top: 102px;
+    right: 77.2%;
+  }
+  .physics__star:nth-child(3)::after {
+    content: "1996";
+  }
+  .physics__star:nth-child(4) {
+    bottom: -1px;
+    left: 9px;
+  }
+  .physics__star:nth-child(4)::after {
+    top: 40px;
+    content: "2002";
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .physics__star:nth-child(5) {
+    bottom: -26px;
+    left: 19%;
+  }
+  .physics__star:nth-child(5)::after {
+    content: "2007";
+  }
+  .physics__desc {
+    padding: 20px;
+  }
+  .physics__text {
+    font-size: 12px;
+    line-height: 167%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .physics__title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .physics__main {
+    height: 307px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1559px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    background-image: url("../img/physics/arc-mb.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 104;
+  }
+  .physics__star::after {
+    top: 50px;
+    font-size: 18px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .physics__star:nth-child(1) {
+    right: 17.58%;
+    top: -3.5px;
+  }
+  .physics__star:nth-child(1)::after {
+    content: "1989";
+  }
+  .physics__star:nth-child(2) {
+    top: 52px;
+    right: 56.57%;
+  }
+  .physics__star:nth-child(2)::after {
+    content: "1995";
+  }
+  .physics__star:nth-child(3) {
+    top: 105px;
     right: 77.2%;
   }
   .physics__star:nth-child(3)::after {
