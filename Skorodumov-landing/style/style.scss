@@ -789,8 +789,6 @@ br{
 .slider-wrapper {
 	box-sizing: content-box;
 	width: 100%;
-	transition: 0s, .3s opacity, .3s visibility;
-	position: absolute;
 	overflow-x: hidden;
 
 }
@@ -886,7 +884,6 @@ br{
 		position: absolute;
 	}
 	&__slider {
-		height: 550px;
 		position: relative;
 		&:before{
 			content: '';
@@ -911,8 +908,10 @@ br{
 	}
 	&__social{
 		margin-left: 200px;
+		flex-shrink: 0;
 	}
 	&__buttons{
+		flex-shrink: 0;
 		min-width: 132px;
 	}
 	&__subtitle {
@@ -975,11 +974,15 @@ br{
 		border-radius: 6px;
 		text-decoration: none;
 		transition: .2s;
+		margin-top: auto;
 		&:hover{
 			background: rgba(38, 174, 232, 0.3);
 		}
 	}
 	&__item{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 		flex-shrink: 0;
 		background: #0A2349;
 		border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1002,13 +1005,13 @@ br{
 .title {
 }
 .slider-top {
-	position: relative;
 	display: flex;
 	align-items: center;
 	margin-bottom: 47px;
 	z-index: 105;
 }
 .slider-nav {
+	flex-shrink: 0;
 	&__link {
 		font-weight: 400;
 		font-size: 25px;
@@ -1117,7 +1120,7 @@ br{
 			width: 60px;
 			height: 60px;
 			content: '';
-			bottom: 0;
+			bottom: -1.5px;
 			left: 50%;
 			transform: translate(-50%, 50%);
 			background-image: url('../img/icons/ministar.svg');
@@ -2523,13 +2526,246 @@ br{
 @media screen and (max-width: 1024px) {
 	.finance{
 		&::after{
-			display: none;
+			top: unset;
+			bottom: 0;
+			right: 0;
+			width: 106px;
+			height:	500px;
+			background-size: 150% auto;
+			transform: translateY(70%);
 		}
 
 		&__date{
 			&:hover{
 				color: white;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.finance{
+		&__item{
+			width: 180px;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.finance{
+		&__line{
+			height: 58px;
+		}
+		&__buttons{
+			max-width: unset;
+		}
+		&__item{
+			width: 109px;
+			padding: 30px 0;
+			&_active{
+				padding-bottom: 5px;
+				& .finance__date{
+					font-size: 38px;
+
+				}
+			}
+
+		}
+		&__date{
+			font-size: 20px;
+		}
+
+		&__desc{
+			margin-right: 15px;
+		}
+		&-desc {
+			&__dates{
+				transform: translateY(100%);
+				bottom: -18px;
+				left: 0;
+				right: unset;
+				top: unset;
+				font-size: 16px;
+
+				color: $active;
+				padding: 0;
+				width: 124px;
+			}
+			&__arrow{
+				background-image: url('../img/icons/arrow.svg');
+				margin: 0 10px;
+
+			}	
+		}
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.finance {
+		&__container{
+			padding: 0;
+		}
+		&__title{
+			text-align: left;
+			margin-left: 15px;
+		}
+		&__wrapper{
+			height: 100px;
+		}
+		&__bottom{
+			margin: 0 15px;
+		}
+		&__desc{
+			padding: 20px;
+			margin: 0;
+		}
+		&__text{
+			font-size: 16px;
+			line-height: 188%;
+		}
+		&__list-item{
+			font-size: 16px;
+			line-height: 188%;
+		}
+		&__date{
+			font-size: 16px;
+			transition: 0s;
+		}
+		&__item{
+			transition: 0s;
+			width: 75px;
+			&_active{
+				& .finance__date{
+					font-size: 32px;
+
+				}
+			}
+
+		}
+	}
+}
+
+
+@media screen and (max-width: 1600px) {
+	.publications{
+		&__subtitle{
+			min-height: 90px;
+		}
+	}
+}
+@media screen and (max-width: 1324px) {
+
+	.publications{
+		&__title{
+			&::after{
+				display: none;
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width:  1285px) {
+	.publications{
+		&__subtitle{
+			min-height: 66px;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.publications{
+		&__container{
+			&::before{
+				display: none;
+			}
+		}
+		&__subtitle{
+			font-size: 20px;
+		}
+		&__desc{
+			font-size: 14px;
+			line-height: 171%;
+			max-height: 8.65em;
+		}
+		&__item{
+			padding: 30px 20px;
+			min-height: unset;
+			&:not(:last-child){
+				margin-right: 20px;
+			}
+		}
+		.slider-wrapper{
+			width: 100%;
+			padding: 0;
+			padding-bottom: 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.publications{
+		&__slider{
+			&::before{
+				display: none;
+			}
+		}
+		&__social{
+			margin-left: 15px;
+			position: absolute;
+			bottom: -20px;
+			left: 0;
+			transform: translateY(100%);
+		}
+		
+
+	}
+}
+
+@media screen and (max-width: 704px) {
+	.publications{
+		.slider-nav__link{
+			font-size: 20px;
+		}
+		&__subtitle{
+		}
+		&__item{
+			&:not(:last-child){
+				margin-right: 15px;
+			}
+		}
+		&__desc{
+			max-height: 14em;
+		}
+	}
+}
+
+@media screen and (max-width: 580px) {
+
+	.publications{
+		&::before{
+			display: none;
+		}
+		&__title{
+			margin-left: 15px;
+		}
+		.slider-top{
+			margin-left: 15px;
+			margin-bottom: 0;
+		}
+		&__container{
+			padding-right: 0;
+			padding-left: 0;
+			padding-bottom: 200px;
+		}
+		&__buttons{
+			display: none;
+		}
+		.slider-wrapper{
+			padding: 25px 15px;
+		}
+		&__item.slider__item_active{
+			box-shadow: 0px 0px 30px rgba(49, 196, 248, 0.3), inset 0px 0px 30px rgba(49, 196, 248, 0.3);
 		}
 	}
 }

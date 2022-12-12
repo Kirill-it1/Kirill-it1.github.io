@@ -21,9 +21,22 @@ function slider_init(q, ind) {
   nextTrf = 0,
   prevTrf = 0,
   slideWidth = 0,
-  th = 3;
+  th = 3,
+  margin = 40;
  
+  if(window.screen.width < 1285) {
+    th = 2;
 
+  }
+  if(window.screen.width < 1025) {
+    margin = 20;
+  }
+  if(window.screen.width < 705) {
+    margin = 15;
+  }
+  if(window.screen.width <= 580) {
+    th = 1;
+  }
   function itemWidth() {
    if(Math.floor(sliderList.offsetWidth / slides[0].offsetWidth) >= slides.length){
       next.classList.add('slider__button_disabled');
@@ -32,7 +45,11 @@ function slider_init(q, ind) {
       next.classList.remove('slider__button_disabled');
     }
     slides.forEach((slide)=>{
-      slideWidth = (sliderTrack.offsetWidth - ((th - 1) * 40)) / th;
+      if(window.screen.width <= 580) {
+        slideWidth = 250;
+      } else {
+        slideWidth = (sliderTrack.offsetWidth - ((th - 1) * margin)) / th;
+      }
       slide.style.width = `${slideWidth}px`;
     });
   }
@@ -41,8 +58,7 @@ function slider_init(q, ind) {
     posThreshold = slides[0].offsetWidth * 0.35,
     trfRegExp = /([-0-9.]+(?=px))/,
     swipeStartTime,
-    swipeEndTime,
-    margin = 40;
+    swipeEndTime;
   let getEvent = function() {
     return (event.type.search('touch') !== -1) ? event.touches[0] : event;
   }
@@ -54,7 +70,7 @@ function slider_init(q, ind) {
     if(slides.length - Math.floor(sliderList.offsetWidth / slideWidth) >= slideIndex){
       
        slides.forEach((elem) =>{
-      elem.classList.remove('slide_active');
+      elem.classList.remove('slider__item_active');
     });
 
 
@@ -376,11 +392,11 @@ for(i = 0; i < 2; i++){
                 slideIndex = 13 - 4;
                 sliderTrack.style.transition = 'transform 0s';
                 sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + consta}px, 0px, 0px)`;
-              }, 0);
+              }, 200);
               setTimeout(() => {
                 slideIndex = index + 9 - 4;
                 slide('prev');
-              }, 20);
+              }, 250);
             } else {
               slideIndex = 13 - 4;
               sliderTrack.style.transition = 'transform 0s';
@@ -389,7 +405,7 @@ for(i = 0; i < 2; i++){
                 slideIndex = index + 9 - 4;
                 slide('prev');
 
-              }, 0);
+              }, 100);
             }
             
           } else if(index > 12) {
@@ -404,11 +420,11 @@ for(i = 0; i < 2; i++){
                 } else {
                   sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth + consta}px, 0px, 0px)`;
                 }
-              }, 0);
+              }, 200);
               setTimeout(() => {
                 slideIndex = index - 9 - 4;
                 slide('next');
-              }, 20);
+              }, 250);
             } else {
               slideIndex = 3 - 4;
               sliderTrack.style.transition = 'transform 0s';
@@ -421,7 +437,7 @@ for(i = 0; i < 2; i++){
               setTimeout(() => {
                 slideIndex = index - 9 - 4;
                 slide('next');
-              }, 0);
+              }, 100);
             }
           }
            else {
