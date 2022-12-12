@@ -2553,12 +2553,22 @@ br{
 
 @media screen and (max-width: 700px) {
 	.finance{
+		padding-bottom: 350px;
+		&::after{
+			transform: translateY(0);
+		}
 		&__line{
 			height: 58px;
 		}
 		&__buttons{
 			max-width: unset;
+			margin: 0 15px;
+			.slider__button{
+				width: 24px;
+				height: 24px;
+			}
 		}
+
 		&__item{
 			width: 109px;
 			padding: 30px 0;
@@ -2722,8 +2732,11 @@ br{
 	}
 }
 
-@media screen and (max-width: 704px) {
+@media screen and (max-width: 709px) {
 	.publications{
+		&__container{
+			padding-top: 0;
+		}
 		.slider-nav__link{
 			font-size: 20px;
 		}

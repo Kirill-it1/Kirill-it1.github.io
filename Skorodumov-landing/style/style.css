@@ -2008,11 +2008,23 @@ br {
   }
 }
 @media screen and (max-width: 700px) {
+  .finance {
+    padding-bottom: 350px;
+  }
+  .finance::after {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
   .finance__line {
     height: 58px;
   }
   .finance__buttons {
     max-width: unset;
+    margin: 0 15px;
+  }
+  .finance__buttons .slider__button {
+    width: 24px;
+    height: 24px;
   }
   .finance__item {
     width: 109px;
@@ -2140,7 +2152,10 @@ br {
             transform: translateY(100%);
   }
 }
-@media screen and (max-width: 704px) {
+@media screen and (max-width: 709px) {
+  .publications__container {
+    padding-top: 0;
+  }
   .publications .slider-nav__link {
     font-size: 20px;
   }

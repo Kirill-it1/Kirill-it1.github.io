@@ -1,3 +1,4 @@
+let winWidth = window.screen.width;
 function slider_init(q, ind) {
   let slid = document.querySelector('#publications-slider');
   let slider = q,
@@ -253,7 +254,8 @@ s.forEach((sl, index) => {
   slider_init(sl, index);
 });
 window.addEventListener('resize', () => {
-  location.reload();
+  if(window.screen.width != winWidth)
+    location.reload();
 });
 
 for(i = 0; i < 2; i++){
