@@ -2307,3 +2307,31 @@ br {
             box-shadow: 0px 0px 30px rgba(49, 196, 248, 0.3), inset 0px 0px 30px rgba(49, 196, 248, 0.3);
   }
 }
+.physics__container {
+  max-width: 2220px;
+  margin: 0 auto;
+}
+
+@media screen and (min-height: 1063px) {
+  .intro {
+    min-height: 1280px;
+  }
+  .intro__container {
+    min-height: 1280px;
+  }
+  .publications {
+    min-height: 1080px;
+  }
+  .publications__container {
+    min-height: 1080px;
+  }
+  .physics {
+    min-height: 1720px;
+  }
+  .contact {
+    min-height: 1063px;
+  }
+  .contact__container {
+    min-height: 1063px;
+  }
+}

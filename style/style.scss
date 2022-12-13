@@ -3082,3 +3082,30 @@ br{
 }
 
 
+.physics__container{
+	max-width: 2220px;
+	margin: 0 auto;
+}
+@media screen and (min-height: 1063px) {
+	.intro{
+		min-height: 1280px;
+		&__container{
+			min-height: 1280px;
+		}
+	}
+	.publications{
+		min-height: 1080px;
+		&__container{
+			min-height: 1080px;
+		}
+	}
+	.physics{
+		min-height: 1720px;
+	}
+	.contact{
+		min-height: 1063px;
+		&__container{
+			min-height: 1063px;
+		}
+	}
+}
