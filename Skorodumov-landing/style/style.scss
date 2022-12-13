@@ -3117,6 +3117,9 @@ br{
 	.physics{
 		&__star{
 			transition: 0s;
+			&::hover{
+				transition: 0s;
+			}
 		}
 	}
 }
