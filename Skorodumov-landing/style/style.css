@@ -1451,7 +1451,7 @@ br {
 }
 .contact {
   position: relative;
-  min-height: 100vh;
+  min-height: 1000px;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(3.6%, #0A2349), color-stop(74.98%, rgba(10, 35, 73, 0.6))), url("../img/background-svg/contact.svg"), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.png");
   background: linear-gradient(180deg, #0A2349 3.6%, rgba(10, 35, 73, 0.6) 74.98%), url("../img/background-svg/contact.svg"), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.png");
