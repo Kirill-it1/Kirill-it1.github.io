@@ -16,6 +16,7 @@ br{
 .link{
 	color: $link;
 	text-decoration: none;
+	-webkit-tap-highlight-color: rgb(41.271, 15.938, 239.06, 0.1) ;
 }
 
 .fraction,
@@ -1613,6 +1614,7 @@ br{
 		&:last-child{
 			margin-bottom: 0;
 		}
+
 	}
 	&__container {
 	}

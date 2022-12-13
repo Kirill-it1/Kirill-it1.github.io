@@ -15,6 +15,7 @@ br {
 .link {
   color: #8097B9;
   text-decoration: none;
+  -webkit-tap-highlight-color: rgba(41, 16, 239, 0.1);
 }
 
 .fraction,
