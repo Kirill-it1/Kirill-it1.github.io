@@ -1,3 +1,5 @@
+window.onload = () => {
+
 let winWidth = window.screen.width;
 function slider_init(q, ind) {
   let slid = document.querySelector('#publications-slider');
@@ -497,3 +499,4 @@ publ_btns.forEach((link, index) => {
 
 
 
+}
