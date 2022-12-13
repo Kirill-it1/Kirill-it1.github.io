@@ -144,6 +144,7 @@ br {
 }
 
 .header-lang {
+  display: none;
   margin-left: auto;
   width: 128px;
   height: 63px;
@@ -1470,7 +1471,7 @@ br {
   background: #0A2349;
   -webkit-filter: blur(100px);
           filter: blur(100px);
-  z-index: -1;
+  z-index: 2000;
 }
 .contact::before {
   content: "";
@@ -2334,5 +2335,11 @@ br {
   }
   .contact__container {
     min-height: 1063px;
+  }
+}
+@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+  .physics__star {
+    -webkit-transition: 0;
+    transition: 0;
   }
 }

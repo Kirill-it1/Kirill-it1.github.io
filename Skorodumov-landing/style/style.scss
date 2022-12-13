@@ -135,6 +135,7 @@ br{
 	}
 }
 .header-lang {
+	display: none;
 	margin-left: auto;
 	width: 128px;
 	height: 63px;
@@ -1651,7 +1652,7 @@ br{
 		left: -15%;
 		background: #0A2349;
 		filter: blur(100px);
-		z-index: -1;
+		z-index: 2000;
 	}
 	&::before{
 		content: '';
@@ -3108,6 +3109,14 @@ br{
 		min-height: 1063px;
 		&__container{
 			min-height: 1063px;
+		}
+	}
+}
+
+@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+	.physics{
+		&__star{
+			transition: 0;
 		}
 	}
 }
