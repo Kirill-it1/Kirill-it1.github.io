@@ -2339,7 +2339,7 @@ br {
 }
 @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
   .physics__star {
-    -webkit-transition: 0;
-    transition: 0;
+    -webkit-transition: 0s;
+    transition: 0s;
   }
 }
