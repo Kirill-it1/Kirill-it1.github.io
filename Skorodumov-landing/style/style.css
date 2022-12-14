@@ -1152,6 +1152,10 @@ br {
   font-weight: 600;
   color: #26AEE8;
   display: inline;
+  text-decoration: none;
+}
+.finance__text .bblue:hover {
+  text-decoration: underline;
 }
 .finance__list {
   font-weight: 200;
