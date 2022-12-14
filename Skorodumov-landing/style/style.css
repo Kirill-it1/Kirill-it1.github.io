@@ -1139,7 +1139,7 @@ br {
 }
 .finance__text {
   width: 100%;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 24px;
   line-height: 125%;
   color: white;
@@ -1433,6 +1433,7 @@ br {
   visibility: visible;
 }
 .physics__text {
+  color: white;
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
