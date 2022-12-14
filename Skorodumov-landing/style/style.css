@@ -796,6 +796,12 @@ br {
   margin-bottom: 16px;
   min-height: 66px;
   letter-spacing: -0.011em;
+  overflow: hidden;
+}
+.publications__subtitle:not(.publications__subtitle_no) {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .publications__subtitle sup {
   color: white;
@@ -808,29 +814,16 @@ br {
   overflow: hidden;
   position: relative;
   line-height: 1.33em;
-  max-height: 6.65em;
-  padding-right: 0.5em;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .publications__desc .bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.5019607843);
 }
 .publications__desc sup {
   color: white;
-}
-.publications__desc::before {
-  content: "...";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-.publications__desc::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 1em;
-  height: 1em;
-  margin-top: 0.2em;
-  background: #0A2349;
 }
 .publications__button {
   display: -webkit-inline-box;
@@ -889,6 +882,7 @@ br {
 }
 
 .slider-top {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -896,6 +890,7 @@ br {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 47px;
+  margin-left: 15px;
   z-index: 105;
 }
 
@@ -1185,7 +1180,7 @@ br {
   font-weight: 200;
   font-size: 20px;
   line-height: 120%;
-  color: #5A6A84;
+  color: #26AEE8;
   width: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1205,7 +1200,7 @@ br {
 .finance-desc__arrow {
   width: 30px;
   height: 8px;
-  background-image: url("../img/icons/arrow_disabled.svg");
+  background-image: url("../img/icons/arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1804,8 +1799,8 @@ br {
     padding: 20px;
   }
   .physics__text {
-    font-size: 12px;
-    line-height: 167%;
+    font-size: 13px;
+    line-height: 154%;
   }
 }
 @media screen and (max-width: 625px) {
@@ -1884,10 +1879,6 @@ br {
   .physics__desc {
     padding: 20px;
   }
-  .physics__text {
-    font-size: 12px;
-    line-height: 167%;
-  }
 }
 @media screen and (max-width: 500px) {
   .physics__title {
@@ -1957,10 +1948,6 @@ br {
   .physics__desc {
     padding: 20px;
   }
-  .physics__text {
-    font-size: 12px;
-    line-height: 167%;
-  }
 }
 @media screen and (max-width: 430px) {
   .physics__title {
@@ -2013,10 +2000,6 @@ br {
   }
   .physics__desc {
     padding: 20px;
-  }
-  .physics__text {
-    font-size: 12px;
-    line-height: 167%;
   }
 }
 @media screen and (max-width: 350px) {
@@ -2071,10 +2054,6 @@ br {
   .physics__desc {
     padding: 20px;
   }
-  .physics__text {
-    font-size: 12px;
-    line-height: 167%;
-  }
 }
 @media screen and (max-width: 1024px) {
   .finance::after {
@@ -2094,6 +2073,14 @@ br {
 @media screen and (max-width: 900px) {
   .finance__item {
     width: 180px;
+  }
+}
+@media screen and (min-width: 699px) {
+  .finance-desc__dates {
+    color: #5A6A84;
+  }
+  .finance-desc__arrow {
+    background-image: url("../img/icons/arrow_disabled.svg");
   }
 }
 @media screen and (max-width: 700px) {
@@ -2167,12 +2154,30 @@ br {
     margin: 0;
   }
   .finance__text {
+    font-size: 13px;
+    line-height: 154%;
+  }
+  .finance__text:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .finance__text_title {
     font-size: 16px;
-    line-height: 188%;
+    line-height: 20px;
+  }
+  .finance__list .link {
+    font-size: 13px;
+    line-height: 154%;
+  }
+  .finance__list .link:not(:last-child) {
+    margin-bottom: 5px;
   }
   .finance__list-item {
-    font-size: 16px;
-    line-height: 188%;
+    font-size: 13px;
+    line-height: 154%;
+    margin-left: 20px;
+  }
+  .finance__list-item:not(:last-child) {
+    margin-bottom: 5px;
   }
   .finance__date {
     font-size: 16px;
@@ -2190,7 +2195,7 @@ br {
 }
 @media screen and (max-width: 1600px) {
   .publications__subtitle {
-    min-height: 90px;
+    min-height: 65px;
   }
 }
 @media screen and (max-width: 1324px) {
@@ -2200,7 +2205,7 @@ br {
 }
 @media screen and (max-width: 1285px) {
   .publications__subtitle {
-    min-height: 66px;
+    min-height: 65px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -2208,11 +2213,12 @@ br {
     display: none;
   }
   .publications__subtitle {
-    font-size: 20px;
+    font-size: 16px;
+    min-height: 43px;
   }
   .publications__desc {
-    font-size: 14px;
-    line-height: 171%;
+    font-size: 13px;
+    line-height: 154%;
     max-height: 8.65em;
   }
   .publications__item {
@@ -2261,6 +2267,13 @@ br {
   }
   .publications__title {
     margin-left: 15px;
+  }
+  .publications__desc {
+    -webkit-line-clamp: 6;
+  }
+  .publications__subtitle {
+    height: 44px;
+    margin-bottom: 12px;
   }
   .publications .slider-top {
     margin-left: 15px;

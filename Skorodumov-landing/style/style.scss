@@ -889,6 +889,7 @@ br{
 	}
 	&__title {
 		margin-bottom: 54px;
+
 		&:after{
 			content: '';
 			right: 0;
@@ -950,6 +951,14 @@ br{
 		margin-bottom: 16px;
 		min-height: 66px;
 		letter-spacing: -0.011em;
+		overflow: hidden;
+		&:not(.publications__subtitle_no){
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			
+		}
+		
 
 
 		& sup{
@@ -965,8 +974,10 @@ br{
 		overflow: hidden;
 		position: relative;
 		line-height: 1.33em;
-		max-height: 6.65em;
-		padding-right: 0.5em;
+		display: -webkit-box;
+		-webkit-line-clamp: 5;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 
 		& .bottom{
 			border-top: 1px solid #ffffff80;
@@ -976,21 +987,7 @@ br{
 			color: white;
 		}
 
-		&::before {
-			content: '...';
-			position: absolute;
-			right: 0;
-			bottom: 0;
-		}
-		&::after{
-			content: '';
-			position: absolute;
-			right: 0;
-			width: 1em;
-			height: 1em;
-			margin-top: 0.2em;
-			background:	#0A2349;
-		}
+		
 	}
 	&__button {
 		display: inline-flex;
@@ -1037,9 +1034,11 @@ br{
 .title {
 }
 .slider-top {
+	position: relative;
 	display: flex;
 	align-items: center;
 	margin-bottom: 47px;
+	margin-left: 15px;
 	z-index: 105;
 }
 .slider-nav {
@@ -1328,6 +1327,7 @@ br{
 		}
 	}
 	&-desc{
+
 		&__dates{
 			position: absolute;
 			top: 50%;
@@ -1335,7 +1335,7 @@ br{
 			font-weight: 200;
 			font-size: 20px;
 			line-height: 120%;
-			color: #5A6A84;
+			color: $active;
 			width: 180px;
 			display: flex;
 			align-items: center;
@@ -1347,7 +1347,7 @@ br{
 		&__arrow{
 			width: 30px;
 			height: 8px;
-			background-image: url('../img/icons/arrow_disabled.svg');
+			background-image: url('../img/icons/arrow.svg');
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -2253,8 +2253,8 @@ br{
 	}
 	&__text{
 
-		font-size: 12px;
-		line-height: 167%;
+		font-size: 13px;
+		line-height: 154%;
 		
 		&:nth-child(1){
 			
@@ -2391,8 +2391,7 @@ br{
 	}
 	&__text{
 
-		font-size: 12px;
-		line-height: 167%;
+
 		
 		&:nth-child(1){
 			
@@ -2527,8 +2526,7 @@ br{
 	}
 	&__text{
 
-		font-size: 12px;
-		line-height: 167%;
+
 		
 		&:nth-child(1){
 			
@@ -2658,8 +2656,6 @@ br{
 	}
 	&__text{
 
-		font-size: 12px;
-		line-height: 167%;
 		
 		&:nth-child(1){
 			
@@ -2788,8 +2784,7 @@ br{
 	}
 	&__text{
 
-		font-size: 12px;
-		line-height: 167%;
+		
 		
 		&:nth-child(1){
 			
@@ -2830,7 +2825,18 @@ br{
 		}
 	}
 }
-
+@media screen and (min-width: 699px) {
+	.finance{
+		&-desc{
+			&__dates{
+				color: #5A6A84
+			}
+			&__arrow{
+				background-image: url('../img/icons/arrow_disabled.svg');
+			}
+		}
+	}
+}
 @media screen and (max-width: 700px) {
 	.finance{
 		padding-bottom: 350px;
@@ -2910,12 +2916,33 @@ br{
 			margin: 0;
 		}
 		&__text{
-			font-size: 16px;
-			line-height: 188%;
+			font-size: 13px;
+			line-height: 154%;
+			&:not(:last-child){
+				margin-bottom: 12px;
+			}
+
+			&_title{
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
+		&__list{
+			& .link{
+				font-size: 13px;
+				line-height: 154%;
+				&:not(:last-child){
+					margin-bottom: 5px;
+				}
+			}
 		}
 		&__list-item{
-			font-size: 16px;
-			line-height: 188%;
+			font-size: 13px;
+			line-height: 154%;
+			margin-left: 20px;
+			&:not(:last-child){
+				margin-bottom: 5px;
+			}
 		}
 		&__date{
 			font-size: 16px;
@@ -2939,7 +2966,7 @@ br{
 @media screen and (max-width: 1600px) {
 	.publications{
 		&__subtitle{
-			min-height: 90px;
+			min-height: 65px;
 		}
 	}
 }
@@ -2958,7 +2985,7 @@ br{
 @media screen and (max-width:  1285px) {
 	.publications{
 		&__subtitle{
-			min-height: 66px;
+			min-height: 65px;
 		}
 	}
 }
@@ -2971,11 +2998,12 @@ br{
 			}
 		}
 		&__subtitle{
-			font-size: 20px;
+			font-size: 16px;
+			min-height: 43px;
 		}
 		&__desc{
-			font-size: 14px;
-			line-height: 171%;
+			font-size: 13px;
+			line-height: 154%;
 			max-height: 8.65em;
 		}
 		&__item{
@@ -3041,6 +3069,13 @@ br{
 		}
 		&__title{
 			margin-left: 15px;
+		}
+		&__desc{
+			-webkit-line-clamp: 6;
+		}
+		&__subtitle{
+			height: 44px;
+			margin-bottom: 12px;
 		}
 		.slider-top{
 			margin-left: 15px;
