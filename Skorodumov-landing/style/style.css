@@ -807,7 +807,7 @@ br {
   color: white;
 }
 .publications__desc {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 18px;
   color: white;
   margin-bottom: 22px;
@@ -2219,6 +2219,7 @@ br {
     font-size: 13px;
     line-height: 154%;
     max-height: 8.65em;
+    font-weight: 400;
   }
   .publications__item {
     padding: 30px 20px;
