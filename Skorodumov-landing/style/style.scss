@@ -621,6 +621,9 @@ br{
 	}
 	&__button {
 		margin-right: 10px;
+		&:hover{
+			background: #0A2349;
+		}
 	}
 	&__next {
 	}
@@ -2250,6 +2253,7 @@ br{
 	&__desc{
 
 		padding: 20px;
+		box-shadow: 0px 0px 30px rgba(49, 196, 248, 0.3), inset 0px 0px 30px rgba(49, 196, 248, 0.3);
 		
 		
 		&_active{
@@ -3033,6 +3037,9 @@ br{
 			&::before{
 				display: none;
 			}
+		}
+		&__item:hover{
+			box-shadow: none;
 		}
 		&__social{
 			margin-left: 15px;
