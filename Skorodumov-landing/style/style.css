@@ -277,7 +277,7 @@ br {
 .intro {
   min-height: 130vh;
   width: 100%;
-  background: url("../img/background-svg/intro-3.svg"), url("../img/background-svg/intro-2.svg"), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.svg");
+  background: url("../img/background-svg/intro-3.svg"), url("../img/background-svg/intro-2.svg"), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.png");
   background-repeat: no-repeat;
   background-position: bottom left, 60% center, right, right;
   background-size: 522px 595px, contain, cover, cover;
@@ -420,7 +420,7 @@ br {
 
 @media screen and (max-width: 1800px) {
   .intro {
-    background: url("../img/background-svg/intro-2.svg"), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.svg");
+    background: url("../img/background-svg/intro-2.svg"), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.png");
     background-repeat: no-repeat;
     background-position: 60% center, right, right;
     background-size: contain, cover, cover;
@@ -484,8 +484,8 @@ br {
     transition: 0.3s all;
   }
   .intro {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(10, 35, 73, 0.8)), to(rgba(10, 35, 73, 0.8))), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.svg");
-    background: linear-gradient(to right, rgba(10, 35, 73, 0.8), rgba(10, 35, 73, 0.8)), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.svg");
+    background: -webkit-gradient(linear, left top, right top, from(rgba(10, 35, 73, 0.8)), to(rgba(10, 35, 73, 0.8))), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.png");
+    background: linear-gradient(to right, rgba(10, 35, 73, 0.8), rgba(10, 35, 73, 0.8)), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.png");
     background-repeat: no-repeat;
     background-position: center, 79.5%, 79.5%;
     background-size: cover, cover, cover;
@@ -1224,7 +1224,7 @@ br {
   min-height: 145vh;
   width: 100%;
   padding-left: 110px;
-  background-image: url("../img/background-svg/physics.svg");
+  background-image: url("../img/background-svg/physics.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1650,7 +1650,7 @@ br {
     min-height: 1600px;
     width: 100%;
     padding-left: 110px;
-    background-image: url("../img/background-svg/physics.svg");
+    background-image: url("../img/background-svg/physics.png");
     background-size: 150% auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -1749,7 +1749,7 @@ br {
     position: relative;
     min-height: 90vh;
     width: 100%;
-    background-image: url("../img/background-svg/physics.svg");
+    background-image: url("../img/background-svg/physics.png");
     background-size: 150% auto;
     background-position: center;
     background-repeat: no-repeat;
