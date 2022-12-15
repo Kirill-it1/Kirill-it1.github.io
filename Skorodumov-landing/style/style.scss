@@ -256,7 +256,7 @@ br{
 		url('../img/background-svg/intro-3.svg'),
 		url('../img/background-svg/intro-2.svg'),
 		radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%),
-		url('../img/intro.png');
+		url('../img/intro.svg');
 	background-repeat: no-repeat;
 	background-position: bottom left, 60% center, right, right;
 	background-size: 522px 595px, contain, cover, cover;
@@ -389,7 +389,7 @@ br{
 	background:
 		url('../img/background-svg/intro-2.svg'),
 		radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%),
-		url('../img/intro.png');
+		url('../img/intro.svg');
 	background-repeat: no-repeat;
 	background-position:  60% center, right, right;
 	background-size: contain, cover, cover;
@@ -458,7 +458,7 @@ br{
 	background:
 		linear-gradient(to right, rgba(10, 35, 73, 0.8), rgba(10, 35, 73, 0.8)),
 		radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%),
-		url('../img/intro.png');
+		url('../img/intro.svg');
 	background-repeat: no-repeat;
 	background-position: center, 79.5%, 79.5%;
 	background-size: cover, cover, cover;
@@ -2045,6 +2045,12 @@ br{
 }
 }
 @media screen and (max-width: 1200px) {
+	.slider__button:hover{
+		opacity: 1;
+	}
+	.slider__button_disabled.slider__button:hover{
+		opacity: 0.3;
+	}
 	.physics {
 	
 	&__star {
@@ -2142,6 +2148,7 @@ br{
 }
 }
 @media screen and (max-width: 790px) {
+
 	.physics {
 		padding-left: 15px;
 		position: relative;
