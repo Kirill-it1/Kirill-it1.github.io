@@ -1,4 +1,4 @@
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 let winWidth = window.screen.width;
 function slider_init(q, ind) {
@@ -499,4 +499,4 @@ publ_btns.forEach((link, index) => {
 
 
 
-}
+});
