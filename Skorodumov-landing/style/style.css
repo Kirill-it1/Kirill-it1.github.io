@@ -277,7 +277,7 @@ br {
 .intro {
   min-height: 130vh;
   width: 100%;
-  background: url("../img/background-svg/intro-3.svg"), url("../img/background-svg/intro-2.svg"), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.png");
+  background: url("../img/background-svg/intro-3.svg"), url("../img/background-svg/intro-2.svg"), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.webp");
   background-repeat: no-repeat;
   background-position: bottom left, 60% center, right, right;
   background-size: 522px 595px, contain, cover, cover;
@@ -420,7 +420,7 @@ br {
 
 @media screen and (max-width: 1800px) {
   .intro {
-    background: url("../img/background-svg/intro-2.svg"), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.png");
+    background: url("../img/background-svg/intro-2.svg"), radial-gradient(51.77% 52.78% at 71.67% 44.3%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/intro.webp");
     background-repeat: no-repeat;
     background-position: 60% center, right, right;
     background-size: contain, cover, cover;
@@ -1224,7 +1224,7 @@ br {
   min-height: 145vh;
   width: 100%;
   padding-left: 110px;
-  background-image: url("../img/background-svg/physics.png");
+  background-image: url("../img/background-svg/physics.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1456,8 +1456,8 @@ br {
   position: relative;
   min-height: 1000px;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, #0A2349)), -webkit-gradient(linear, left top, left bottom, color-stop(3.6%, #0A2349), color-stop(74.98%, rgba(10, 35, 73, 0.6))), url("../img/background-svg/contact.svg"), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.png");
-  background: linear-gradient(to bottom, transparent, #0A2349 70%), linear-gradient(180deg, #0A2349 3.6%, rgba(10, 35, 73, 0.6) 74.98%), url("../img/background-svg/contact.svg"), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.png");
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, #0A2349)), -webkit-gradient(linear, left top, left bottom, color-stop(3.6%, #0A2349), color-stop(74.98%, rgba(10, 35, 73, 0.6))), url("../img/background-svg/contact.svg"), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.webp");
+  background: linear-gradient(to bottom, transparent, #0A2349 70%), linear-gradient(180deg, #0A2349 3.6%, rgba(10, 35, 73, 0.6) 74.98%), url("../img/background-svg/contact.svg"), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.webp");
   background-repeat: no-repeat;
   background-size: 100% 300px, cover, auto 100%, cover, cover;
   background-position: bottom, 15%, center, center;
@@ -1538,8 +1538,8 @@ br {
     position: relative;
     min-height: 100vh;
     width: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, #0A2349)), -webkit-gradient(linear, left top, left bottom, color-stop(3.6%, #0A2349), color-stop(74.98%, rgba(10, 35, 73, 0.6))), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.png");
-    background: linear-gradient(to bottom, transparent, #0A2349 70%), linear-gradient(180deg, #0A2349 3.6%, rgba(10, 35, 73, 0.6) 74.98%), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.png");
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, #0A2349)), -webkit-gradient(linear, left top, left bottom, color-stop(3.6%, #0A2349), color-stop(74.98%, rgba(10, 35, 73, 0.6))), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.webp");
+    background: linear-gradient(to bottom, transparent, #0A2349 70%), linear-gradient(180deg, #0A2349 3.6%, rgba(10, 35, 73, 0.6) 74.98%), radial-gradient(44.37% 102.93% at 61.48% 44.41%, rgba(7, 25, 65, 0) 0%, rgba(7, 25, 65, 0.58) 47.92%, #0A2349 100%), url("../img/contact/contact.webp");
     background-repeat: no-repeat;
     background-size: 100% 300px, cover, cover, cover;
     background-position: bottom, center, center, center;
@@ -1650,7 +1650,7 @@ br {
     min-height: 1600px;
     width: 100%;
     padding-left: 110px;
-    background-image: url("../img/background-svg/physics.png");
+    background-image: url("../img/background-svg/physics.webp");
     background-size: 150% auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -1749,7 +1749,7 @@ br {
     position: relative;
     min-height: 90vh;
     width: 100%;
-    background-image: url("../img/background-svg/physics.png");
+    background-image: url("../img/background-svg/physics.webp");
     background-size: 150% auto;
     background-position: center;
     background-repeat: no-repeat;
