@@ -118,7 +118,7 @@ sub {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid white;
+  border: 4px solid white;
 }
 .medium-bx {
   width: 21px;
