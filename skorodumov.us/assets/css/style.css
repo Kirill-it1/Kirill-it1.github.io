@@ -1692,6 +1692,6 @@ a.about-link{
   transition: .15s;
 }
 .card-btn:hover{
-  opacity: 0.9;
-  box-shadow: 0 0 3px 3px rgba(255,255,255, 0.3);
+  background: #dfdfdf;
+  border-color: #dfdfdf;
 }
