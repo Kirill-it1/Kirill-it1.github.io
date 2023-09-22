@@ -118,7 +118,7 @@ sub {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #0A2349;
+  border: 8px solid white;
 }
 .medium-bx {
   width: 21px;
@@ -1694,5 +1694,8 @@ a.about-link{
 button.card-btn:hover{
   background: #dfdfdf;
   border-color: #dfdfdf;
+  box-shadow: 0 0 20px 10px rgba(255,255,255,0.1);
+}
+.card_btn:hover{
   box-shadow: 0 0 20px 10px rgba(255,255,255,0.1);
 }
