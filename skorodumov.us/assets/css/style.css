@@ -1691,7 +1691,7 @@ a.about-link{
 .card-btn{
   transition: .15s;
 }
-.card-btn:hover{
+button.card-btn:hover{
   background: #dfdfdf;
   border-color: #dfdfdf;
 }
