@@ -17,13 +17,13 @@ body {
 a {
   /* color: #149ddd;
   text-decoration: none; */
-  color: #9183fb;
+  color: #26AEE8;
     font-weight: 500;
     text-decoration: none;
 }
 
 a:hover {
-  color: #9183fb;
+  color: #26AEE8;
   text-decoration: none;
 }
 
@@ -110,7 +110,7 @@ sub {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #000050;
+  background: #8097B9;
   overflow-y: auto;
 }
 
@@ -118,7 +118,7 @@ sub {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #000031;
+  border: 8px solid #0A2349;
 }
 .medium-bx {
   width: 21px;
@@ -220,7 +220,7 @@ color: #;
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: #a8a9b4;
+  color: #676978;
   padding: 12px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
@@ -350,7 +350,7 @@ color: #;
   padding: 10px 15px;
   border-radius: 30px;
   list-style-type: none;
-  border: 1px solid #9183fb;
+  border: 1px solid #26AEE8;
 }
 .hero-keys li a{
   letter-spacing: 0.024em;
@@ -789,7 +789,7 @@ width: 25%;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #9183fb;
+  background-color: #26AEE8;
 }
 
 /*--------------------------------------------------------------
@@ -969,7 +969,7 @@ font-weight: 600;
 }
 .card-btn{
   padding: 16px 137px;
-  color: #000031;
+  color: #0A2349;
   border: 1px solid #fff;
   border-radius: 30px;
   background: #fff;
@@ -1669,7 +1669,7 @@ margin-left: 11px;
 }
 li.about-item{
   transition: .15s;
-  border-color: #000031;
+  border-color: #0A2349;
 }
 a.about-link{
   border: 0;
