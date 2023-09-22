@@ -220,7 +220,7 @@ color: #;
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: #676978;
+  color: #404040;
   padding: 12px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
@@ -231,7 +231,7 @@ color: #;
 .nav-menu a:focus i {
   font-size: 24px;
   padding-right: 8px;
-  color: #6f7180;
+  color:#404040;;
 }
 
 .nav-menu a:hover,
@@ -1015,6 +1015,7 @@ font-weight: 600;
 
 
 #link-ease-in-out a {
+  color: #26AEE8;
   display: inline-block;
 font-weight: 600;
   line-height: 1;
@@ -1023,12 +1024,12 @@ font-weight: 600;
 }
 
 #link-ease-in-out a:after {
-  background-color: #130a08; 
+  background-color: #26AEE8; 
 
   display: block;
   content: "";
   margin-top: 5px;
-  height: 2px; 
+  height: 1.5px; 
   width: 0%;
   -webkit-transition: width .3s ease-in-out;
   -moz--transition: width .3s ease-in-out;
