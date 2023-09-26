@@ -100,11 +100,11 @@ a:hover{
     background: #fdece1;
     padding: 60px 40px;
     color: #993f48;
-    box-shadow: 0 0 20px 10px rgba(255,255,255,0.3);
+    box-shadow: 0 0 20px 10px rgba(95.625, 31.875, 33.013, 0.6);
 
 }
 .about__image{
-    box-shadow: 0 0 20px 10px rgba(255,255,255,0.3);
+    box-shadow: 0 0 20px 10px rgba(95.625, 31.875, 33.013, 0.6);
     border-radius: 25px;
     max-width: 379px;
     min-width: 230px;
@@ -177,7 +177,7 @@ a:hover{
     display: block;
     margin-right: 5px;
     margin-bottom: 5px;
-    box-shadow: 0 0 10px 4px rgba(255,255,255,0.3);
+    box-shadow: 0 0 10px 4px rgba(95.625, 31.875, 33.013, 0.6);
 
 }
 .min-text{
@@ -211,7 +211,7 @@ a:hover{
     transition: .2s;
 }
 .logo:hover{
-    box-shadow: 0 0 10px 4px rgba(255,255,255,0.3);
+    box-shadow: 0 0 10px 4px rgba(95.625, 31.875, 33.013, 0.6);
 }
 .logo-link::after{
     display: none;
