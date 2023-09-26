@@ -57,7 +57,7 @@ a{
     position: relative;
     text-decoration: none;
     transition: .1s;
-    color: #fff;
+    color: #4e1212;
     font-weight: bolder;
     font-size: 1.05em;
 
@@ -70,14 +70,14 @@ a::after{
     display: block;
     height: 1.5px;
     width: 0%;
-    background: #fff;
+    background: #b30c0c;
     transition: .25s;
 }
 a:hover::after{
     width: 100%;
 }
 a:hover{
-    color: #fde1e1;
+    color: #b30c0c;
 }
 
 .main-photo {
@@ -221,6 +221,9 @@ a:hover{
 }
 .pub a{
     font-size: 1.2em;
+}
+.pub li{
+    list-style-type: decimal;
 }
 .add__text{
     margin-bottom: 30px;
