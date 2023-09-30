@@ -58,3 +58,10 @@ a:hover{
 	text-decoration: none;
 
 }
+.title{
+	color: #070040;
+	letter-spacing: .1em;
+}
+.desc{
+	font-size: 1.1em
+}
