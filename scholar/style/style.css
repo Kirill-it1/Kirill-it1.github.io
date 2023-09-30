@@ -1,6 +1,10 @@
+html{
+	width: 100%;
+}
 body{
 	font-family: "Raleway", sans-serif;
 	box-sizing: border-box;
+	width: 100%;
 }
 .header{
 	width: 100%;
@@ -14,9 +18,8 @@ body{
 
 }
 .container{
-	width: 100%;
 	max-width: 1200px;
-	padding: 0 10px;
+	padding: 0 5px;
 	margin: 0 auto;
 	margin-bottom: 200px;
 }
@@ -47,6 +50,7 @@ body{
 	text-transform: uppercase;
 	border-bottom-width: 0;
 	text-align: left;
+	vertical-align: text-top;
 }
 .gs_title span{
 	font-size: .5em;
