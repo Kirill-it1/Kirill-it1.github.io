@@ -64,6 +64,7 @@ font-weight: 600;
   line-height: 1;
   text-decoration: none; 
   padding-bottom: 10px;
+  transition: .3s;
 
 }
 
@@ -91,4 +92,41 @@ a:focus:after {
 }
 .desc{
 	font-size: 1.1em
+}
+
+.hero-keys{
+  padding-left: 0rem;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 10px;
+  width: 70%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.hero-keys li{
+  padding: 10px 15px;
+  border-radius: 30px;
+  list-style-type: none;
+  border: 1px solid #127fad;
+  transition: .3s;
+}
+.hero-keys li a{
+  letter-spacing: 0.038em;
+  padding-bottom: 0;
+  font-weight: 400;
+  transition: 0s;
+}
+.hero-keys li a::after{
+	display: none;
+}
+
+.hero-keys li:hover a{
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.hero-keys li:hover{
+	box-shadow: 0 0 10px 5px rgba(0,0,150,0.1)
 }
