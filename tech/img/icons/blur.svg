@@ -13,7 +13,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
 	</filter>
 </defs>
 <g transform="translate(0.000000,966.000000) scale(0.1000,-0.1000)"
-fill="#3c8f30" fill-opacity="0.4" filter="url(#blur)" overflow="visible">
+fill="#3c8f30" fill-opacity="0.4" stroke="none" filter="url(#blur)" overflow="visible">
 <path d="M3700 9354 c-631 -52 -1001 -149 -1470 -383 -354 -177 -660 -400
 -955 -696 -503 -502 -817 -1057 -980 -1730 -83 -341 -109 -507 -125 -786 -45
 -775 192 -1617 646 -2299 232 -349 592 -740 949 -1033 556 -456 1211 -822
