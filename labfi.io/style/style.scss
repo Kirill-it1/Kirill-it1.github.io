@@ -169,16 +169,21 @@ body{
 .main {
 }
 .intro {
-	background-image: url('../img/main/bg_image.svg');
-	background-position: right;
-	background-size: contain;
-	background-repeat: no-repeat;
 	background-color: white;
+	&__container-l{
+		max-width: 1920px;
+		margin: 0 auto;
+		background-image: url('../img/main/bg_image.svg');
+		background-position: right;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
 	&__container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		height: 640px;
+		max-width: 1320px;
 	}
 	&__title {
 		&::after{
@@ -228,11 +233,12 @@ body{
 	}
 	&__subtitle {
 		margin-bottom: 24px;
+		font-weight: 600;
 	}
 	&__text {
 		line-height: 162.5%;
 		font-size: 16px;
-		color: $gray;
+		color: #949494;
 		margin-bottom: 44px;
 	}
 	&__button {
@@ -277,9 +283,9 @@ body{
 	padding: 35px 44px 52px;
 	border-top: 3px solid $gray_bg;
 	background: $gray_bg;
-	transition: .2s;
+	transition: 0s all, .2s background, .2s border;
 
-	&:hover{
+	&_f, &:hover{
 		background: #fff;
 		border-top: 3px solid $green;
 		box-shadow: 0 0 50px 10px rgba(0,0,0,0.1);

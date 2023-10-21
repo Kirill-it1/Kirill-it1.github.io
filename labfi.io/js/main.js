@@ -72,3 +72,12 @@ close_serv.addEventListener('click', () => {
   document.removeEventListener('wheel', prevent);
   serv_hid_f()
 });
+
+const serv_card = document.querySelectorAll('.services-card');
+serv_card.forEach((el)=>{
+    el.addEventListener('mouseover', () => {
+    serv_card.forEach((i)=>{
+      i.classList.remove('services-card_f');
+    });
+  });
+});
