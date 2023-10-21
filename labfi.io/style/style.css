@@ -246,7 +246,7 @@ body {
 }
 .services__container {
   padding: 0;
-  max-width: 1319px;
+  max-width: 1315px;
 }
 .services__subtitle {
   margin-bottom: 24px;
@@ -281,11 +281,11 @@ body {
   padding: 0 35px;
   margin: 0 auto;
   max-width: 1389px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 
 .services-wrapper {
-  background: #e4e4e4;
+  padding-bottom: 30px;
 }
 
 .services-card {
@@ -294,12 +294,14 @@ body {
   background: #F9F9FB;
   -webkit-transition: 0s all, 0.2s background, 0.2s border;
   transition: 0s all, 0.2s background, 0.2s border;
+  -webkit-box-shadow: 0px -1px 0 1px rgb(228, 228, 228);
+          box-shadow: 0px -1px 0 1px rgb(228, 228, 228);
 }
 .services-card_f, .services-card:hover {
   background: #fff;
   border-top: 3px solid #29AD26;
-  -webkit-box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.08);
   z-index: 1000;
 }
 .services-card__image {
