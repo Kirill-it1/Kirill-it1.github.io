@@ -73,11 +73,24 @@ close_serv.addEventListener('click', () => {
   serv_hid_f()
 });
 
+const serv_w = document.querySelector('.services-w');
 const serv_card = document.querySelectorAll('.services-card');
-serv_card.forEach((el)=>{
-    el.addEventListener('mouseover', () => {
-    serv_card.forEach((i)=>{
-      i.classList.remove('services-card_f');
-    });
+const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+bullets.forEach((bul, i) => {
+  if (i == 1) bul.classList.add('swiper-pagination-bullet_f');
+  else{
+    bul.classList.add('swiper-pagination-bullet_h');
+  }
+});
+
+
+serv_w.addEventListener('mouseover', () => {
+  bullets.forEach((bul, i) => {
+    bul.classList.remove('swiper-pagination-bullet_f');
+    bul.classList.remove('swiper-pagination-bullet_h');
+  });
+  serv_card.forEach((i)=>{
+    i.classList.remove('services-card_f');
   });
 });
+
