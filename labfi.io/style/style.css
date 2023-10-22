@@ -175,7 +175,7 @@ body {
   color: #fff;
   font-size: 18px;
   line-height: 24.5px;
-  font-weight: 600;
+  font-weight: 500;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -242,7 +242,7 @@ body {
 .title {
   font-size: 42px;
   line-height: 128.5%;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .services {
@@ -254,7 +254,7 @@ body {
 }
 .services__subtitle {
   margin-bottom: 24px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .services__text {
   line-height: 162.5%;
@@ -271,7 +271,7 @@ body {
   border: 1px solid #2E8D3A;
   border-radius: 8px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
   cursor: pointer;
   -webkit-transition: 0.2s;
@@ -294,6 +294,7 @@ body {
 }
 
 .services-card {
+  max-width: 440px;
   padding: 35px 44px 52px;
   border-top: 3px solid #F9F9FB;
   background: #F9F9FB;
@@ -416,7 +417,7 @@ body {
 }
 .services-hidden__text {
   max-width: 550px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   font-weight: 150%;
   color: #333333;
@@ -442,7 +443,7 @@ body {
   background-size: contain;
   background-position: center;
   padding: 60px;
-  height: 600px;
+  height: 500px;
 }
 
 .footer {
@@ -562,7 +563,7 @@ body {
 }
 .vision__text {
   color: #333333;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 162.5%;
 }
@@ -638,7 +639,7 @@ body {
 }
 .values__subtitle {
   margin-bottom: 16px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .values-main {
