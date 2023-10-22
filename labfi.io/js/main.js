@@ -6,7 +6,7 @@ const swiper = new Swiper('.swiper', {
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: '.services__pagination',
     clickable: true
   },
 
@@ -30,10 +30,10 @@ const swiper2 = new Swiper('.swiper-2', {
 
 
   // If we need pagination
-  /*pagination: {
-    el: '.swiper-pagination',
+  pagination: {
+    el: '.services-hidden__pagination',
     clickable: true
-  }, */
+  }, 
 
   // Navigation arrows
   navigation: {
@@ -51,9 +51,11 @@ const prevent = ev => ev.preventDefault();
 
 // ...
 // в вашей функции закрытия окна:
-
+const serv_pag = document.querySelector('.services__pagination');
+const serv_pag_bul = serv_pag.querySelectorAll('.swiper-pagination-bullet')
 serv_hid_f = () => {
   serv_hid.classList.toggle('services-hidden_visible');
+  serv_pag.classList.toggle('services__pagination_hidden');
   document.querySelectorAll('.container').forEach((cont) => {
     cont.classList.toggle('container_blur');
   });
@@ -80,6 +82,23 @@ const serv_card = document.querySelectorAll('.services-card');
 serv_w.addEventListener('mouseover', () => {
   serv_card.forEach((i)=>{
     i.classList.remove('services-card_f');
+  });
+});
+
+serv_card.forEach((el, i)=>{
+  el.addEventListener('mouseover', () => {
+    serv_pag_bul.forEach((bul) => {
+      bul.classList.remove('swiper-pagination-bullet_f');
+      bul.classList.add('swiper-pagination-bullet_h');
+    }); 
+    serv_pag_bul[i].classList.add('swiper-pagination-bullet_f');
+    serv_pag_bul[i].classList.remove('swiper-pagination-bullet_h');
+  });
+   el.addEventListener('mouseout', () => {
+    serv_pag_bul.forEach((bul) => {
+      bul.classList.remove('swiper-pagination-bullet_h');
+    }); 
+    serv_pag_bul[i].classList.remove('swiper-pagination-bullet_f');
   });
 });
 
