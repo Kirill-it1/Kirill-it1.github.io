@@ -468,7 +468,8 @@ body {
   transition: 0.2s;
 }
 .footer__privacy:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline 1px solid white;
+          text-decoration: underline 1px solid white;
 }
 .footer__privacy:nth-child(1) {
   padding-right: 32px;
