@@ -249,8 +249,32 @@ body {
   background: #F9F9FB;
 }
 .services__container {
+  position: relative;
   padding: 0;
-  max-width: 1315px;
+  max-width: 1320px;
+  padding-bottom: 40.5px;
+}
+.services__container::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 100%;
+  background: #F9F9FB;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+.services__container::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 100%;
+  background: #F9F9FB;
+  right: 0;
+  top: 0;
+  z-index: 100;
 }
 .services__subtitle {
   margin-bottom: 24px;
@@ -286,22 +310,17 @@ body {
   padding: 0 35px;
   margin: 0 auto;
   max-width: 1389px;
-  padding-bottom: 50px;
-}
-
-.services-wrapper {
-  padding-bottom: 30px;
+  padding-bottom: 37.5px;
 }
 
 .services-card {
-  max-width: 440px;
   padding: 35px 44px 52px;
   border-top: 3px solid #F9F9FB;
   background: #F9F9FB;
   -webkit-transition: 0s all, 0.2s background, 0.2s border;
   transition: 0s all, 0.2s background, 0.2s border;
-  -webkit-box-shadow: 0px -1px 0 1px rgb(228, 228, 228);
-          box-shadow: 0px -1px 0 1px rgb(228, 228, 228);
+  min-height: 497px;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
 }
 .services-card__img_g {
   display: none;
@@ -501,6 +520,7 @@ body {
 .footer__link-btn {
   width: 32px;
   height: 32px;
+  background-size: 12.8px;
 }
 
 .footer-left {

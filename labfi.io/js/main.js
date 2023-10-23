@@ -20,7 +20,7 @@ const swiper = new Swiper('.swiper', {
   slideToClickedSlide: false,
   centeredSlides: false,
   loopedSlides: 2,
-  spaceBetween: 1
+  spaceBetween: 0
 });
 
 const swiper2 = new Swiper('.swiper-2', {
@@ -44,7 +44,7 @@ const swiper2 = new Swiper('.swiper-2', {
   slidesPerView: 1,
   slideToClickedSlide: false,
   centeredSlides: false,
-  loopedSlides: 2,
+  loopedSlides: 0,
   spaceBetween: 100
 });
 const prevent = ev => ev.preventDefault();
