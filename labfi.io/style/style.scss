@@ -21,6 +21,25 @@ body{
 .subtitle{
 	
 }
+.to-top{
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	background-color: $green;
+	background-image: url('../img/icons/arrow-up.svg');
+	background-size: 17px;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 10000;
+	bottom: 24px;
+	right: 24px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: .2s;
+	&:hover{
+		background-color: $green_dark;
+	}
+}
 .container{
 	max-width: 1320px;
 	margin: 0 auto;
@@ -172,6 +191,7 @@ body{
 }
 .intro {
 	background-color: white;
+
 	&__container-l{
 		max-width: 1920px;
 		margin: 0 auto;
@@ -231,6 +251,7 @@ body{
 }
 .services {
 	background: $gray_bg;
+	box-shadow: 0 -20px 35px 10px rgba(249, 249, 251, 1);
 	&__container {
 		position: relative;
 		padding: 0;
@@ -313,7 +334,7 @@ body{
 	background: $gray_bg;
 	transition: 0s all, .2s background, .2s border;
 	min-height: 497px;
-	border-right: 1px solid rgba(0,0,0,0.25);
+	border-right: 1px solid rgba(0,0,0,0.15);
 	&__img {
 		&_g{
 			display: none;
@@ -715,16 +736,62 @@ body{
 
 
 
-.dop{
+.planets{
 	height: 100vh;
 	background-color: $gray_bg;
+	padding-top: 80px;
+	&__container{
+		max-width: 1316px;
+		position: relative;
+	}
+	&__text{
+		font-size: 16px;
+		line-height: 26px;
+		color: #333333;
+		font-weight: 400;
+		margin-bottom: 80px;
+	}
+	&__ab{
+		position: absolute;
+		width: 100%;
+		max-width: 647px;
+		padding: 10px 24px;
+
+
+		&_left{
+			top: 159px;
+			left: 0;
+			background: linear-gradient(90deg, rgba(123, 120, 120, 0.05) 0%, rgba(123, 120, 120, 0) 87.39%);
+
+		}
+		&_right{
+			right: 0;
+			bottom: 42px;
+			background: linear-gradient(90deg, rgba(50, 181, 47, 0) 6.57%, rgba(52, 183, 49, 0.05) 100%);
+			& .planets__ab-text{
+				color: $green;
+				margin-left: auto;
+			}
+		}
+
+		&-text{
+			display: block;
+			max-width: 169px;
+			font-size: 22px;
+			font-weight: 700;
+			line-height: 30px;
+			color: #7C7979;
+
+		}
+	}
 }
-.dop-w{
-	width: 736px;
+.planets-wrapper{
+	max-width: 936px;
+	width: 100%;
 	padding: 0 150px;
 	margin: 100px auto;
 }
-.dop-image{
+.planetarium{
 	width: 100%;
 	padding-top: 100%;
 	background-image: url('../img/solution/intro.svg');
@@ -732,17 +799,238 @@ body{
 	background-size: contain;
 	background-position: center;
 	position: relative;
+	z-index: 100;
 }
-.dop-s{
+.planetarium-center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 33.9623%;
+	height: 33.9623%;
+	background-color: transparent;
+	border-radius: 50%;
+	overflow: hidden;
+	&__button{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: linear-gradient(282.51deg, #1EA22E -0.69%, #11CD0C 83.72%);
+		width: 100%;
+		height: 49.305%;
+		font-size: 18px;
+		font-weight: 700;
+		color: #fff;
+		text-align: center;
+		padding-left: 8.8%;
+		padding-right: 8.8%;
+		line-height: 136%;
+		transition: .2s;
+		&:hover{
+			background: linear-gradient(282.51deg, #15A026 -0.69%, #1BB018 83.72%);
+		}
+		&:first-child{
+			margin-bottom: 1.39%;
+			padding-top: 11.19%
+		}
+		&:last-child{
+			padding-bottom: 11.19%
+		}
+	}
+}
+a.planetarium__planet{
 	position: absolute;
 	display: block;
-	width: 10px;
-	height: 10px;
+	width: 48px;
+	height: 48px;
 	border-radius: 50%;
-	background-color: $green;
-	right: calc(50% - 50% * cos(3.14159 / 12));
-	top: calc(50% - 50% * sin(3.14159 / 12));
+	background-image: url('../img/solution/icons/ellipse.png');
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: center;
 	transform: translate(50%, -50%);
+	background-color: transparent;
+	transition: .2s;
+	cursor: pointer;
+	text-decoration: none;
+	filter: drop-shadow( 0 24px 23px rgba(0,0,0,0.3));
+	&::after{
+		color: #333333;
+		box-sizing: content-box;
+		top: 5px;
+		display: block;
+		position: absolute;
+		padding: 5px;
+		padding-left: 0;
+		font-size: 20px;
+		line-height: 135%;
+		font-weight: 600;
+		transition: .2s all;
+	}
+	&:hover{
+		background-size: 48px 48px;
 
+		&::after{
+			color: $green_dark;
+		}
+	}
 
+}
+#cmdts{
+	right: calc(50% - 50% * cos(3.14159 / 20));
+	top: calc(50% - 50% * sin(3.14159 / 20));
+	&::after{
+		content: 'Commodities';
+
+		right: -12px;
+		transform: translate(100%, );
+	}
+}
+#for_exc{
+	right: calc(50% - 50% * cos(6 * 3.14159 / 20));
+	top: calc(50% - 50% * sin(6 * 3.14159 / 20));
+	&::after{
+		content: 'Foreign Exchange';
+
+		right: -12px;
+		transform: translate(100%, 0);
+	}
+}
+#equ{
+	right: calc(50% - 50% * cos(12 * 3.14159 / 20));
+	top: calc(50% - 50% * sin(12 * 3.14159 / 20));
+	&::after{
+		content: 'Equities';
+
+		left: -12px;
+		transform: translate(-100%, 0);
+	}
+}
+#digas{
+	right: calc(50% - 50% * cos(17.5 * 3.14159 / 20));
+	top: calc(50% - 50% * sin(17.5 * 3.14159 / 20));
+	&::after{
+		content: 'Digital Assets';
+
+		left: -12px;
+		transform: translate(-100%, 0);
+	}
+}
+#ins{
+	right: calc(50% - 50% * cos(23 * 3.14159 / 20));
+	top: calc(50% - 50% * sin(23 * 3.14159 / 20));
+	&::after{
+		content: 'Insurance';
+
+		left: -12px;
+		transform: translate(-100%, 0);
+	}
+}
+#infl{
+	right: calc(50% - 50% * cos(26.5 * 3.14159 / 20));
+	top: calc(50% - 50% * sin(26.5 * 3.14159 / 20));
+	&::after{
+		content: 'Inflation';
+
+		left: -12px;
+		transform: translate(-100%, 0);
+	}
+}
+#cred{
+	right: calc(50% - 50% * cos(31 * 3.14159 / 20));
+	top: calc(50% - 50% * sin(31 * 3.14159 / 20));
+	&::after{
+		content: 'Credit';
+
+		right: -12px;
+		transform: translate(100%, 0);
+	}
+}
+#fxd_inc{
+	right: calc(50% - 50% * cos(36 * 3.14159 / 20));
+	top: calc(50% - 50% * sin(36 * 3.14159 / 20));
+	&::after{
+		content: 'Fixed Income';
+
+		right: -12px;
+		transform: translate(100%, 0);
+	}
+}
+a.planetarium__planet_g{
+	position: absolute;
+	display: block;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-image: url('../img/solution/icons/ellipse_gray.png');
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: center;
+	transform: translate(50%, -50%);
+	transition: .2s;
+	cursor: pointer;
+	text-decoration: none;
+	&::after{
+		color: #333333;
+		box-sizing: content-box;
+		top: 5px;
+		display: block;
+		position: absolute;
+		padding: 5px;
+		padding-left: 0;
+		font-size: 20px;
+		line-height: 135%;
+		font-weight: 600;
+		transition: .2s all;
+	}
+}
+#anlcs{
+	right: calc(50% - 32.7% * cos(2.8 * 3.14159 / 20));
+	top: calc(50% - 32.7% * sin(2.8 * 3.14159 / 20));
+	&::after{
+		content: 'Analytics';
+
+		right: -12px;
+		transform: translate(35%, 130%);
+	}
+}
+#pdcts{
+	right: calc(50% - 32.7% * cos(10.5 * 3.14159 / 20));
+	top: calc(50% - 32.7% * sin(10.5 * 3.14159 / 20));
+	&::after{
+		content: 'Products';
+
+		right: -12px;
+		transform: translate(100%, 0);
+	}
+}
+#vldt{
+	right: calc(50% - 32.7% * cos(19 * 3.14159 / 20));
+	top: calc(50% - 32.7% * sin(19 * 3.14159 / 20));
+	&::after{
+		content: 'Validations';
+
+		right: -12px;
+		transform: translate(25%, -130%);
+	}
+}
+#mtds{
+	right: calc(50% - 32.7% * cos(26.5 * 3.14159 / 20));
+	top: calc(50% - 32.7% * sin(26.5 * 3.14159 / 20));
+	&::after{
+		content: 'Methods';
+
+		right: -12px;
+		transform: translate(100%, 0);
+	}
+}
+#mdls{
+	right: calc(50% - 32.7% * cos(35 * 3.14159 / 20));
+	top: calc(50% - 32.7% * sin(35 * 3.14159 / 20));
+	&::after{
+		content: 'Models';
+
+		right: -12px;
+		transform: translate(50%, -130%);
+	}
 }
