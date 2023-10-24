@@ -281,8 +281,9 @@ body{
 		}
 	}
 	&__subtitle {
+		color: #333333;
 		margin-bottom: 24px;
-		font-weight: 500;
+		font-weight: 600;
 	}
 	&__text {
 		line-height: 162.5%;
@@ -313,6 +314,14 @@ body{
 	&__prev {
 	}
 	&__next {
+	}
+	&__nxt{
+		transform: translateX(100%);
+		right: 8px;
+	}
+	&__prv{
+		transform: translateX(-100%) rotate(180deg);
+		left: 8px;
 	}
 }
 .swiper {
@@ -521,7 +530,7 @@ body{
 		line-height: .85em;
 		transition: .2s;
 		&:hover{
-			text-decoration:  underline 1px solid white;
+			color: $green
 		}
 
 	}
