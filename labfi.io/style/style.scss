@@ -26,6 +26,19 @@ body{
 	height: 100%;
 	object-fit: contain;
 }
+.link-btn {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	border: 1px solid $blue_dark;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px auto;
+	transition: .2s;
+}
+.link-btn_linkedin {
+	background-image: url('../img/icons/linkedin.svg')
+}
 .to-top{
 	position: fixed;
 	width: 60px;
@@ -89,9 +102,10 @@ body{
 		align-items: center;
 	}
 	&__link-btn {
+		background-position: center 10.5px;
 		&:hover{
 			background-color: $blue_dark;
-			background-image: url('../img/icons/linkedin_hover.svg')
+			background-image: url('../img/icons/linkedin_hover.svg');
 		}
 	}
 
@@ -165,19 +179,7 @@ body{
 	&__link {
 	}
 }
-.link-btn {
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	border: 1px solid $blue_dark;
-	background-repeat: no-repeat;
-	background-position: center 10.5px;
-	background-size: 16px auto;
-	transition: .2s;
-}
-.link-btn_linkedin {
-	background-image: url('../img/icons/linkedin.svg')
-}
+
 .btn {
 	display: block;
 	padding: 12px 17px 12px 17px;
