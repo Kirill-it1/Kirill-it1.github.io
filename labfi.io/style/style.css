@@ -16,6 +16,13 @@ body {
   overflow: hidden;
 }
 
+.img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .to-top {
   position: fixed;
   width: 60px;
@@ -178,7 +185,7 @@ body {
   height: 40px;
   border: 1px solid #1B3949;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 10.5px;
   background-size: 16px auto;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -647,6 +654,7 @@ body {
   padding: 80px 0;
 }
 .team__title {
+  color: #333333;
   margin-bottom: 24px;
 }
 .team__text {
@@ -681,11 +689,14 @@ body {
 .team-card__image {
   margin: 0 auto 47px;
   max-width: 238px;
+  height: 273px;
 }
 .team-card__subtitle {
   margin-bottom: 16px;
   font-size: 24px;
   line-height: 133%;
+  color: #333333;
+  font-weight: 600;
 }
 .team-card__text {
   line-height: 162%;
@@ -714,7 +725,8 @@ body {
 }
 .values__subtitle {
   margin-bottom: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #333333;
 }
 
 .values-main {
@@ -795,6 +807,7 @@ body {
 .planets__ab_right .planets__ab-text {
   color: #29AD26;
   margin-left: auto;
+  max-width: 109px;
 }
 .planets__ab-text {
   display: block;
@@ -886,8 +899,8 @@ a.planetarium__planet {
   transition: 0.2s;
   cursor: pointer;
   text-decoration: none;
-  -webkit-filter: drop-shadow(0 24px 23px rgba(0, 0, 0, 0.3));
-          filter: drop-shadow(0 24px 23px rgba(0, 0, 0, 0.3));
+  -webkit-filter: drop-shadow(0 24px 23px rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(0 24px 23px rgba(0, 0, 0, 0.35));
 }
 a.planetarium__planet::after {
   color: #333333;
@@ -1085,4 +1098,78 @@ a.planetarium__planet_g::after {
   right: -12px;
   -webkit-transform: translate(50%, -130%);
           transform: translate(50%, -130%);
+}
+
+.grid {
+  padding-bottom: 48px;
+}
+.grid-card {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+}
+.grid-card__desc {
+  padding: 70px;
+  -ms-flex-preferred-size: 856px;
+      flex-basis: 856px;
+  -ms-flex-negative: 3;
+      flex-shrink: 3;
+}
+.grid-card__title {
+  color: #333333;
+  font-size: 28px;
+  line-height: 135%;
+  font-weight: 600;
+}
+.grid-card__title::after {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 3px;
+  background: #29AD26;
+  margin: 24px 0;
+}
+.grid-card__text {
+  color: #333333;
+  font-size: 16px;
+  line-height: 162.5%;
+  font-weight: 600;
+  margin-bottom: 40px;
+  max-width: 540px;
+}
+.grid-card__ul {
+  margin-left: 26px;
+}
+.grid-card__li {
+  color: #6F6F6F;
+  font-size: 16px;
+  line-height: 162.5%;
+  list-style-image: url("../img/icons/li-cube.svg");
+  padding-left: 8px;
+}
+.grid-card__li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.grid-card__image {
+  background: #F9F9FB;
+  padding: 45px;
+  -ms-flex-preferred-size: 416px;
+      flex-basis: 416px;
+  margin: 24px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+.grid-card__image_left {
+  margin-right: 0;
+}
+.grid-card__image_right {
+  margin-left: 0;
 }
