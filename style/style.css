@@ -531,6 +531,7 @@ body {
   padding: 32px 0;
 }
 .footer__container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,8 +546,8 @@ body {
   position: relative;
   color: #fff;
   line-height: 0.85em;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 .footer__privacy:hover {
   color: #29AD26;
@@ -559,7 +560,11 @@ body {
   padding-left: 32px;
 }
 .footer__allrights {
-  margin-left: 67px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0 auto;
 }
 .footer__link-btn {
   width: 32px;
