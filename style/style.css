@@ -1139,7 +1139,7 @@ a.planetarium__planet_g::after {
   margin-bottom: 32px;
 }
 .grid-card__desc {
-  padding: 70px;
+  padding: 70px 70px 44px;
   -ms-flex-preferred-size: 856px;
       flex-basis: 856px;
   -ms-flex-negative: 3;
