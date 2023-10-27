@@ -40,6 +40,7 @@ body {
 }
 
 .to-top {
+  display: block;
   position: fixed;
   width: 60px;
   height: 60px;
@@ -642,7 +643,11 @@ body {
   padding: 80px 0;
 }
 .vision__title {
+  font-weight: 600;
   margin: 0 0 44px;
+  color: black;
+  font-size: 36px;
+  line-height: 125%;
 }
 .vision__desc {
   padding: 40px;
@@ -653,20 +658,28 @@ body {
 }
 .vision__text {
   color: #333333;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   line-height: 162.5%;
+  margin-bottom: 20px;
+}
+.vision__text_r {
+  font-weight: 400;
 }
 
 .team {
   padding: 80px 0;
 }
 .team__title {
-  color: #333333;
+  font-weight: 600;
+  color: black;
   margin-bottom: 24px;
+  font-size: 36px;
+  line-height: 125%;
 }
 .team__text {
   margin-bottom: 44px;
+  color: #333333;
 }
 
 .team-grid {
@@ -732,6 +745,7 @@ body {
   margin-bottom: 71px;
 }
 .values__subtitle {
+  font-size: 24px;
   margin-bottom: 16px;
   font-weight: 600;
   color: #333333;
@@ -779,7 +793,6 @@ body {
 }
 
 .planets {
-  height: 100vh;
   background-color: #F9F9FB;
   padding-top: 80px;
 }
@@ -1109,6 +1122,7 @@ a.planetarium__planet_g::after {
 }
 
 .grid {
+  padding-top: 80px;
   padding-bottom: 48px;
 }
 .grid-card {
@@ -1168,7 +1182,7 @@ a.planetarium__planet_g::after {
 }
 .grid-card__image {
   background: #F9F9FB;
-  padding: 45px;
+  padding: 71px 52px;
   -ms-flex-preferred-size: 416px;
       flex-basis: 416px;
   margin: 24px;

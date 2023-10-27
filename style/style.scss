@@ -40,6 +40,7 @@ body{
 	background-image: url('../img/icons/linkedin.svg')
 }
 .to-top{
+	display: block;
 	position: fixed;
 	width: 60px;
 	height: 60px;
@@ -624,7 +625,11 @@ body{
 	&__container {
 	}
 	&__title {
+		font-weight: 600;
 		margin: 0 0 44px;
+		color: black;
+		font-size: 36px;
+		line-height: 125%;
 	}
 	&__desc {
 		padding: 40px;
@@ -634,9 +639,13 @@ body{
 	}
 	&__text {
 		color: #333333;
-		font-weight: 500;
+		font-weight: 600;
 		font-size: 16px;
 		line-height: 162.5%;
+		margin-bottom: 20px;
+		&_r{
+			font-weight: 400;
+		}
 	}
 }
 .team {
@@ -644,11 +653,15 @@ body{
 	&__container {
 	}
 	&__title {
-		color: #333333;
+		font-weight: 600;
+		color: black;
 		margin-bottom: 24px;
+		font-size: 36px;
+		line-height: 125%;
 	}
 	&__text {
 		margin-bottom: 44px;
+		color: #333333;
 	}
 }
 
@@ -719,6 +732,7 @@ body{
 	&__img {
 	}
 	&__subtitle {
+		font-size: 24px;
 		margin-bottom: 16px;
 		font-weight: 600;
 		color: #333333;
@@ -762,7 +776,6 @@ body{
 
 
 .planets{
-	height: 100vh;
 	background-color: $gray_bg;
 	padding-top: 80px;
 	&__container{
@@ -1062,6 +1075,7 @@ a.planetarium__planet_g{
 }
 
 .grid {
+	padding-top: 80px;
 	padding-bottom: 48px;
 	&__container {
 	}
@@ -1117,7 +1131,7 @@ a.planetarium__planet_g{
 	}
 	&__image {
 		background: #F9F9FB;
-		padding: 45px;
+		padding: 71px 52px;
 		flex-basis: 416px;
 		margin: 24px;
 		flex-shrink: 1;
