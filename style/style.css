@@ -279,8 +279,8 @@ body {
 
 .services {
   background: #F9F9FB;
-  -webkit-box-shadow: 0 -20px 35px 10px rgb(249, 249, 251);
-          box-shadow: 0 -20px 35px 10px rgb(249, 249, 251);
+  -webkit-box-shadow: 0 -10px 20px 10px rgb(249, 249, 251);
+          box-shadow: 0 -10px 20px 10px rgb(249, 249, 251);
 }
 .services__container {
   position: relative;
