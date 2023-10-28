@@ -736,7 +736,11 @@ body{
 	&__container {
 	}
 	&__title {
+		font-weight: 600;
+		color: black;
 		margin-bottom: 24px;
+		font-size: 36px;
+		line-height: 125%;
 	}
 	&__text {
 		margin-bottom: 44px;
