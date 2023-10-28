@@ -155,24 +155,8 @@ body{
 		position: relative;
 		font-size: 18px;
 		font-weight: 400;
-		&::after{
-			position: absolute;
-			content: '';
-			bottom: -28px;
-			left: 0;
-			display: block;
-			width: 0;
-			height: 1px;
-			background-color: $green_dark;
-			transition: .05s;
-		}
 		&:hover{
 			color: $green_dark
-		}
-		&:active{
-			&::after{
-				width: 100%;
-			}
 		}
 	}
 }
@@ -258,8 +242,20 @@ body{
 .intro-image {
 }
 .services {
+	position: relative;
 	background: $gray_bg;
-	box-shadow: 0 -10px 20px 10px rgba(249, 249, 251, 1);
+	&::before{
+		width: 100%;
+		height: 120px;
+		content: '';
+		position: absolute;
+		top: -120px;
+		left: 0;
+		display: block;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F9F9FB 100%);
+
+
+	}
 	&__container {
 		position: relative;
 		padding: 0;
@@ -687,12 +683,11 @@ body{
 .team-card {
 	display: flex;
 	flex-direction: column;
-	box-shadow: 0px 20px 50px 0px #00000014;
 	flex-basis: 636px;
 	background-color: #fff;
 	padding: 48px 24px 37px;
 	border-top: 3px solid $green;
-	box-shadow: 0 0 50px 5px rgba(0,0,0,.08);
+	box-shadow: 0px 20px 50px 0px #00000014;
 	&:not(:last-child){
 		margin-right: 24px;
 	}
@@ -773,13 +768,14 @@ body{
 	align-items: stretch;
 	max-width: 834px;
 	margin: 0 auto;
+	filter: drop-shadow(0px 20px 50px #00000014);
+
 
 	&__card {
 		padding: 34px 32px 32px;
 		background-color: white;
 		flex-basis: 412px;
 		border-top: 3px solid $green;
-		box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.08);
 		flex-shrink: 1;
 		&_b{
 		margin-bottom: 10px;
@@ -867,31 +863,49 @@ body{
 .planetarium-center{
 	position: absolute;
 	top: 50%;
-	left: 50.3%;
+	left: 50.4%;
 	transform: translate(-50%, -50%);
-	width: 35.22%;
-	height: 35.22%;
+	width: 44.968%;
+	height: 44.968%;
 	background-color: transparent;
+	&::after{
+		content: '';
+		display: block;
+		width: 80%;
+		height: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		opacity: 0;
+		background-color: blue;
+		box-shadow: 0 0 15px 3px rgba(0,0,0,0.15);
+		transform: translate(-50%, -50%);
+	}
+	&_h{
+		&::after{
+			opacity: 1;
+		}
+	}
+	.planetarium-center .planetarium-center-block:hover ~ .planetarium-center{
+		background-color: red;
+	}
 	&-block{
 		width: 100%;
 		position: relative;
-		height: 48.66%;
+		height: 49.2%;
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
 		transition: .1s;
+		z-index: 100;
 		&_top{
 //			margin-top: 1.786%;
-			margin-bottom: 2.678%;
+			margin-bottom: 2.178%;
 			margin-top: 0;
+			
 		}
 		&_bottom{
-			//margin-bottom: 1.786%;
-			&:hover{
-				width: 100%;
-				height: 48.66%;
-				margin-bottom: 0;
-			}
+			padding-bottom: 1.786%;
 		}
 	}
 	&__button{
@@ -900,9 +914,9 @@ body{
 		flex-direction: column;
 		align-items: center;
 		background: linear-gradient(282.51deg, #1EA22E -0.69%, #11CD0C 83.72%);
-		width: 96.42%;
-		height: 195%;
-		top: 5%;
+		width: 75.52%;
+		height: 150%;
+		top: 25%;
 		font-size: 18px;
 		font-weight: 600;
 		color: #fff;
@@ -914,10 +928,14 @@ body{
 		border-radius: 50%;
 		transition: .1s;
 		&:hover{
-			top: 0;
-			bottom: 0;
-			width: 100%;
-			height: 200%;
+			top: 22.14%;
+			bottom: 22.14%;
+			width: 78.32%;
+			height: 155.7%;
+			box-shadow: 4px 4px 10px 5px #0000000D inset;
+			box-shadow: 0px 15px 20px 0px #00000026;
+
+
 			background: linear-gradient(282.51deg, #15A026 -0.69%, #1BB018 83.72%);
 			&_top{
 				padding-top: 17.43%;
@@ -929,13 +947,13 @@ body{
 
 		&_top{
 			justify-content: flex-start;
-			padding-top: 17.58%;
+			padding-top: 12.58%;
 		}
 		&_bottom{
 			justify-content: flex-end;
 			margin-top: auto;
-			padding-bottom: 17.58%;
-			bottom: 5%;
+			padding-bottom: 12.58%;
+			bottom: 25%;
 
 		}
 	}
@@ -955,7 +973,8 @@ a.planetarium__planet{
 	transition: .2s;
 	cursor: pointer;
 	text-decoration: none;
-	filter: drop-shadow( 0 24px 23px rgba(0,0,0,0.35));
+	filter: drop-shadow(0px 44px 24px rgba(0,0,0,0.25));
+
 	&::after{
 		color: #333333;
 		box-sizing: content-box;
@@ -1072,6 +1091,7 @@ a.planetarium__planet_g{
 	transition: .2s;
 	cursor: pointer;
 	text-decoration: none;
+	filter: drop-shadow(0px 44px 24px rgba(0,0,0,0.2));
 	&::after{
 		color: #333333;
 		box-sizing: content-box;
