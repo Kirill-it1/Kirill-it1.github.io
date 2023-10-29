@@ -970,26 +970,32 @@ $pl_sz: 48px;
 			height: 155.7%;
 			box-shadow: 4px 4px 10px 5px #0000000D inset;
 			box-shadow: 0px 15px 20px 0px #00000026;
-
-
+			line-height: 136.85%;
 			background: linear-gradient(282.51deg, #15A026 -0.69%, #1BB018 83.72%);
 			&_top{
-				padding-top: 14.43%;
+				
 			}
 			&_bottom{
-				padding-bottom: 14.43%;
+				
 			}
 		}
 
 		&_top{
 			justify-content: flex-start;
 			padding-top: 14.14%;
+			&:hover{
+				padding-top: 14.43%;
+			}
+			
 		}
 		&_bottom{
 			justify-content: flex-end;
 			margin-top: auto;
 			padding-bottom: 14.14%;
 			bottom: 25%;
+			&:hover{
+				padding-bottom: 14.43%;
+			}
 
 		}
 	}
