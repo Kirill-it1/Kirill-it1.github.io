@@ -618,6 +618,7 @@ body{
 }
 .vision {
 	&__container-l{
+		position: relative;
 		padding: 80px 0 52px;
 		max-width: 1920px;
 		margin: 0 auto;
@@ -625,6 +626,7 @@ body{
 		background-position: center right -6%;
 		background-size: contain;
 		background-repeat: no-repeat;
+		z-index: 1000;
 	}
 	&__container {
 
@@ -658,7 +660,27 @@ body{
 	}
 }
 .team {
+	position: relative;
 	padding: 80px 0;
+	background-color: #ffffff;;
+	&::before{
+		content: '';
+		position: absolute;
+		top: -162px;
+		left: 0;
+		height: 162px;
+		width: 100%;
+		background: linear-gradient(180deg, rgba(249, 249, 251, 0) 0%, #FFFFFF 100%);
+	}
+	&::after{
+		content: '';
+		position: absolute;
+		bottom: -162px;
+		left: 0;
+		height: 162px;
+		width: 100%;
+		background: linear-gradient(0deg, rgba(249, 249, 251, 0) 0%, #FFFFFF 100%);
+	}
 	&__container {
 	}
 	&__title {
@@ -680,6 +702,8 @@ body{
 	justify-content: space-between;
 	align-items: stretch;
 	filter: drop-shadow(0px 20px 50px #00000014);
+	position: relative;
+	z-index: 1000;
 
 }
 .team-card {
@@ -713,13 +737,16 @@ body{
 		margin-bottom: 16px;
 	}
 	&__down-block {
+		align-self: flex-start;
 		margin-top: auto;
-		display: inline-block;
+		display: block;
+		padding: 10px 0;
+		border-bottom: 1px solid $green;
+	}
+	&__down-text{
 		font-size: 16px;
 		line-height: 150%;
 		color: #6f6f6f;
-		padding: 10px;
-		border-bottom: 1px solid $green;
 	}
 }
 .img {
@@ -729,6 +756,7 @@ body{
 }
 .values {
 	padding: 80px 0;
+	position: relative;
 	&__container {
 	}
 	&__title {
@@ -795,7 +823,8 @@ body{
 	}
 }
 
-
+// Variable for planets
+$pl_sz: 48px;
 
 
 
@@ -873,6 +902,7 @@ body{
 	width: 44.968%;
 	height: 44.968%;
 	background-color: transparent;
+
 	&::after{
 		content: '';
 		display: block;
@@ -885,6 +915,7 @@ body{
 		background-color: blue;
 		box-shadow: 0 0 15px 3px rgba(0,0,0,0.15);
 		transform: translate(-50%, -50%);
+		transition: .1s;;
 	}
 	&_h{
 		&::after{
@@ -943,21 +974,21 @@ body{
 
 			background: linear-gradient(282.51deg, #15A026 -0.69%, #1BB018 83.72%);
 			&_top{
-				padding-top: 17.43%;
+				padding-top: 14.43%;
 			}
 			&_bottom{
-				padding-bottom: 17.43%;
+				padding-bottom: 14.43%;
 			}
 		}
 
 		&_top{
 			justify-content: flex-start;
-			padding-top: 12.58%;
+			padding-top: 14.14%;
 		}
 		&_bottom{
 			justify-content: flex-end;
 			margin-top: auto;
-			padding-bottom: 12.58%;
+			padding-bottom: 14.14%;
 			bottom: 25%;
 
 		}
@@ -966,20 +997,30 @@ body{
 a.planetarium__planet{
 	position: absolute;
 	display: block;
-	width: 48px;
-	height: 48px;
+	width: $pl_sz;
+	height: $pl_sz;
 	border-radius: 50%;
 	background-image: url('../img/solution/icons/ellipse.png');
 	background-repeat: no-repeat;
-	background-size: 40px 40px;
+	background-size: calc($pl_sz * 5 / 6) calc($pl_sz * 5 / 6);
 	background-position: center;
-	transform: translate(50%, -50%);
-	background-color: transparent;
 	transition: .2s;
+
 	cursor: pointer;
 	text-decoration: none;
-	filter: drop-shadow(0px 44px 24px rgba(0,0,0,0.25));
-
+	&::before{
+		content: '';
+		position: absolute;
+		width: calc($pl_sz * 5 / 6);
+		height: calc($pl_sz * 5 / 6);
+		top: calc($pl_sz * 1 / 12);
+		left: calc($pl_sz * 1 / 12);
+		border-radius: 50%;
+		background-color: $green;
+		box-shadow: 0px 24px 24px 0px #00000026;
+		z-index: -1;
+		
+	}
 	&::after{
 		color: #333333;
 		box-sizing: content-box;
@@ -994,7 +1035,7 @@ a.planetarium__planet{
 		transition: .2s all;
 	}
 	&:hover{
-		background-size: 48px 48px;
+		background-size: $pl_sz $pl_sz;
 
 		&::after{
 			color: $green_dark;
@@ -1003,8 +1044,8 @@ a.planetarium__planet{
 
 }
 #cmdts{
-	right: calc(50% - 50% * cos(3.14159 / 20));
-	top: calc(50% - 50% * sin(3.14159 / 20));
+	right: calc(50% - 50% * cos(3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 50% * sin(3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Commodities';
 
@@ -1013,8 +1054,8 @@ a.planetarium__planet{
 	}
 }
 #for_exc{
-	right: calc(50% - 50% * cos(6 * 3.14159 / 20));
-	top: calc(50% - 50% * sin(6 * 3.14159 / 20));
+	right: calc(50% - 50% * cos(6 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 50% * sin(6 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Foreign Exchange';
 
@@ -1023,8 +1064,8 @@ a.planetarium__planet{
 	}
 }
 #equ{
-	right: calc(50% - 50% * cos(12 * 3.14159 / 20));
-	top: calc(50% - 50% * sin(12 * 3.14159 / 20));
+	right: calc(50% - 50% * cos(12 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 50% * sin(12 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Equities';
 
@@ -1033,8 +1074,8 @@ a.planetarium__planet{
 	}
 }
 #digas{
-	right: calc(50% - 50% * cos(17.5 * 3.14159 / 20));
-	top: calc(50% - 50% * sin(17.5 * 3.14159 / 20));
+	right: calc(50% - 50% * cos(17.5 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 50% * sin(17.5 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Digital Assets';
 
@@ -1043,8 +1084,8 @@ a.planetarium__planet{
 	}
 }
 #ins{
-	right: calc(50% - 50% * cos(23 * 3.14159 / 20));
-	top: calc(50% - 50% * sin(23 * 3.14159 / 20));
+	right: calc(50% - 50% * cos(23 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 50% * sin(23 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Insurance';
 
@@ -1053,8 +1094,8 @@ a.planetarium__planet{
 	}
 }
 #infl{
-	right: calc(50% - 50% * cos(26.5 * 3.14159 / 20));
-	top: calc(50% - 50% * sin(26.5 * 3.14159 / 20));
+	right: calc(50% - 50% * cos(26.5 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 50% * sin(26.5 * 3.14159 / 20) - $pl_sz / 2) ;
 	&::after{
 		content: 'Inflation';
 
@@ -1063,8 +1104,8 @@ a.planetarium__planet{
 	}
 }
 #cred{
-	right: calc(50% - 50% * cos(31 * 3.14159 / 20));
-	top: calc(50% - 50% * sin(31 * 3.14159 / 20));
+	right: calc(50% - 50% * cos(31 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 50% * sin(31 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Credit';
 
@@ -1073,8 +1114,8 @@ a.planetarium__planet{
 	}
 }
 #fxd_inc{
-	right: calc(50% - 50% * cos(36 * 3.14159 / 20));
-	top: calc(50% - 50% * sin(36 * 3.14159 / 20));
+	right: calc(50% - 50% * cos(36 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 50% * sin(36 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Fixed Income';
 
@@ -1085,18 +1126,29 @@ a.planetarium__planet{
 a.planetarium__planet_g{
 	position: absolute;
 	display: block;
-	width: 48px;
-	height: 48px;
+	width: $pl_sz;
+	height: $pl_sz;
 	border-radius: 50%;
 	background-image: url('../img/solution/icons/ellipse_gray.png');
 	background-repeat: no-repeat;
-	background-size: 40px 40px;
+	background-size: calc($pl_sz * 5 / 6) calc($pl_sz * 5 / 6);
 	background-position: center;
-	transform: translate(50%, -50%);
 	transition: .2s;
 	cursor: pointer;
 	text-decoration: none;
-	filter: drop-shadow(0px 44px 24px rgba(0,0,0,0.2));
+	&::before{
+		content: '';
+		position: absolute;
+		width: calc($pl_sz * 5 / 6);
+		height: calc($pl_sz * 5 / 6);
+		top: calc($pl_sz * 1 / 12);
+		left: calc($pl_sz * 1 / 12);
+		border-radius: 50%;
+		background-color: #5B5858;
+		box-shadow: 0px 24px 24px 0px #00000026;
+		z-index: -1;
+		
+	}
 	&::after{
 		color: #333333;
 		box-sizing: content-box;
@@ -1112,8 +1164,8 @@ a.planetarium__planet_g{
 	}
 }
 #anlcs{
-	right: calc(50% - 32.7% * cos(2.8 * 3.14159 / 20));
-	top: calc(50% - 32.7% * sin(2.8 * 3.14159 / 20));
+	right: calc(50% - 32.7% * cos(2.8 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 32.7% * sin(2.8 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Analytics';
 
@@ -1122,8 +1174,8 @@ a.planetarium__planet_g{
 	}
 }
 #pdcts{
-	right: calc(50% - 32.7% * cos(10.5 * 3.14159 / 20));
-	top: calc(50% - 32.7% * sin(10.5 * 3.14159 / 20));
+	right: calc(50% - 32.7% * cos(10.5 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 32.7% * sin(10.5 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Products';
 
@@ -1132,8 +1184,8 @@ a.planetarium__planet_g{
 	}
 }
 #vldt{
-	right: calc(50% - 32.7% * cos(19 * 3.14159 / 20));
-	top: calc(50% - 32.7% * sin(19 * 3.14159 / 20));
+	right: calc(50% - 32.7% * cos(19 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 32.7% * sin(19 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Validations';
 
@@ -1142,8 +1194,8 @@ a.planetarium__planet_g{
 	}
 }
 #mtds{
-	right: calc(50% - 32.7% * cos(26.5 * 3.14159 / 20));
-	top: calc(50% - 32.7% * sin(26.5 * 3.14159 / 20));
+	right: calc(50% - 32.7% * cos(26.5 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 32.7% * sin(26.5 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Methods';
 
@@ -1152,8 +1204,8 @@ a.planetarium__planet_g{
 	}
 }
 #mdls{
-	right: calc(50% - 32.7% * cos(35 * 3.14159 / 20));
-	top: calc(50% - 32.7% * sin(35 * 3.14159 / 20));
+	right: calc(50% - 32.7% * cos(35 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 32.7% * sin(35 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Models';
 
