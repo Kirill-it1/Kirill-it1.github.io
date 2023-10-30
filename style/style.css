@@ -2,6 +2,8 @@
   font-family: "Open Sans", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -1338,4 +1340,82 @@ a.planetarium__planet_g::after {
 }
 .grid-card__image_right {
   margin-left: 0;
+}
+.default-section-main {
+  background-color: #fff;
+  width: 100%;
+  padding: 70px;
+  margin: 80px auto;
+  max-width: 856px;
+}
+
+.default-section__title {
+  font-size: 36px;
+  line-height: 133%;
+  font-weight: 600;
+  margin: 0;
+}
+.default-section__list {
+  padding-left: 20px;
+}
+.default-section__item {
+  margin-bottom: 0px;
+  font-size: 16px;
+  color: #333333;
+  line-height: 200%;
+  font-weight: 400;
+  list-style-type: none;
+  position: relative;
+}
+.default-section__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3.6px;
+  height: 3.7px;
+  border-radius: 50%;
+  background-color: #333333;
+  top: 15px;
+  left: -12px;
+}
+.default-section__text {
+  font-size: 16px;
+  line-height: 162.5%;
+  color: #333333;
+  font-weight: 400px;
+}
+.default-section__text_lst {
+  margin-top: 24px;
+}
+.default-section__text:not(:last-child) {
+  margin-bottom: 24px;
+}
+.default-section__text_spec-top {
+  margin-top: 24px;
+}
+.default-section__subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 137.5%;
+  margin-bottom: 24px;
+  color: #333333;
+}
+.default-section__link {
+  text-decoration: underline;
+  color: #0057FF;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  font-size: 16px;
+  line-height: 162.5%;
+  font-weight: 400px;
+}
+
+.default-section-row {
+  margin-top: 48px;
+}
+
+.attention {
+  color: #2E8D3A;
+  font-size: 16px;
+  line-height: 150%;
 }

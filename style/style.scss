@@ -1,6 +1,8 @@
 *{
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 a{
 	text-decoration: none;
@@ -1296,3 +1298,107 @@ a.planetarium__planet_g{
 .text {
 }
 
+
+.default-section-main {
+	background-color: #fff;
+	width: 100%;
+	padding: 70px;
+	margin: 80px auto;
+	max-width: 856px;
+}
+.default-section {
+
+	&__container {
+	}
+
+	&__title {
+		font-size: 36px;
+		line-height: 133%;
+		font-weight: 600;
+		margin: 0;
+	}
+	&__list{
+		padding-left: 20px;
+
+	}
+	&__item{
+		margin-bottom: 0px;
+		font-size: 16px;
+		color: #333333;
+		line-height: 200%;
+		font-weight: 400;
+		list-style-type: none;
+		position: relative;
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 3.6px;
+			height: 3.7px;
+			border-radius: 50%;
+			background-color: #333333;
+			top: 15px;
+			left: -12px;
+		}
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 162.5%;
+		color: #333333;
+		font-weight: 400px;
+		&_lst{
+			margin-top: 24px;
+		}
+		&:not(:last-child){
+			margin-bottom: 24px;
+		}
+		&_top {
+		}
+
+		&_spec-top {
+			margin-top: 24px;
+		}
+	}
+
+	&__attention {
+		
+	}
+
+	&__subtitle {
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 137.5%;
+		margin-bottom: 24px;
+		color: #333333;
+
+	}
+
+	&__link {
+		text-decoration: underline;
+		color: #0057FF;
+		transition: .1s;
+		font-size: 16px;
+		line-height: 162.5%;
+		font-weight: 400px;
+	}
+}
+.container {
+}
+
+.title {
+}
+.default-section-row {
+	margin-top: 48px;
+}
+.text {
+}
+.attention {
+	color: $green_dark;
+	font-size: 16px;
+	line-height: 150%;
+
+}
+.subtitle {
+}
+.link {
+}
