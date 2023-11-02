@@ -1505,6 +1505,7 @@ a.planetarium__planet_g::after {
   background-size: 24px;
   background-position: center right 20px;
   background-repeat: no-repeat;
+  padding-right: 50px;
 }
 .contact-block__input::-webkit-input-placeholder {
   color: #a8a8a8;
