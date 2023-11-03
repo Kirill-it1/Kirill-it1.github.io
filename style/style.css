@@ -658,6 +658,7 @@ body {
 
 .vision {
   position: relative;
+  background-color: #F9F9FB;
 }
 .vision::before {
   content: "";
@@ -699,7 +700,7 @@ body {
 .vision__desc {
   padding-top: 70px;
   max-width: 636px;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 .vision__text {
   margin-bottom: 32px;
@@ -773,8 +774,8 @@ body {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  -webkit-filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.0784313725));
-          filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.0784313725));
+  -webkit-filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.08));
+          filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.08));
   position: relative;
   z-index: 1000;
 }

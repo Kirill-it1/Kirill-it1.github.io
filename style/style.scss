@@ -641,6 +641,7 @@ body{
 }
 .vision {
 	position: relative;
+	background-color: $gray_bg;
 	&::before{
 		content: '';
 		position: absolute;
@@ -683,7 +684,7 @@ body{
 	&__desc {
 		padding-top: 70px;
 		max-width: 636px;
-		margin-bottom: 32px;
+		margin-bottom: 48px;
 
 	}
 	&__text {
@@ -755,7 +756,7 @@ body{
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
-	filter: drop-shadow(0px 20px 50px #00000014);
+	filter: drop-shadow( 0px 20px 50px rgba(0, 0, 0, 0.08));
 	position: relative;
 	z-index: 1000;
 
