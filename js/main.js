@@ -101,9 +101,3 @@ serv_card.forEach((el, i)=>{
     serv_pag_bul[i].classList.remove('swiper-pagination-bullet_f');
   });
 });
-const cen_h = () => {
-  document.querySelector('.planetarium-center').classList.toggle('planetarium-center_h');
-}
-document.querySelector('.planetarium-center__button_top').addEventListener('mouseover', cen_h);
-document.querySelector('.planetarium-center__button_top').addEventListener('mouseover', cen_h);
-
