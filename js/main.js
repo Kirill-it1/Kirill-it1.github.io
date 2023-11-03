@@ -52,8 +52,8 @@ const prevent = ev => ev.preventDefault();
 // ...
 // в вашей функции закрытия окна:
 const serv_pag = document.querySelector('.services__pagination');
-const serv_pag_bul = serv_pag.querySelectorAll('.swiper-pagination-bullet')
-serv_hid_f = () => {
+const serv_pag_bul = serv_pag.querySelectorAll('.swiper-pagination-bullet');
+const serv_hid_f = () => {
   serv_hid.classList.toggle('services-hidden_visible');
   serv_pag.classList.toggle('services__pagination_hidden');
   document.querySelectorAll('.container').forEach((cont) => {
@@ -63,18 +63,28 @@ serv_hid_f = () => {
 const btn_serv = document.querySelectorAll('.services__button');
 const close_serv = document.querySelector('.services-close');
 const serv_hid = document.querySelector('.services-hidden');
+let serv_hid_flag = false;
 btn_serv.forEach((el) => {
   el.addEventListener('click', () => {
     swiper2.slideTo((el.id.slice(el.id.indexOf('-') + 1)), 0);
     document.addEventListener('wheel', prevent, {passive: false});
     serv_hid_f();
+    serv_hid_flag = true;
   });
 });
 close_serv.addEventListener('click', () => {
   document.removeEventListener('wheel', prevent);
-  serv_hid_f()
+  serv_hid_f();
+  serv_hid_flag = false;
 });
-
+document.addEventListener("keydown", (e) => {
+  if (e.code == "Escape") {
+    if (serv_hid_flag){
+      serv_hid_f();
+      serv_hid_flag = false;
+    }
+  }
+});
 const serv_w = document.querySelector('.services-w');
 const serv_card = document.querySelectorAll('.services-card');
 
