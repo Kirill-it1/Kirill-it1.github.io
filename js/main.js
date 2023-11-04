@@ -40,6 +40,11 @@ const swiper2 = new Swiper('.swiper-2', {
     nextEl: '.swiper-button-next-h',
     prevEl: '.swiper-button-prev-h',
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true
+  },
   simulateTouch: true,
   slidesPerView: 1,
   slideToClickedSlide: false,
