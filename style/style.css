@@ -150,6 +150,14 @@ body {
   background-color: #1B3949;
   background-image: url("../img/icons/linkedin_hover.svg");
 }
+.header__btn {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.header__btn:hover {
+  background-color: #2E8D3A;
+}
+
 .header-burger {
   display: none;
   width: 24px;
@@ -351,7 +359,7 @@ body {
   border: 1px solid #2E8D3A;
   border-radius: 8px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   cursor: pointer;
   -webkit-transition: 0.2s;
