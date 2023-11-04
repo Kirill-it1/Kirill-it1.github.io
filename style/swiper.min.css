@@ -223,8 +223,8 @@
 
 .swiper-button-next, .swiper-button-prev, .swiper-button-prev-h, .swiper-button-next-h{
 	position: absolute;
-	top: var(--swiper-navigation-top-offset, 50%);
-	margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+	top: calc(var(--swiper-navigation-top-offset, 50%) - 30px);
+
 	z-index: 10;
 	cursor: pointer;
 	display: flex;
