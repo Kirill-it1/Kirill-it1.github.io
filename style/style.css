@@ -370,21 +370,26 @@ body {
   color: #fff;
 }
 .services__nxt {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  right: 8px;
+  right: 0px;
 }
 .services__prv {
-  -webkit-transform: translateX(-100%) rotate(180deg);
-          transform: translateX(-100%) rotate(180deg);
-  left: 8px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: 0px;
+}
+
+.swiper {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .services-w {
   position: relative;
-  padding: 0 35px;
+  padding: 0 84px;
   margin: 0 auto;
-  max-width: 1389px;
+  max-width: 1488px;
   padding-bottom: 37.5px;
 }
 

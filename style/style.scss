@@ -350,21 +350,21 @@ body{
 	&__next {
 	}
 	&__nxt{
-		transform: translateX(100%);
-		right: 8px;
+		right: 0px;
 	}
 	&__prv{
-		transform: translateX(-100%) rotate(180deg);
-		left: 8px;
+		transform: rotate(180deg);
+		left: 0px;
 	}
 }
 .swiper {
+	user-select: none;
 }
 .services-w{
 	position: relative;
-	padding: 0 35px;
+	padding: 0 84px;
 	margin: 0 auto;
-	max-width: 1389px;
+	max-width: 1488px;
 	padding-bottom: 37.5px;
 }
 .services-wrapper{
