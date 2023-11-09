@@ -236,10 +236,12 @@ body {
 .intro__container-l {
   max-width: 1920px;
   margin: 0 auto;
+  min-height: 640px;
   background-image: url("../img/main/bg_image.svg");
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
+  padding-top: 100px;
 }
 .intro__container {
   display: -webkit-box;
@@ -251,13 +253,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 640px;
   max-width: 1320px;
 }
-.intro__title {
+.intro__title.title {
   margin: 0;
+  font-weight: 600;
 }
-.intro__title::after {
+.intro__title.title::after {
   content: "";
   display: block;
   width: 66px;
@@ -697,6 +699,7 @@ body {
   position: relative;
   padding: 80px 0 72px;
   max-width: 1920px;
+  min-height: 640px;
   margin: 0 auto;
   background-image: url("../img/company/intro-bg.svg");
   background-position: center right;
@@ -706,10 +709,10 @@ body {
 }
 .vision__title {
   font-weight: 600;
-  margin: 0 0 44px;
+  margin: 0 0 32px;
   color: black;
   font-size: 36px;
-  line-height: 125%;
+  line-height: 133%;
 }
 .vision__title::after {
   content: "";
@@ -720,12 +723,12 @@ body {
   margin: 32px 0;
 }
 .vision__desc {
-  padding-top: 70px;
+  padding-top: 50px;
   max-width: 636px;
-  margin-bottom: 48px;
+  margin-bottom: 60px;
 }
 .vision__text {
-  margin-bottom: 32px;
+  margin-bottom: 60px;
   color: #333;
   font-size: 22px;
   font-style: normal;
@@ -742,6 +745,7 @@ body {
   background-repeat: no-repeat;
   background-position: center right 22px;
   padding-left: 20px;
+  font-weight: 500;
 }
 .vision__btn:hover {
   background-color: #2E8D3A;
@@ -750,18 +754,19 @@ body {
 
 .team {
   position: relative;
-  padding: 80px 0;
+  padding: 40px 0 80px;
   background-color: #ffffff;
 }
 .team::before {
+  display: block;
   content: "";
   position: absolute;
-  top: -162px;
+  top: -120px;
   left: 0;
-  height: 162px;
+  height: 120px;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 251, 0)), to(#FFFFFF));
-  background: linear-gradient(180deg, rgba(249, 249, 251, 0) 0%, #FFFFFF 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 251, 0)), to(#FFF));
+  background: linear-gradient(180deg, rgba(249, 249, 251, 0) 0%, #FFF 100%);
 }
 .team::after {
   content: "";
@@ -858,7 +863,7 @@ body {
 .values__title {
   font-weight: 600;
   color: black;
-  margin-bottom: 24px;
+  margin-bottom: 44px;
   font-size: 36px;
   line-height: 133%;
 }
@@ -1429,10 +1434,30 @@ a.planetarium__planet_g::after {
   background-color: #fff;
   width: 100%;
   padding: 70px;
-  margin: 80px auto;
-  max-width: 856px;
+  margin: 0 auto;
+  max-width: 1296px;
+  -webkit-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.08);
 }
 
+.default-section {
+  position: relative;
+  padding: 80px 0;
+}
+.default-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 160px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(249, 249, 251, 0)), to(#FFF));
+  background: linear-gradient(0, rgba(249, 249, 251, 0) 0%, #FFF 100%);
+}
+.default-section__container {
+  position: relative;
+}
 .default-section__title {
   font-size: 36px;
   line-height: 133%;
@@ -1466,7 +1491,7 @@ a.planetarium__planet_g::after {
   font-size: 16px;
   line-height: 162.5%;
   color: #333333;
-  font-weight: 400px;
+  font-weight: 400;
 }
 .default-section__text_lst {
   margin-top: 24px;
@@ -1491,7 +1516,10 @@ a.planetarium__planet_g::after {
   transition: 0.1s;
   font-size: 16px;
   line-height: 162.5%;
-  font-weight: 400px;
+  color: #2E8D3A;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .default-section-row {
@@ -1499,13 +1527,27 @@ a.planetarium__planet_g::after {
 }
 
 .attention {
-  color: #2E8D3A;
+  color: #656565;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
   line-height: 150%;
 }
 
 .contact-section {
+  position: relative;
   padding: 80px 0;
+}
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 160px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(249, 249, 251, 0)), to(#FFF));
+  background: linear-gradient(0, rgba(249, 249, 251, 0) 0%, #FFF 100%);
 }
 .contact-section__text {
   font-weight: 400;
@@ -1516,12 +1558,15 @@ a.planetarium__planet_g::after {
 }
 
 .contact__container {
-  max-width: 886px;
+  max-width: 876px;
+  position: relative;
 }
 
 .contact-block {
   padding: 70px;
   background-color: #fff;
+  -webkit-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.08);
 }
 .contact-block__title {
   color: #000;

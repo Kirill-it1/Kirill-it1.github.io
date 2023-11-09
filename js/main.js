@@ -28,7 +28,6 @@ const swiper2 = new Swiper('.swiper-2', {
   direction: 'horizontal',
   loop: true,
 
-
   // If we need pagination
   pagination: {
     el: '.services-hidden__pagination',

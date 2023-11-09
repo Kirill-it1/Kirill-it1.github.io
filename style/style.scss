@@ -216,20 +216,22 @@ body{
 	&__container-l{
 		max-width: 1920px;
 		margin: 0 auto;
+		min-height: 640px;
 		background-image: url('../img/main/bg_image.svg');
 		background-position: right;
 		background-size: contain;
 		background-repeat: no-repeat;
+		padding-top: 100px;
 	}
 	&__container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 640px;
 		max-width: 1320px;
 	}
-	&__title {
+	&__title.title {
 		margin: 0;
+		font-weight: 600;
 		&::after{
 			content: '';
 			display: block;
@@ -665,6 +667,7 @@ body{
 		position: relative;
 		padding: 80px 0 72px;
 		max-width: 1920px;
+		min-height: 640px;
 		margin: 0 auto;
 		background-image: url('../img/company/intro-bg.svg');
 		background-position: center right;
@@ -673,14 +676,14 @@ body{
 		z-index: 1000;
 	}
 	&__container {
-
+		
 	}
 	&__title {
 		font-weight: 600;
-		margin: 0 0 44px;
+		margin: 0 0 32px;
 		color: black;
 		font-size: 36px;
-		line-height: 125%;
+		line-height: 133%;
 		&::after{
 			content: '';
 			display: block;
@@ -691,13 +694,13 @@ body{
 		}
 	}
 	&__desc {
-		padding-top: 70px;
+		padding-top: 50px;
 		max-width: 636px;
-		margin-bottom: 48px;
+		margin-bottom: 60px;
 
 	}
 	&__text {
-		margin-bottom: 32px;
+		margin-bottom: 60px;
 		color: #333;
 		font-size: 22px;
 		font-style: normal;
@@ -715,6 +718,7 @@ body{
 		background-repeat: no-repeat;
 		background-position: center right 22px;
 		padding-left: 20px;
+		font-weight: 500;
 		&:hover{
 			background-color: $green_dark;
 			background-position: center right 18px;
@@ -724,16 +728,17 @@ body{
 }
 .team {
 	position: relative;
-	padding: 80px 0;
+	padding: 40px 0 80px;
 	background-color: #ffffff;;
 	&::before{
+		display: block;
 		content: '';
 		position: absolute;
-		top: -162px;
+		top: -120px;
 		left: 0;
-		height: 162px;
+		height: 120px;
 		width: 100%;
-		background: linear-gradient(180deg, rgba(249, 249, 251, 0) 0%, #FFFFFF 100%);
+		background: linear-gradient(180deg, rgba(249, 249, 251, 0.00) 0%, #FFF 100%);
 	}
 	&::after{
 		content: '';
@@ -827,7 +832,7 @@ body{
 	&__title {
 		font-weight: 600;
 		color: black;
-		margin-bottom: 24px;
+		margin-bottom: 44px;
 		font-size: 36px;
 		line-height: 133%;
 	}
@@ -1381,12 +1386,25 @@ a.planetarium__planet_g{
 	background-color: #fff;
 	width: 100%;
 	padding: 70px;
-	margin: 80px auto;
-	max-width: 856px;
+	margin: 0 auto;
+	max-width: 1296px;
+	box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.08);
 }
 .default-section {
-
+	position: relative;
+	padding: 80px 0;
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 160px;
+		background: linear-gradient(0, rgba(249, 249, 251, 0.00) 0%, #FFF 100%);
+	}
 	&__container {
+		position: relative;
 	}
 
 	&__title {
@@ -1423,7 +1441,7 @@ a.planetarium__planet_g{
 		font-size: 16px;
 		line-height: 162.5%;
 		color: #333333;
-		font-weight: 400px;
+		font-weight: 400;
 		&_lst{
 			margin-top: 24px;
 		}
@@ -1457,7 +1475,11 @@ a.planetarium__planet_g{
 		transition: .1s;
 		font-size: 16px;
 		line-height: 162.5%;
-		font-weight: 400px;
+		color:#2E8D3A;
+		font-style: normal;
+		font-weight: 600;
+		text-decoration: none;
+
 	}
 }
 .container {
@@ -1471,9 +1493,11 @@ a.planetarium__planet_g{
 .text {
 }
 .attention {
-	color: $green_dark;
+	color: #656565;
 	font-size: 16px;
-	line-height: 150%;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%
 
 }
 .subtitle {
@@ -1487,7 +1511,18 @@ a.planetarium__planet_g{
 
 
 .contact-section {
+	position: relative;
 	padding: 80px 0;
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 160px;
+		background: linear-gradient(0, rgba(249, 249, 251, 0.00) 0%, #FFF 100%);
+	}
 	&__text {
 		font-weight: 400;
 		font-size: 16px;
@@ -1501,7 +1536,8 @@ a.planetarium__planet_g{
 .contact {
 
 	&__container {
-		max-width: 886px;
+		max-width: 876px;
+		position: relative;
 
 	}
 }
@@ -1510,6 +1546,7 @@ a.planetarium__planet_g{
 .contact-block {
 	padding: 70px;
 	background-color: #fff;
+	box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.08);
 
 	&__title {
 		color: #000;
