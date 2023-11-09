@@ -371,6 +371,9 @@ body {
   background: #2E8D3A;
   color: #fff;
 }
+.services div.swiper-pagination.services__pagination {
+  bottom: var(--swiper-pagination-bottom, 32.5px);
+}
 .services__nxt {
   right: 0px;
 }
