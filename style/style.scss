@@ -982,16 +982,15 @@ $pl_sz: 48px;
 		width: 90%;
 		height: 0;
 		position: absolute;
-		top: 50%;
+		top: 50.5%;
 		left: 50%;
 		background-color: blue;
-		box-shadow: 0 0 30px 3px rgba(0,0,0,0.45);
+		box-shadow: 0 0 3px 3px rgba(0,0,0,0.03);
 		transform: translate(-50%, -50%);
 		transition: .1s;;
 	}
 	&_hl{
 		&::after{
-			box-shadow: 0 0 30px 3px rgba(0,0,0,0.6);
 		}
 	}
 	.planetarium-center .planetarium-center-block:hover ~ .planetarium-center{

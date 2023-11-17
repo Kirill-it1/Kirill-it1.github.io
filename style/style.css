@@ -1015,19 +1015,15 @@ body {
   width: 90%;
   height: 0;
   position: absolute;
-  top: 50%;
+  top: 50.5%;
   left: 50%;
   background-color: blue;
-  -webkit-box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.45);
-          box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.03);
+          box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.03);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-transition: 0.1s;
   transition: 0.1s;
-}
-.planetarium-center_hl::after {
-  -webkit-box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.6);
 }
 .planetarium-center .planetarium-center .planetarium-center-block:hover ~ .planetarium-center {
   background-color: red;
