@@ -34,5 +34,5 @@ const slideTo = (n) => {
   el.scrollIntoView({
     behavior: 'smooth'
   });
-  gridSwiper.slideToLoop(n);
+  gridSwiper.slideToLoop(n, 0);
 }

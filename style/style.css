@@ -932,6 +932,23 @@ body {
   line-height: 162.5%;
 }
 
+.pl-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 216px;
+  height: 216px;
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.25) inset, -20px 0px 24px 0px rgba(0, 0, 0, 0.15) inset;
+          box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.25) inset, -20px 0px 24px 0px rgba(0, 0, 0, 0.15) inset;
+  -webkit-box-shadow: 0px 14px 34px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 14px 34px 0 rgba(0, 0, 0, 0.08);
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
 .planets {
   background-color: #fff;
   padding-top: 80px;
@@ -1009,22 +1026,6 @@ body {
   height: 44.968%;
   background-color: transparent;
 }
-.planetarium-center::after {
-  content: "";
-  display: block;
-  width: 90%;
-  height: 0;
-  position: absolute;
-  top: 50.5%;
-  left: 50%;
-  background-color: blue;
-  -webkit-box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.03);
-          box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.03);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-}
 .planetarium-center .planetarium-center .planetarium-center-block:hover ~ .planetarium-center {
   background-color: red;
 }
@@ -1075,8 +1076,6 @@ body {
   border-radius: 50%;
   -webkit-transition: 0.1s;
   transition: 0.1s;
-  -webkit-filter: drop-shadow(0px 14px 13px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.12)) drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.08));
-          filter: drop-shadow(0px 14px 13px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.12)) drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.08));
   cursor: pointer;
 }
 .planetarium-center__button:hover {
