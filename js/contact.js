@@ -6,6 +6,7 @@ const moveToStart = (input) => {
 const select = document.querySelector('#country-select');
 const choices = new Choices(select, {
 	itemSelectText: '',
+	position: 'bottom'
 });
 const selectedCountryFlag = document.querySelector('.contact-block__flag');
 select.addEventListener('addItem', (event) => {

@@ -901,18 +901,20 @@ $pl_sz: 48px;
 
 
 .planets{
-	background-color: $gray_bg;
+	background-color: #fff;
 	padding-top: 80px;
+	padding-bottom: 92px;
 	&__container{
 		max-width: 1316px;
 		position: relative;
 	}
 	&__text{
-		font-size: 16px;
-		line-height: 26px;
-		color: #333333;
+		color: #333;
+		font-family: Open Sans;
+		font-size: 20px;
+		font-style: normal;
 		font-weight: 400;
-		margin-bottom: 80px;
+		line-height: 170%;
 	}
 	&__ab{
 		position: absolute;
@@ -922,17 +924,17 @@ $pl_sz: 48px;
 
 
 		&_left{
-			top: 159px;
+			top: 177px;
 			left: 0;
-			background: linear-gradient(90deg, rgba(123, 120, 120, 0.05) 0%, rgba(123, 120, 120, 0) 87.39%);
-
+			background: linear-gradient(90deg, rgba(196, 196, 196, 0.05) 0%, rgba(123, 120, 120, 0.00) 87.39%);
 		}
 		&_right{
 			right: 0;
-			bottom: 42px;
-			background: linear-gradient(90deg, rgba(50, 181, 47, 0) 6.57%, rgba(52, 183, 49, 0.05) 100%);
+			bottom: 30px;
+			background: linear-gradient(270deg, rgba(196, 196, 196, 0.05) 0%, rgba(123, 120, 120, 0.00) 87.39%);
+
 			& .planets__ab-text{
-				color: $green;
+				text-align: right;
 				margin-left: auto;
 				max-width: 109px;
 			}
@@ -942,7 +944,7 @@ $pl_sz: 48px;
 			display: block;
 			max-width: 169px;
 			font-size: 22px;
-			font-weight: 700;
+			font-weight: 600;
 			line-height: 30px;
 			color: #7C7979;
 
@@ -953,14 +955,14 @@ $pl_sz: 48px;
 	max-width: 936px;
 	width: 100%;
 	padding: 0 150px;
-	margin: 100px auto;
+	margin: 70px auto 33px;
 }
 .planetarium{
 	width: 100%;
 	padding-top: 100%;
 	background-image: url('../img/solution/intro.svg');
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: auto 100%;
 	background-position: center;
 	position: relative;
 	z-index: 100;
@@ -968,7 +970,7 @@ $pl_sz: 48px;
 .planetarium-center{
 	position: absolute;
 	top: 50%;
-	left: 50.5%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 44.968%;
 	height: 44.968%;
@@ -982,15 +984,14 @@ $pl_sz: 48px;
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		opacity: 0;
 		background-color: blue;
-		box-shadow: 0 0 30px 3px rgba(0,0,0,0.4);
+		box-shadow: 0 0 30px 3px rgba(0,0,0,0.45);
 		transform: translate(-50%, -50%);
 		transition: .1s;;
 	}
-	&_h{
+	&_hl{
 		&::after{
-			opacity: 1;
+			box-shadow: 0 0 30px 3px rgba(0,0,0,0.6);
 		}
 	}
 	.planetarium-center .planetarium-center-block:hover ~ .planetarium-center{
@@ -999,7 +1000,7 @@ $pl_sz: 48px;
 	&-block{
 		width: 100%;
 		position: relative;
-		height: 49.2%;
+		height: 49.4%;
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
@@ -1007,7 +1008,7 @@ $pl_sz: 48px;
 		z-index: 100;
 		&_top{
 //			margin-top: 1.786%;
-			margin-bottom: 2.178%;
+			margin-bottom: 2.078%;
 			margin-top: 0;
 			
 		}
@@ -1019,12 +1020,12 @@ $pl_sz: 48px;
 		position: absolute;
 		display: flex;
 		flex-direction: column;
-		background: linear-gradient(303deg, #1EA22E -0.69%, #11CD0C 83.72%);
+		background: linear-gradient(283deg, #10881e 8.31%, #06E700 83.72%);
 		width: 75.52%;
 		height: 150%;
 		top: 25%;
 		font-size: 18px;
-		font-weight: 600;
+		font-weight: 700;
 		color: #fff;
 		text-align: center;
 		padding-left: 8.8%;
@@ -1033,15 +1034,17 @@ $pl_sz: 48px;
 		transition: .2s;
 		border-radius: 50%;
 		transition: .1s;
+		filter: drop-shadow(0px 14px 13px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.12)) drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.08));
+		cursor: pointer;
 		&:hover{
 			top: 22.14%;
 			bottom: 22.14%;
 			width: 78.32%;
 			height: 155.7%;
-			box-shadow: 4px 4px 10px 5px #0000000D inset;
-			box-shadow: 0px 15px 20px 0px #00000026;
+			box-shadow: 4px 4px 10px 5px rgba(0,0,0,0.8) inset;
+			box-shadow: 0px 15px 20px 0px rgba(0,0,0,0.08);
 			line-height: normal;
-			background: linear-gradient(302.51deg, #15A026 -0.69%, #1BB018 83.72%);
+			background: linear-gradient(303deg, #15A026 -0.69%, #159d13 83.72%);
 			&_top{
 				
 			}
@@ -1052,19 +1055,19 @@ $pl_sz: 48px;
 
 		&_top{
 			justify-content: flex-start;
-			padding-top: 14.14%;
+			padding-top: 13.14%;
 			&:hover{
-				padding-top: 14.43%;
+				padding-top: 13.43%;
 			}
 			
 		}
 		&_bottom{
 			justify-content: flex-end;
 			margin-top: auto;
-			padding-bottom: 14.14%;
+			padding-bottom: 13.14%;
 			bottom: 25%;
 			&:hover{
-				padding-bottom: 14.43%;
+				padding-bottom: 13.43%;
 			}
 
 		}
@@ -1095,6 +1098,7 @@ a.planetarium__planet{
 		background-color: $green;
 		box-shadow: 0px 24px 24px 0px #00000026;
 		z-index: -1;
+		transition: .2s;
 		
 	}
 	&::after{
@@ -1109,14 +1113,20 @@ a.planetarium__planet{
 		line-height: 135%;
 		font-weight: 600;
 		transition: .2s all;
-		background-color: $gray_bg;
-		z-index: -10;
+		background: #fff;
 	}
 	&:hover{
 		background-size: $pl_sz $pl_sz;
-
+		&::before{
+			width: $pl_sz;
+			height: $pl_sz;
+			top: 0;
+			left: 0;
+			box-shadow: 0px 24px 28px 0px rgba(0,0,0,0.25);
+		}
 		&::after{
 			color: $green_dark;
+			z-index: -2;
 		}
 	}
 
@@ -1192,8 +1202,8 @@ a.planetarium__planet{
 	}
 }
 #fxd_inc{
-	right: calc(50% - 50% * cos(36 * 3.14159 / 20) - $pl_sz / 2);
-	top: calc(50% - 50% * sin(36 * 3.14159 / 20) - $pl_sz / 2);
+	right: calc(50% - 50% * cos(36.5 * 3.14159 / 20) - $pl_sz / 2);
+	top: calc(50% - 50% * sin(36.5 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Fixed Income';
 
@@ -1212,7 +1222,6 @@ a.planetarium__planet_g{
 	background-size: calc($pl_sz * 5 / 6) calc($pl_sz * 5 / 6);
 	background-position: center;
 	transition: .2s;
-	cursor: pointer;
 	text-decoration: none;
 	&::before{
 		content: '';
@@ -1229,6 +1238,7 @@ a.planetarium__planet_g{
 	}
 	&::after{
 		color: #333333;
+		background: #fff;
 		box-sizing: content-box;
 		top: 5px;
 		display: block;
@@ -1239,8 +1249,7 @@ a.planetarium__planet_g{
 		line-height: 135%;
 		font-weight: 600;
 		transition: .2s all;
-		background-color: $gray_bg;
-		z-index: -10;
+		z-index: -100;
 	}
 }
 #anlcs{
@@ -1249,7 +1258,7 @@ a.planetarium__planet_g{
 	&::after{
 		content: 'Analytics';
 
-		right: -12px;
+		right: -14px;
 		transform: translate(35%, 130%);
 	}
 }
@@ -1269,7 +1278,7 @@ a.planetarium__planet_g{
 	&::after{
 		content: 'Validations';
 
-		right: -5px;
+		right: -12px;
 		transform: translate(25%, -130%);
 	}
 }
@@ -1278,9 +1287,8 @@ a.planetarium__planet_g{
 	top: calc(50% - 32.7% * sin(26.5 * 3.14159 / 20) - $pl_sz / 2);
 	&::after{
 		content: 'Methods';
-
 		right: -12px;
-		transform: translate(100%, 12%);
+		transform: translate(100%, 5%);
 	}
 }
 #mdls{
@@ -1290,45 +1298,75 @@ a.planetarium__planet_g{
 		content: 'Models';
 
 		right: -12px;
-		transform: translate(50%, -130%);
+		transform: translate(40%, -130%);
 	}
 }
 .grid {
 	position: relative;
 	padding-top: 20px;
-	padding-bottom: 48px;
 	background-color: $gray_bg;
-	// &::before{
-	// 	content: '';
-	// 	display: block;
-	// 	width: 100%;
-	// 	height: 160px;
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	background: linear-gradient(0, rgba(249, 249, 251, 0.00) 0%, #FFF 100%);
-	// }
+	&::before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 160px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: linear-gradient(0, rgba(249, 249, 251, 0.00) 0%, #FFF 100%);
+		z-index: 1000;
+	}
 	&__container {
 		position: relative;
+		z-index: 100000;
+		max-width: 1608px;
 	}
 }
-.container {
+.grid-swiper{
+	position: unset;
+	padding: 40px 146px 80px;
+	margin-top: 0px;
+
+
+	&-wrapper{
+		display: flex;
+		align-items: stretch;
+
+	}
+
+}
+.swiper>div.grid__pagination{
+	top: unset;
+	position: absolute;
+	bottom: 34.5px;
+	left: 0;
+}
+.grid__button-prev{
+	left: 65px;
+	top: calc(50% - 60px)
+}
+.grid__button-next{
+	right: 65px;
+	top: calc(50% - 60px)
 }
 .grid-card {
 	background-color: #fff;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 32px;
+	align-items: flex-start;
+	box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.05);
+	min-height: 577px;
+	height: 100%;
+	border-top: 3px solid $green;
 	&__desc {
-		padding: 70px 70px 44px;
+		padding: 70px;
 		flex-basis: 856px;
 		flex-shrink: 3;
 	}
 	&__title {
 		color: #333333;
 		font-size: 28px;
-		line-height: 135%;
+		line-height: 100%;
 		font-weight: 600;
 		&::after{
 			content: '';
@@ -1362,11 +1400,12 @@ a.planetarium__planet_g{
 		}
 	}
 	&__image {
-		background: #F9F9FB;
-		padding: 71px 52px;
+		padding: 84px 52px;
 		flex-basis: 416px;
 		margin: 24px;
 		flex-shrink: 1;
+		align-self: center;
+
 		&_left{
 			margin-right: 0;
 		}
@@ -1375,6 +1414,7 @@ a.planetarium__planet_g{
 		}
 	}
 	&__img {
+		filter: drop-shadow( 0px 0px 80px rgba(0, 0, 0, 0.08));
 	}
 }
 .title {
