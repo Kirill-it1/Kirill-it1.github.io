@@ -1117,10 +1117,6 @@ a.planetarium__planet {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-image: url("../img/solution/icons/ellipse.png");
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  background-position: center;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   cursor: pointer;
@@ -1134,7 +1130,7 @@ a.planetarium__planet::before {
   top: 4px;
   left: 4px;
   border-radius: 50%;
-  background-color: #29AD26;
+  background: linear-gradient(135deg, #61E85E 0%, #219F1E 100%);
   -webkit-box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.1490196078);
           box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.1490196078);
   z-index: -1;
@@ -1267,10 +1263,6 @@ a.planetarium__planet_g {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-image: url("../img/solution/icons/ellipse_gray.png");
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  background-position: center;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   text-decoration: none;
@@ -1283,7 +1275,7 @@ a.planetarium__planet_g::before {
   top: 4px;
   left: 4px;
   border-radius: 50%;
-  background-color: #7f7b7b;
+  background: linear-gradient(144deg, #ABA6A6 5.31%, #5B5858 94.16%);
   -webkit-box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.1490196078);
           box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.1490196078);
   z-index: -1;
@@ -1431,6 +1423,7 @@ a.planetarium__planet_g::after {
   min-height: 577px;
   height: 100%;
   border-top: 3px solid #29AD26;
+  margin-right: 290px;
 }
 .grid-card__desc {
   padding: 70px;
