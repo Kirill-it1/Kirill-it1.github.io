@@ -8,7 +8,11 @@ const gridSwiper = new Swiper('.grid-swiper', {
   direction: 'horizontal',
   loop: true,
 
-
+  on: {
+    slideChange: swiper => {
+      incrPlanet(swiper.realIndex)
+    }
+  },
   // If we need pagination
   pagination: {
     el: '.grid__pagination',
@@ -36,3 +40,15 @@ const slideTo = (n) => {
   });
   gridSwiper.slideToLoop(n, 0);
 }
+document.querySelector('.grid__pagination').style.opacity = 1;
+
+const incrPlanet = (n) => {
+  planets.forEach((el, ind) => {
+    if (ind === n){
+      el.classList.add('planetarium__planet_active')
+    } else {
+      el.classList.remove('planetarium__planet_active')
+    }
+  })
+}
+incrPlanet(0);

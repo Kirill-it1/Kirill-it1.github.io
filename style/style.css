@@ -938,8 +938,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 216px;
-  height: 216px;
+  width: 33.96%;
+  height: 33.96%;
   z-index: -1;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.25) inset, -20px 0px 24px 0px rgba(0, 0, 0, 0.15) inset;
@@ -1153,10 +1153,10 @@ a.planetarium__planet::after {
   transition: 0.2s all;
   background: #fff;
 }
-a.planetarium__planet:hover {
+a.planetarium__planet:hover, a.planetarium__planet_active {
   background-size: 48px 48px;
 }
-a.planetarium__planet:hover::before {
+a.planetarium__planet:hover::before, a.planetarium__planet_active::before {
   width: 48px;
   height: 48px;
   top: 0;
@@ -1164,7 +1164,7 @@ a.planetarium__planet:hover::before {
   -webkit-box-shadow: 0px 24px 28px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 24px 28px 0px rgba(0, 0, 0, 0.25);
 }
-a.planetarium__planet:hover::after {
+a.planetarium__planet:hover::after, a.planetarium__planet_active::after {
   color: #2E8D3A;
   z-index: -2;
 }
@@ -1395,6 +1395,9 @@ a.planetarium__planet_g::after {
   position: absolute;
   bottom: 34.5px;
   left: 0;
+  opacity: 0;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
 }
 
 .grid__button-prev {
