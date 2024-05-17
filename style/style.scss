@@ -327,6 +327,17 @@ body{
 		&_active, &:hover{
 			color: $green_dark
 		}
+		&_active{
+			&::after{
+				content: '';
+				position: absolute;
+				bottom: -28px;
+				left: 0;
+				width: 100%;
+				height: 0;
+				border-bottom: 1px solid $green_dark;
+			}
+		}
 	}
 }
 .header-nav {
