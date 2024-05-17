@@ -1102,7 +1102,7 @@ a.planetarium__planet{
 		padding: 5px;
 		padding-left: 0;
 		font-size: 20px;
-		line-height: 135%;
+		line-height: normal;
 		font-weight: 600;
 		transition: .2s all;
 		background: #fff;
@@ -1208,9 +1208,9 @@ a.planetarium__planet{
 	top: calc(44% - $pl_sz / 2);
 	&::after{
 		content: 'Multi-Asset';
-		top: 1.1 * $pl_sz;
+		top: 1.2 * $pl_sz;
 		right: 0;
-		transform: translate(60%, 0);
+		transform: translate(65%, 0);
 		width: 109px;
 	}
 }

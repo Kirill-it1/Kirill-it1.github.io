@@ -1110,7 +1110,7 @@ a.planetarium__planet::after {
   padding: 5px;
   padding-left: 0;
   font-size: 20px;
-  line-height: 135%;
+  line-height: normal;
   font-weight: 600;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
@@ -1228,10 +1228,10 @@ a.planetarium__planet:hover::after, a.planetarium__planet_active::after {
 }
 #muas1::after {
   content: "Multi-Asset";
-  top: 52.8px;
+  top: 57.6px;
   right: 0;
-  -webkit-transform: translate(60%, 0);
-          transform: translate(60%, 0);
+  -webkit-transform: translate(65%, 0);
+          transform: translate(65%, 0);
   width: 109px;
 }
 
