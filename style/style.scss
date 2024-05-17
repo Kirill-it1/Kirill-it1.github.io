@@ -447,7 +447,7 @@ body{
 	}
 	&__subtitle {
 		color: #333333;
-		margin-bottom: 24px;
+		margin-bottom: 20px;
 		font-weight: 600;
 	}
 	&__text {
@@ -457,6 +457,7 @@ body{
 		margin-bottom: 44px;
 	}
 	&__button {
+		margin-top: auto;
 		display: block;
 		width: 100%;
 		padding: 12px;
@@ -505,6 +506,9 @@ body{
 .swiper-wrapper {
 }
 .services-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	padding: 35px 44px 52px;
 	border-top: 3px solid $gray_bg;
 	background: $gray_bg;
@@ -530,7 +534,7 @@ body{
 		}
 	}
 	&__image {
-		margin: 0 auto 28px;
+		margin: 0 auto 26px;
 		width: 134px;
 		height: 150px;
 	}
