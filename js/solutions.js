@@ -1,3 +1,4 @@
+//planets slider
 const gridSwiper = new Swiper('.grid-swiper', {
   direction: 'horizontal',
   loop: false,
@@ -34,7 +35,7 @@ const slideTo = (n) => {
   // });
   gridSwiper.slideToLoop(n, 0);
 }
-
+//planets
 const incrPlanet = (n) => {
   planets.forEach((el, ind) => {
     toSlide = parseInt(el.getAttribute('onmouseover').match(/\d+/)[0])

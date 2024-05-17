@@ -56,7 +56,7 @@ const prevent = ev => ev.preventDefault();
 // ...
 // в вашей функции закрытия окна:
 const serv_pag = document.querySelector('.services__pagination');
-// const serv_pag_bul = serv_pag.querySelectorAll('.swiper-pagination-bullet');
+const serv_pag_bul = serv_pag.querySelectorAll('.swiper-pagination-bullet');
 // const serv_hid_f = () => {
 //   serv_hid.classList.toggle('services-hidden_visible');
 //   serv_pag.classList.toggle('services__pagination_hidden');
@@ -99,19 +99,19 @@ serv_w.addEventListener('mouseover', () => {
   });
 });
 
-// serv_card.forEach((el, i)=>{
-//   el.addEventListener('mouseover', () => {
-//     serv_pag_bul.forEach((bul) => {
-//       bul.classList.remove('swiper-pagination-bullet_f');
-//       bul.classList.add('swiper-pagination-bullet_h');
-//     }); 
-//     serv_pag_bul[i].classList.add('swiper-pagination-bullet_f');
-//     serv_pag_bul[i].classList.remove('swiper-pagination-bullet_h');
-//   });
-//    el.addEventListener('mouseout', () => {
-//     serv_pag_bul.forEach((bul) => {
-//       bul.classList.remove('swiper-pagination-bullet_h');
-//     }); 
-//     serv_pag_bul[i].classList.remove('swiper-pagination-bullet_f');
-//   });
-// });
+serv_card.forEach((el, i)=>{
+  el.addEventListener('mouseover', () => {
+    serv_pag_bul.forEach((bul) => {
+      bul.classList.remove('swiper-pagination-bullet_f');
+      bul.classList.add('swiper-pagination-bullet_h');
+    }); 
+    serv_pag_bul[i].classList.add('swiper-pagination-bullet_f');
+    serv_pag_bul[i].classList.remove('swiper-pagination-bullet_h');
+  });
+   el.addEventListener('mouseout', () => {
+    serv_pag_bul.forEach((bul) => {
+      bul.classList.remove('swiper-pagination-bullet_h');
+    }); 
+    serv_pag_bul[i].classList.remove('swiper-pagination-bullet_f');
+  });
+});
