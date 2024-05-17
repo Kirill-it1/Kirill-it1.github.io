@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Worx</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/style/normalalize.css">
+	<link rel="stylesheet" href="/style/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/style/style.css">
+
+
+</head>
+<body>
+	<!-- HEADER -------------------------------------------------------------------------------->
+	<header class="header">
+		<div class="container header__container">
+			<a href="/" class="logo header__logo"><img src="/img/icons/logo.svg" alt="logo" class="logo-image header__logo-image"></a>
+			<nav class="nav header__nav">
+				<a href="/team/" class="nav__link header-nav__link">Team</a>
+				<a href="/framework/" class="nav__link header-nav__link nav__link_active">Framework</a>
+			</nav>
+			<div class="header__buttons">
+				<a href="" class="link-btn link-btn_linkedin header__link-btn"></a>
+				<a href="mailto:contact@worx.io" class="btn header__btn">Contact</a>
+			</div>
+			<div class="header-burger">
+				<span class="header-burger__line"></span>
+				<span class="header-burger__line"></span>
+				<span class="header-burger__line"></span>
+			</div>
+		</div>
+	</header>
+	<!-- END HEADER -------------------------------------------------------------------------------->
+	<main class="main">
+		<!-- OUR VISION -------------------------------------------------------------------------------->
+		<section class="approach def-section">
+			<div class="def-section__container-l approach__container-l">
+				<div class="container def-section__container approach__container">
+					<div class="def-section__desc approach__desc">
+						<h2 class="title def-section__title approach__title">Our Approach</h2>
+						<p class="def-section__text approach__text">
+							Our investment management process is a dynamic feedback loop that integrates research, portfolio construction, and risk management.
+						</p>
+						<a href="/team/" class="btn def-section__btn approach__btn">Team</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- END OUR VISION -------------------------------------------------------------------------------->
+		<section class="def-section planets">
+			<div class="container planets__container">
+				<h2 class="title planets__title def-section__title">Our Expertise</h2>
+				<p class="def-section__text planets__text">
+					We leverage our deep domain expertise to develop multi-asset investment strategies and structured products, maintaining consistency across all asset classes.
+				</p>
+
+				<div class="planets-wrapper">
+					<div class="planets__ab planets__ab_left">
+						<span class="planets__ab-text">Multi-Asset Consistency</span>
+					</div>
+					
+					<div class="planetarium">
+						
+						<a class="planetarium__planet" id="equ" onmouseover="slideTo(0)"></a>
+						<a class="planetarium__planet" id="for_exc" onmouseover="slideTo(1)"></a>
+						<a class="planetarium__planet" id="cmdts" onmouseover="slideTo(2)"></a>
+						<a class="planetarium__planet" id="fxd_inc" onmouseover="slideTo(3)"></a>
+						<a class="planetarium__planet" id="cred" onmouseover="slideTo(4)"></a>
+						<a class="planetarium__planet" id="infl" onmouseover="slideTo(5)"></a>
+						<a class="planetarium__planet" id="ins" onmouseover="slideTo(6)"></a>
+						<a class="planetarium__planet" id="digas" onmouseover="slideTo(7)"></a>
+						
+
+						<a class="planetarium__planet_g" id="anlcs"></a>
+						<a class="planetarium__planet_g" id="pdcts"></a>
+						<a class="planetarium__planet_g" id="vldt"></a>
+						<a class="planetarium__planet_g" id="mtds"></a>
+						<a class="planetarium__planet_g" id="mdls"></a>
+						
+					</div>
+					<a class="planetarium__planet" id="muas1" onmouseover="slideTo(8)"></a>
+					<a class="planetarium__planet" id="muas2" onmouseover="slideTo(8)"></a>
+					<div class="planetarium-center">
+						<a class="planetarium-center__planet planetarium__planet planetarium__planet_g" id="risk" onmouseover="slideTo(9)"></a>
+						<span class="planetarium-center__p">Management</span>
+						<span class="planetarium-center__p">Risk</span>
+						
+					</div>
+
+					<div class="planets__ab planets__ab_right">
+						<span class="planets__ab-text">Domain Expertise</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="grid" id="grid">
+			<div class="container grid__container">
+				<div class="grid-swiper swiper">
+					<div class="swiper-wrapper grid-swiper-wrapper">
+						<!-- GRID CARD -->
+						<div class="grid-card swiper-slide">
+							<div class="grid-card__desc">
+								<h2 class="title grid-card__title">Equities</h2>
+								<p class="text grid-card__text">We focus on generating attractive risk-adjusted returns for equity portfolios across various economic cycles.</p>
+							</div>
+							<div class="grid-card__image"><img src="/img/solution/1.svg" alt="solution" class="img grid-card__img"></div>
+						</div>
+						<!-- GRID CARD -->
+						<div class="grid-card swiper-slide" id="foreign-exchange">
+							<div class="grid-card__desc">
+								<h2 class="title grid-card__title">Foreign Exchange</h2>
+								<p class="text grid-card__text">We design tailored currency solutions for market participants, optimizing performance and managing risk.</p>
+							</div>
+							<div class="grid-card__image"><img src="/img/solution/2.svg" alt="solution" class="img grid-card__img"></div>
+						</div>
+						<!-- GRID CARD -->
+						<div class="grid-card swiper-slide" id="commodities">
+							<div class="grid-card__desc">
+								<h2 class="title grid-card__title">Commodities</h2>
+								<p class="text grid-card__text">We structure derivatives solutions that empower commodity players to establish effective hedging programs.</p>
+							</div>
+							<div class="grid-card__image"><img src="/img/solution/3.svg" alt="solution" class="img grid-card__img"></div>
+						</div>
+						<!-- GRID CARD -->
+						<div class="grid-card swiper-slide" id="fixed-income">
+							<div class="grid-card__desc">
+								<h2 class="title grid-card__title">Fixed Income</h2>
+								<p class="text grid-card__text">We tackle the complex challenges in fixed income markets by developing innovative strategies that add value.</p>
+							</div>
+							<div class="grid-card__image"><img src="/img/solution/4.svg" alt="solution" class="img grid-card__img"></div>
+						</div>
+						<!-- GRID CARD -->
+						<div class="grid-card swiper-slide" id="credit">
+							<div class="grid-card__desc">
+								<h2 class="title grid-card__title">Credit</h2>
+								<p class="text grid-card__text">We design comprehensive, structured credit products while effectively balancing risk and opportunity.</p>
+							</div>
+							<div class="grid-card__image"><img src="/img/solution/5.svg" alt="solution" class="img grid-card__img"></div>
+						</div>
+						<!-- GRID CARD -->
+						<div class="grid-card swiper-slide" id="inflation">
+							<div class="grid-card__desc">
+								<h2 class="title grid-card__title">Inflation</h2>
+								<p class="text grid-card__text">We implement systematic hedging programs designed to address the complexities of inflationary markets.</p>
+							</div>
+							<div class="grid-card__image"><img src="/img/solution/6.svg" alt="solution" class="img grid-card__img"></div>
+						</div>
+						<!-- GRID CARD -->
+						<div class="grid-card swiper-slide" id="insurance">
+							<div class="grid-card__desc">
+								<h2 class="title grid-card__title">Insurance</h2>
+								<p class="text grid-card__text">We devise derivatives strategies for liability management and hedging tailored to life and annuity businesses.</p>
+
+							</div>
+							<div class="grid-card__image"><img src="/img/solution/7.svg" alt="solution" class="img grid-card__img"></div>
+						</div>
+						<!-- GRID CARD -->
+						<div class="grid-card swiper-slide" id="digital-assets">
+							<div class="grid-card__desc">
+								<h2 class="title grid-card__title">Digital Assets</h2>
+								<p class="text grid-card__text">We navigate the unique challenges of digital assets, providing strategic exposure to this emerging sector.</p>
+							</div>
+							<div class="grid-card__image"><img src="/img/solution/8.svg" alt="solution" class="img grid-card__img"></div>
+						</div>
+						<!-- GRID CARD -->
+						<div class="grid-card swiper-slide" id="multi-asset">
+							<div class="grid-card__desc">
+								<h2 class="title grid-card__title">Multi-Asset</h2>
+								<p class="text grid-card__text">We craft sophisticated hybrid structured products, integrating various asset classes seamlessly.</p>
+							</div>
+							<div class="grid-card__image"><img src="/img/solution/9.svg" alt="solution" class="img grid-card__img"></div>
+						</div>
+						<!-- GRID CARD -->
+						<div class="grid-card swiper-slide" id="risk-management">
+							<div class="grid-card__desc">
+								<h2 class="title grid-card__title">Risk Management</h2>
+								<p class="text grid-card__text">We design investment strategies with a meticulous focus on holistic risk management.</p>
+							</div>
+							<div class="grid-card__image"><img src="/img/solution/10.svg" alt="solution" class="img grid-card__img"></div>
+						</div>
+					</div>
+					<!-- <div class="swiper-button-prev grid__button-prev"></div>
+					<div class="swiper-button-next grid__button-next"></div>
+					<div class="grid__pagination"></div> -->
+				</div>
+				
+			</div>
+		</section>
+		<a id="to-top" class="to-top"></a>
+	</main>
+
+	<!-- FOOTER -------------------------------------------------------------------------------->
+	<footer class="footer">
+		<div class="container footer__container">
+			<div class="footer-left">
+				<a href="/terms-of-use/" class="privacy footer__privacy">Terms of Use</a>
+				<a href="/privacy-policy/" class="privacy footer__privacy">Privacy Policy</a>
+			</div>
+
+			<div class="footer-right">
+				<a href="mailto:contact@vorx.io" class="link-btn link-btn_mail link-btn_dark footer__link-btn"></a>
+				<a href="" class="link-btn link-btn_linkedin link-btn_dark footer__link-btn"></a>
+			</div>
+			<p class="allrights footer__allrights">
+				© 2024 Vorx Inc. All Rights Reserved.
+			</p>
+		</div>
+	</footer>
+
+	<!-- END FOOTER -------------------------------------------------------------------------------->
+	<script src="/js/swiper.min.js"></script>
+	<script  src="/js/index.js" ></script>
+	<script src="/js/solutions.js"></script>
+</body>
+</html>

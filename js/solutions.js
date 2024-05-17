@@ -1,12 +1,6 @@
-const cen_h = () => {
-    document.querySelector('.planetarium-center').classList.toggle('planetarium-center_hl');
-  }
-document.querySelector('.planetarium-center__button_top').addEventListener('mouseover', cen_h);
-document.querySelector('.planetarium-center__button_top').addEventListener('mouseout', cen_h);
-
 const gridSwiper = new Swiper('.grid-swiper', {
   direction: 'horizontal',
-  loop: true,
+  loop: false,
 
   on: {
     slideChange: swiper => {
@@ -14,17 +8,17 @@ const gridSwiper = new Swiper('.grid-swiper', {
     }
   },
   // If we need pagination
-  pagination: {
-    el: '.grid__pagination',
-    clickable: true
-  },
+  // pagination: {
+  //   el: '.grid__pagination',
+  //   clickable: true
+  // },
 
   // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  simulateTouch: true,
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
+  simulateTouch: false,
   slidesPerView: 1,
   slideToClickedSlide: false,
   centeredSlides: false,
@@ -34,17 +28,17 @@ const gridSwiper = new Swiper('.grid-swiper', {
 
 const planets = document.querySelectorAll('.planetarium__planet');
 const slideTo = (n) => {
-  el = document.querySelector('.grid');
-  el.scrollIntoView({
-    behavior: 'smooth'
-  });
+  // el = document.querySelector('.grid');
+  // el.scrollIntoView({
+  //   behavior: 'smooth'
+  // });
   gridSwiper.slideToLoop(n, 0);
 }
-document.querySelector('.grid__pagination').style.opacity = 1;
 
 const incrPlanet = (n) => {
   planets.forEach((el, ind) => {
-    if (ind === n){
+    toSlide = parseInt(el.getAttribute('onmouseover').match(/\d+/)[0])
+    if (toSlide === n){
       el.classList.add('planetarium__planet_active')
     } else {
       el.classList.remove('planetarium__planet_active')
