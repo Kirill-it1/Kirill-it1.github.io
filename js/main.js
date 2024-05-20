@@ -115,3 +115,25 @@ serv_card.forEach((el, i)=>{
     serv_pag_bul[i].classList.remove('swiper-pagination-bullet_f');
   });
 });
+
+// IntroButton animation
+team = true;
+introBtn = document.querySelector('#introButton');
+
+const introButton = () => {
+  if (team){
+    team = false;
+    introBtn.classList.add('intro__btn_frame');
+    introBtn.classList.remove('intro__btn_team');
+    introBtn.href = '/framework/';
+
+
+  } else {
+    team = true;
+    introBtn.classList.remove('intro__btn_frame');
+    introBtn.classList.add('intro__btn_team');
+    introBtn.href = '/team/';
+
+  }
+}
+setInterval(introButton, 5000);

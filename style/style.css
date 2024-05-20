@@ -144,7 +144,6 @@ body {
   max-width: 1920px;
   min-height: 640px;
   margin: 0 auto;
-  background-image: url("../img/company/intro-bg.png");
   background-position: center right;
   background-size: contain;
   background-repeat: no-repeat;
@@ -189,12 +188,17 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
+  -webkit-transition: 0.1s all ease-in;
+  transition: 0.1s all ease-in;
 }
 .def-section__btn:hover {
   background-color: #2E8D3A;
   background-position: center right 18px;
 }
 
+.approach__container-l {
+  background-image: url("../img/solution/intro-bg.png");
+}
 .approach__desc {
   max-width: 596px;
 }
@@ -411,6 +415,30 @@ body {
   line-height: 181.8%;
   margin-bottom: 60px;
 }
+.intro__btn {
+  width: 125px;
+  -webkit-transition: 0.1s all ease-in, 0.5s width;
+  transition: 0.1s all ease-in, 0.5s width;
+}
+.intro__btn > span {
+  overflow: hidden;
+  -webkit-transition: 0.8s visibility, 0.3s opacity, 0s all;
+  transition: 0.8s visibility, 0.3s opacity, 0s all;
+}
+.intro__btn_frame {
+  width: 176px;
+}
+.intro__btn_team #fm {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+.intro__btn_frame #tm {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
 .intro__desc {
   max-width: 631px;
   padding-bottom: 0;
@@ -1865,4 +1893,8 @@ a.planetarium__planet_g.planetarium__planet_active::after {
 .choices__list--dropdown.choices__list {
   width: calc(100% + 2px);
   left: -1px;
+}
+
+.vision__container-l {
+  background-image: url("../img/company/intro-bg.png");
 }
