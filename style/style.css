@@ -197,7 +197,7 @@ body {
 }
 
 .approach__container-l {
-  background-image: url("../img/solution/intro-bg.png");
+  background-image: url("../img/solution/intro-bg.webp");
 }
 .approach__desc {
   max-width: 596px;
@@ -379,7 +379,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   min-height: 640px;
-  background-image: url("../img/main/bg_image.png");
+  background-image: url("../img/main/bg_image.webp");
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1896,5 +1896,5 @@ a.planetarium__planet_g.planetarium__planet_active::after {
 }
 
 .vision__container-l {
-  background-image: url("../img/company/intro-bg.png");
+  background-image: url("../img/company/intro-bg.webp");
 }
