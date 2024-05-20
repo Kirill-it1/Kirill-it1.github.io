@@ -14,12 +14,23 @@ a {
   text-decoration: none;
 }
 
-body {
-  background-color: #F9F9FB;
-}
-
 .body_noscroll {
   overflow: hidden;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-height: 100.1vh;
+  background-color: #F9F9FB;
 }
 
 .checkbox {
@@ -699,6 +710,11 @@ body {
 .footer {
   background: #000;
   padding: 32px 0;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+  -ms-flex-preferred-size: 96px;
+      flex-basis: 96px;
 }
 .footer__container {
   position: relative;
