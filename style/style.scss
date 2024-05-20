@@ -199,7 +199,7 @@ body{
 }
 .approach{
 	&__container-l{
-		background-image: url('../img/solution/intro-bg.webp');
+		background-image: url('../img/strategy/intro-bg.webp');
 	}
 	&__desc{
 		max-width: 596px;
@@ -400,15 +400,15 @@ body{
 			overflow: hidden;
 			transition: .8s visibility, .3s opacity, 0s all;
 		}
-		&_frame{
-			width: 176px;
+		&_strat{
+			width: 145px;
 		}
-		&_team #fm{
+		&_team #st{
 			visibility: hidden;
 			opacity: 0;
 			position: absolute;
 		}
-		&_frame #tm{
+		&_strat #tm{
 			opacity: 0;
 			visibility: hidden;
 			position: absolute;
@@ -906,7 +906,7 @@ body{
 }
 .values-main {
 	padding-bottom: 210px;
-	background-image: url('../img/company/bg.svg');
+	background-image: url('../img/team/bg.svg');
 	background-size: contain;
 	background-position: bottom  center;
 	background-repeat: no-repeat;
@@ -1031,7 +1031,7 @@ $pl_sz: 48px;
 	width: 100%;
 	padding: 0;
 	margin: 0px auto 32px;
-	background-image: url('../img/solution/intro.svg');
+	background-image: url('../img/strategy/intro.svg');
 	background-repeat: no-repeat;
 	background-size: 98% 100%;
 	background-position: center;
@@ -1840,6 +1840,6 @@ a.planetarium__planet_g{
 
 .vision{
 	&__container-l{
-		background-image: url('../img/company/intro-bg.webp');
+		background-image: url('../img/team/intro-bg.webp');
 	}
 }

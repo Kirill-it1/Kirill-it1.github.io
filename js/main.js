@@ -153,14 +153,14 @@ introBtn = document.querySelector('#introButton');
 const introButton = () => {
   if (team){
     team = false;
-    introBtn.classList.add('intro__btn_frame');
+    introBtn.classList.add('intro__btn_strat');
     introBtn.classList.remove('intro__btn_team');
-    introBtn.href = '/framework/';
+    introBtn.href = '/strategy/';
 
 
   } else {
     team = true;
-    introBtn.classList.remove('intro__btn_frame');
+    introBtn.classList.remove('intro__btn_strat');
     introBtn.classList.add('intro__btn_team');
     introBtn.href = '/team/';
 
