@@ -24,16 +24,30 @@ const gridSwiper = new Swiper('.grid-swiper', {
   slideToClickedSlide: false,
   centeredSlides: false,
   loopedSlides: 0,
-  spaceBetween: 290,
+  spaceBetween: 200,
 });
+// auto changing planets
+number = 0
+const changePlanets = () => {
+  if (number >= planets.length){
+    number -= planets.length
+  }
+  gridSwiper.slideToLoop(number, 0);
+  number++
+}
+const ip = setInterval(changePlanets, 3500)
 
 const planets = document.querySelectorAll('.planetarium__planet');
-const slideTo = (n) => {
+const planetHover = (n) => {
+  slideTo(n)
+  clearInterval(ip)
+}
+const slideTo = (i) => {
   // el = document.querySelector('.grid');
   // el.scrollIntoView({
   //   behavior: 'smooth'
   // });
-  gridSwiper.slideToLoop(n, 0);
+  gridSwiper.slideToLoop(i, 0);
 }
 //planets
 const incrPlanet = (n) => {
@@ -47,3 +61,4 @@ const incrPlanet = (n) => {
   })
 }
 incrPlanet(0);
+
