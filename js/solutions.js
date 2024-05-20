@@ -35,7 +35,7 @@ const changePlanets = () => {
   gridSwiper.slideToLoop(number, 0);
   number++
 }
-const ip = setInterval(changePlanets, 3500)
+const ip = setInterval(changePlanets, 5500)
 
 const planets = document.querySelectorAll('.planetarium__planet');
 const planetHover = (n) => {
