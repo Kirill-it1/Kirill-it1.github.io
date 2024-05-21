@@ -262,7 +262,8 @@ body {
           align-items: center;
 }
 .header__logo {
-  width: 108px;
+  width: 100px;
+  height: 32px;
 }
 .header__logo-image {
   width: 100%;
@@ -866,6 +867,8 @@ body {
   -webkit-filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.08));
           filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.08));
   position: relative;
+  max-width: 966px;
+  margin: 0 auto;
   z-index: 1000;
 }
 
