@@ -1,35 +1,60 @@
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-
-  // If we need pagination
-  pagination: {
-    el: '.services__pagination',
-    clickable: false
-  },
-  on: {
-    // slideChange: swiper => {
-    //   newSlide(swiper.realIndex)
-    // },
-    slideNextTransitionStart: swiper => activeCard(swiper.realIndex + 2),
-    slidePrevTransitionStart: swiper => activeCard(swiper.realIndex)
-
+document.addEventListener("DOMContentLoaded", () => {
+  const width = window.innerWidth;
+  if (width > 1377) {
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
     
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-nxt',
-    prevEl: '.swiper-button-prv',
-  },
-  simulateTouch: true,
-  slidesPerView: 3,
-  slideToClickedSlide: false,
-  centeredSlides: false,
-  loopedSlides: 2,
-  spaceBetween: 0
+    
+      // If we need pagination
+      pagination: {
+        el: '.services__pagination',
+        clickable: false
+      },
+      on: {
+        // slideChange: swiper => {
+        //   newSlide(swiper.realIndex)
+        // },
+        slideNextTransitionStart: swiper => activeCard(swiper.realIndex + 2),
+        slidePrevTransitionStart: swiper => activeCard(swiper.realIndex)
+    
+        
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-nxt',
+        prevEl: '.swiper-button-prv',
+      },
+      simulateTouch: true,
+      slidesPerView: 3,
+      slideToClickedSlide: false,
+      centeredSlides: false,
+      loopedSlides: 2,
+      spaceBetween: 0
+    });
+ }
 });
+
+
+const burger = document.querySelector('.header-burger');
+const nav = document.querySelector('.header__nav');
+const header = document.querySelector('.header');
+const upper = document.querySelector('.upper');
+
+let activeNav = false
+burger.addEventListener('click', () => { 
+  burger.classList.toggle('header-burger_active');
+  nav.classList.toggle('header__nav_active');
+  header.classList.toggle('header_active');
+  upper.classList.toggle('upper_active');
+  document.querySelector('body').classList.toggle('body_noscroll')
+
+
+
+
+});
+
 
 // const swiper2 = new Swiper('.swiper-2', {
 //   // Optional parameters

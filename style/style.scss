@@ -81,7 +81,7 @@ body{
 	background-size: 17px;
 	background-position: center;
 	background-repeat: no-repeat;
-	z-index: 10000;
+	z-index: 998;
 	bottom: 24px;
 	right: 24px;
 	border-radius: 50%;
@@ -91,12 +91,48 @@ body{
 		background-color: $green_dark;
 	}
 }
+
+@media screen and (min-width: 769px){
+	.to-top{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.to-top{
+		width: 44px;
+		height: 44px;
+		right: 36px;
+		bottom: 15px;
+		background-size: 15px;
+	}
+}
+@media screen and (max-width: 400px){
+	.to-top{
+		right: 15px;
+	}
+}
+
+
+
 .container{
 	max-width: 1320px;
 	margin: 0 auto;
 	padding: 0 10px;
 	transition: .3s;
 }
+
+@media screen and (max-width: 790px){
+	.container{
+		padding: 0 36px;
+	}
+}
+@media screen and (max-width: 400px){
+	.container{
+		padding: 0 15px;
+	}
+}
+
 .button {
 }
 .container_blur{
@@ -197,6 +233,31 @@ body{
 
 	}
 }
+
+@media screen and (max-width: 768px){
+	.def-section{
+		.intro__btn{
+			width: 121px;
+			&_strat{
+				width: 141px;
+			}
+		}
+		
+		&__title{
+			font-size: 24px;
+			font-weight: 600;
+			line-height: normal;
+			&::after{
+				margin: 24px 0
+			}
+		}
+		&__text{
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 155.556%
+		}
+	}
+}	
 .approach{
 	&__container-l{
 		background-image: url('../img/strategy/intro-bg.webp');
@@ -251,6 +312,9 @@ body{
 	min-height: 80px;
 	padding: 16px 0 15px;
 	background: white;
+	z-index: 1000;
+	transition: .3s;
+
 	&__container {
 		display: flex;
 		justify-content: flex-start;
@@ -300,7 +364,7 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	flex-shrink: 1;
-	margin-left: 20px;
+	margin-left: 24px;
 	&__line{
 		display: flex;
 		height: 0;
@@ -327,6 +391,7 @@ body{
 .logo-image {
 }
 .nav {
+	display: flex;
 	align-items: center;
 	&__link {
 		color: $blue_dark;
@@ -334,6 +399,9 @@ body{
 		position: relative;
 		font-size: 18px;
 		font-weight: 400;
+		&_mob{
+			display: none;
+		}
 		&_active, &:hover{
 			color: $green_dark
 		}
@@ -357,8 +425,111 @@ body{
 }
 
 
+@media screen and (max-width: 768px){
+	.header{	
+		position: relative;
+		min-height: 56px;
+
+		&_active{
+			background: $gray_bg
+		}
+		&__btn{
+			display: none;
+		}
+		&__buttons{
+			width: auto;
+		}
+		.link-btn_linkedin{
+			width: 32px;
+			height: 32px;
+			background-size: auto 13px;
+			background-position: center 9px;
+		}
+
+	}
+	.nav{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		transform: translate(-100%, 100%);
+		flex-direction: column;
+		margin: 0;
+		background: #fff;
+		transition: .5s;
+
+
+		
+
+		&__link{
+			width: 100%;
+			padding: 24px 36px;
+			font-size: 16px;
+			margin: 0;
+			background-image: url('/img/icons/miniarrow.svg');
+			background-repeat: no-repeat;
+			background-position: calc(100% - 36px) center;
+			&:not(:last-child){
+				border-bottom: 1px solid #D7D9DB;
+			}
+			&_mob{
+				display: initial;
+			}
+		}
+	}
+	
+	.header-burger{
+		display: flex;
+	}
+	.header__nav{
+		&_active{
+			display: flex;
+			transform: translate(0, 100%);
+		}
+	}
+	
+
+}
+.upper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.60);
+	visibility: hidden;
+	opacity: 0;
+	transition: .3s;
+	&_active{
+		visibility: visible;
+		opacity: 1;
+	}
+}
+@media screen and (max-width: 400px){
+	.nav{
+		&__link{
+			padding: 24px 15px;
+			background-position: calc(100% - 15px) center;
+
+		}
+	}
+}
+
+
 .intro {
 	background-color: white;
+	position: relative;
+	&::after{
+		width: 100%;
+		height: 120px;
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F9F9FB 100%);
+	}
 
 	&__container-l{
 		max-width: 1920px;
@@ -375,6 +546,8 @@ body{
 		justify-content: space-between;
 		align-items: center;
 		max-width: 1320px;
+		position: relative;
+		z-index: 10;
 	}
 	&__title.title {
 		margin: 0;
@@ -431,21 +604,56 @@ body{
 }
 .intro-image {
 }
+
+@media screen and (max-width: 768px){
+
+	.intro{
+		&__container-l{
+			padding-top: 60px;
+			background-position: calc(100% + 333px);
+			background-size: auto 100%;
+			min-height: 503px;
+		}
+		&__desc{
+			max-width: 345px;
+		}
+		&__title.title{
+			font-size: 28px;
+			line-height:  142.857%;
+
+
+			&::after{
+				margin: 24px 0
+			}
+		}
+		&__text{
+			font-size: 18px;
+			font-weight: 400;
+			line-height:  155.556%;
+			margin-bottom: 40px;
+			
+
+
+		}
+	}
+
+}
+@media screen and (max-width: 611px){
+	.intro{
+		&__container-l{
+			padding-top: 60px;
+			background-image: inherit;
+			background-size: auto 100%;
+			min-height: 503px;
+		}
+	}
+}
+
+
 .services {
 	position: relative;
 	background: $gray_bg;
-	&::before{
-		width: 100%;
-		height: 120px;
-		content: '';
-		position: absolute;
-		top: -120px;
-		left: 0;
-		display: block;
-		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F9F9FB 100%);
-
-
-	}
+	
 	&__container {
 		position: relative;
 		padding: 0;
@@ -533,6 +741,9 @@ body{
 .services-wrapper{
 }
 .swiper-wrapper {
+	display: flex;
+	align-items: stretch;
+	flex-direction: row;
 }
 .services-card {
 	display: flex;
@@ -545,7 +756,11 @@ body{
 	min-height: 497px;
 	border-right: 1px solid rgba(0,0,0,0.15);
 	max-width: 440px;
+	flex-grow: 2;
 	&__img {
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
 		&_g{
 			display: none;
 		}
@@ -718,6 +933,128 @@ body{
 	padding: 60px;
 	height: 590px;
 }
+
+
+@media screen and (max-width: 1377px){
+	.services{
+
+		&__button{
+			background: $green_dark;
+			color: #fff;
+		}
+		&-w{
+			padding: 0 10px;
+		}
+		&__pagination{
+			display: none;
+		}
+		&__prev{
+			display: none;
+		}
+		&__next{
+			display: none;
+		}
+	}
+	.services-card, .services-card_f{
+		background: #fff;
+		border-top: 3px solid $green;
+		box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.10);
+		flex-grow: 1;
+		flex-basis: 340px;
+		flex-shrink: 1;
+		margin-bottom: 18px;
+		max-width: inherit;
+
+	}
+	.services-wrapper{
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+}
+@media screen and (max-width: 1377px) and (min-width: 1068px){
+	.services-card{
+		margin-right: 16px;
+
+		&:nth-child(3n){
+			margin-right: 0;
+		}
+	}
+}
+@media screen and (max-width: 1067px) and (min-width: 670px){
+	.services-card{
+		margin-right: 16px;
+
+		&:nth-child(2n){
+			margin-right: 0;
+		}
+	}
+}
+@media screen and (max-width: 850px){
+	.services-card{
+		padding: 40px 20px 32px;
+		flex-basis: 300px;
+		min-height: auto;
+
+	}
+	
+}
+
+
+@media screen and (max-width: 768px){
+	.services{
+		&__container{
+			padding: 0 36px;
+		}
+		&-w{
+			padding: 0
+		}
+		&__subtitle{
+			margin-bottom: 12px;
+		}
+		&__text{
+			margin-bottom: 20px;
+		}
+		&__container{
+			padding-bottom: 78px;
+		}
+	}
+	.services-card{
+		&__image{
+			width: 67px;
+			height: 75px;
+		}
+		&__img{
+			display: none;
+		}
+		&__img_g{
+			display: block;
+		}
+	}
+	
+	.button{
+		font-size: 16px;
+	}
+	.subtitle{
+		font-size: 24px;
+	}
+	.text{
+		font-size: 14px;
+	}
+}
+
+
+@media screen and (max-width: 400px){
+	.services{
+		&__container{
+			padding: 0 15px 78px;
+		}
+	}
+}
+
+
+
 .footer {
 	background: #000;
 	padding: 32px 0;
@@ -728,6 +1065,7 @@ body{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 	&__privacy {
 		position: relative;
@@ -764,6 +1102,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-right: 20px;
 
 }
 .privacy {
@@ -807,6 +1146,51 @@ body{
 
 
 
+@media screen and (max-width: 790px){
+	.footer{
+		min-height: 147px;
+		padding: 32px 0;
+		position: relative;
+		&__container{
+			position: initial;
+		}
+		&__allrights {
+			position: absolute;
+			left: 36px;
+			bottom: 36px;
+			transform: translateX(0);
+			margin: 0 auto;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: normal;
+		}
+		&__privacy {
+			font-size: 16px;
+		}
+		&-left{
+			margin-bottom: 32px;
+
+		}
+		&-right{
+			margin-bottom: 50px;
+		}
+
+	}
+}
+
+@media screen and (max-width: 600px){
+	.footer{
+		min-height: 201px;
+	}
+}
+
+@media screen and (max-width: 400px){
+	.footer{
+		&__allrights {
+			left: 15px;
+		}
+	}
+}
 
 
 
@@ -1847,3 +2231,7 @@ a.planetarium__planet_g{
 		background-image: url('../img/team/intro-bg.webp');
 	}
 }
+
+
+
+
