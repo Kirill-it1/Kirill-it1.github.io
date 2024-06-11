@@ -605,14 +605,23 @@ body{
 .intro-image {
 }
 
-@media screen and (max-width: 768px){
-
+@media screen and (max-width: 1000px){
 	.intro{
 		&__container-l{
 			padding-top: 60px;
 			background-position: calc(100% + 333px);
 			background-size: auto 100%;
 			min-height: 503px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px){
+
+	.intro{
+		&__container-l{
+
 		}
 		&__desc{
 			max-width: 345px;

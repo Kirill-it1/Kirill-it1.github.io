@@ -614,13 +614,15 @@ body {
   font-weight: 600;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .intro__container-l {
     padding-top: 60px;
     background-position: calc(100% + 333px);
     background-size: auto 100%;
     min-height: 503px;
   }
+}
+@media screen and (max-width: 768px) {
   .intro__desc {
     max-width: 345px;
   }
