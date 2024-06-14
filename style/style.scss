@@ -464,7 +464,7 @@ body{
 @media screen and (max-width: 800px){
 	$header_height: 58px;
 	.main{
-		padding-top: $header_height;
+		padding-top: calc($header_height + 5px);
 	}
 	.header{
 		width: 100%;
