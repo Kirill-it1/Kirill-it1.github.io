@@ -1008,10 +1008,8 @@ body {
     display: none;
   }
   .services-card, .services-card_f {
-    background: #fff;
-    border-top: 3px solid #29AD26;
-    -webkit-box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E4E4E4;
+    background: transparent;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -1022,6 +1020,12 @@ body {
     margin-bottom: 18px;
     max-width: inherit;
     border-right: 0;
+  }
+  .services-card:active, .services-card_f:active {
+    background: #fff;
+    border-top: 3px solid #29AD26;
+    -webkit-box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.1);
   }
   .services-wrapper {
     -ms-flex-wrap: wrap;
