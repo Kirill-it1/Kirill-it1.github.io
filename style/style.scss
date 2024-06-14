@@ -10,7 +10,13 @@
 a{
 	text-decoration: none;
 }
-
+.title {
+	font-size: 36px;
+	line-height: 133%;
+	font-weight: 600;
+}
+.text {
+}
 $green: #29AD26 ;
 $green_dark: #2E8D3A;
 $gray: #5D727D;
@@ -88,7 +94,7 @@ body{
 	cursor: pointer;
 	transition: .2s;
 	&:hover{
-		background-color: $green_dark;
+		background-color: $green;
 	}
 }
 
@@ -105,6 +111,11 @@ body{
 		right: 36px;
 		bottom: 15px;
 		background-size: 15px;
+	}
+	.title{
+		font-size: 24px;
+		font-weight: 600;
+		line-height: normal;
 	}
 }
 @media screen and (max-width: 400px){
@@ -233,16 +244,41 @@ body{
 
 	}
 }
+@media screen and (max-width: 1000px){
+	.def-section{
+		&__container-l{
+			padding-top: 60px;
+			background-position: calc(100% + 333px);
+			background-size: auto 100%;
+			min-height: 503px;
+		}
+	}
+}
 
 @media screen and (max-width: 768px){
 	.def-section{
+		&__container-l{
+			padding-top: 45px;
+			padding-bottom: 52px;
+		}
+		&__desc{
+			max-width: 360px;
+		}
+		&__text{
+			font-size: 18px;
+			margin-bottom: 40px;
+		}
 		.intro__btn{
 			width: 121px;
+			font-size: 16px;
 			&_strat{
 				width: 141px;
 			}
-		}
 		
+		}
+		&__btn{
+			font-size: 16px;
+		}
 		&__title{
 			font-size: 24px;
 			font-weight: 600;
@@ -254,10 +290,12 @@ body{
 		&__text{
 			font-size: 18px;
 			font-weight: 400;
-			line-height: 155.556%
+			line-height: 155.556%;
+			margin-bottom: 40px;
 		}
 	}
 }	
+
 .approach{
 	&__container-l{
 		background-image: url('../img/strategy/intro-bg.webp');
@@ -298,8 +336,6 @@ body{
 		font-weight: 600;
 		color: black;
 		margin-bottom: 24px;
-		font-size: 36px;
-		line-height: 133%;
 	}
 	&__text {
 		margin-bottom: 44px;
@@ -425,10 +461,17 @@ body{
 }
 
 
-@media screen and (max-width: 768px){
-	.header{	
-		position: relative;
-		min-height: 56px;
+@media screen and (max-width: 800px){
+	$header_height: 58px;
+	.main{
+		padding-top: $header_height;
+	}
+	.header{
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		min-height: $header_height;
 
 		&_active{
 			background: $gray_bg
@@ -443,16 +486,17 @@ body{
 			width: 32px;
 			height: 32px;
 			background-size: auto 13px;
-			background-position: center 9px;
+			background-position: center 8px;
 		}
 
 	}
 	.nav{
 		position: absolute;
-		bottom: 0;
+		top: $header_height;
 		left: 0;
 		width: 100%;
-		transform: translate(-100%, 100%);
+		transform: translateX(-100%);
+		transform-origin: top;
 		flex-direction: column;
 		margin: 0;
 		background: #fff;
@@ -472,6 +516,11 @@ body{
 			&:not(:last-child){
 				border-bottom: 1px solid #D7D9DB;
 			}
+			&_active{
+				&::after{
+					display: none;
+				}
+			}
 			&_mob{
 				display: initial;
 			}
@@ -484,7 +533,8 @@ body{
 	.header__nav{
 		&_active{
 			display: flex;
-			transform: translate(0, 100%);
+			transform: translateX(0);
+			transform-origin: top;
 		}
 	}
 	
@@ -595,13 +645,7 @@ body{
 	padding-bottom: 0;
 	padding-top: 0;
 }
-.title {
-	font-size: 36px;
-	line-height: 128.5%;
-	font-weight: 600;
-}
-.text {
-}
+
 .intro-image {
 }
 
@@ -621,7 +665,7 @@ body{
 
 	.intro{
 		&__container-l{
-
+			padding-bottom: 60px;
 		}
 		&__desc{
 			max-width: 345px;
@@ -706,7 +750,7 @@ body{
 		margin-top: auto;
 		display: block;
 		width: 100%;
-		padding: 12px;
+		padding: 12px 20px;
 		color: $gray;
 		line-height: 133.5%;
 		border: 1px solid $green_dark;
@@ -756,6 +800,7 @@ body{
 }
 .services-card {
 	display: flex;
+	align-items: flex-start;
 	flex-direction: column;
 	justify-content: flex-start;
 	padding: 35px 44px 52px;
@@ -948,8 +993,9 @@ body{
 	.services{
 
 		&__button{
-			background: $green_dark;
+			background: $green;
 			color: #fff;
+			border: 0;
 		}
 		&-w{
 			padding: 0 10px;
@@ -973,6 +1019,7 @@ body{
 		flex-shrink: 1;
 		margin-bottom: 18px;
 		max-width: inherit;
+		border-right: 0;
 
 	}
 	.services-wrapper{
@@ -1013,6 +1060,7 @@ body{
 
 @media screen and (max-width: 768px){
 	.services{
+		padding-top: 60px;
 		&__container{
 			padding: 0 36px;
 		}
@@ -1027,6 +1075,10 @@ body{
 		}
 		&__container{
 			padding-bottom: 78px;
+		}
+		&__button{
+			width: auto;
+			
 		}
 	}
 	.services-card{
@@ -1044,6 +1096,7 @@ body{
 	
 	.button{
 		font-size: 16px;
+		line-height: normal;
 	}
 	.subtitle{
 		font-size: 24px;
@@ -1210,6 +1263,13 @@ body{
 	color: #333;
 }
 
+@media screen and (max-width: 768px) {
+	.section-text {
+		font-size: 16px;
+		line-height: normal;
+		font-weight: 400;
+	}
+}
 
 .team-grid {
 	display: flex;
@@ -1219,7 +1279,7 @@ body{
 	position: relative;
 	max-width: 966px;
 	margin: 0 auto;
-	z-index: 1000;
+	z-index: 100;
 
 }
 .team-card {
@@ -1266,6 +1326,32 @@ body{
 		color: #6f6f6f;
 	}
 }
+
+@media screen and (max-width: 900px){
+	.team{
+		&-grid{
+			flex-direction: column;
+
+		}
+		&-card{
+			min-height: 394px;
+			flex-basis: inherit;
+			&:not(:last-child){
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+
+			&__text{
+				font-size: 14px;
+				line-height: normal;
+			}
+			&__down-text{
+				font-size: 14px;
+				line-height: normal
+			}
+		}
+	}
+}
 .img {
 }
 .subtitle {
@@ -1280,8 +1366,6 @@ body{
 		font-weight: 600;
 		color: black;
 		margin-bottom: 44px;
-		font-size: 36px;
-		line-height: 133%;
 	}
 	&__text {
 		margin-bottom: 44px;
@@ -1338,6 +1422,69 @@ body{
 		color: #6f6f6f;
 		line-height: 162.5%;
 	}
+}
+
+@media screen and (max-width: 1341px) {
+	.values{
+		&-main{
+			background-image: url(/img/team/bg_m.svg);
+			padding-bottom: 197px;
+			max-width: 725px;
+			margin: 0 auto;
+		}
+		&__subtitle{
+			font-size: 22px;
+		}
+		&-grid{
+			max-width: 582px;
+			&__card{
+				padding: 32px 20px;
+			}
+			&__text{
+				line-height: 157.1%;
+				font-size: 14px;
+			}
+		}
+		
+		&__image{
+			margin-bottom: 20px;
+		}
+		
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.values{
+		&-main{
+			background-image: url(/img/team/bg_s.svg);
+			padding-bottom: 197px;
+			max-width: 345px;
+			margin: 0 auto;
+		}
+		&__subtitle{
+		}
+		&-grid{
+			flex-direction: column;
+			max-width: 285px;
+			&__card{
+				flex-basis: auto;
+				border-top: 1px solid $green;
+				
+				&_b{
+					margin-bottom: 0;
+					&:first-child{
+						border-top: 0;
+					}
+				}
+				&:not(:last-child){
+					margin-right: 0;
+				}
+			}
+			&__text{
+
+			}
+		}
+}
 }
 
 // Variable for planets
@@ -2244,3 +2391,12 @@ a.planetarium__planet_g{
 
 
 
+
+
+@media screen and (max-width: 611px){
+	.def-section{
+		&__container-l{
+			background-image: inherit
+		}
+	}
+}
