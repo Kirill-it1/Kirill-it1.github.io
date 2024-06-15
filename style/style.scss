@@ -1010,6 +1010,7 @@ body{
 			display: none;
 		}
 	}
+	
 	.services-card, .services-card:hover{
 		border: 1px solid #E4E4E4;
 		background: transparent;
@@ -1021,12 +1022,13 @@ body{
 
 		box-shadow: none;
 
-		&_f{
-			background: #fff;
-			border-top: 3px solid $green;
-			box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.10);
-		}
+		
 
+	}
+	.services-card_f{
+		background: #fff;
+		border-top: 3px solid $green;
+		box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.10);
 	}
 	.services-wrapper{
 		flex-wrap: wrap;
