@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let servi = []
     serv_card.forEach((el) => {
-      servi.push(el.getBoundingClientRect().top - el.offsetHeight / 2)
+      servi.push(el.getBoundingClientRect().top - el.offsetHeight / 1.5)
     });
     document.addEventListener('scroll', () => {
       let sc = 0;

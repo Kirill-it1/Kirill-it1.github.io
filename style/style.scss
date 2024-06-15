@@ -1010,7 +1010,7 @@ body{
 			display: none;
 		}
 	}
-	.services-card{
+	.services-card, .services-card:hover{
 		border: 1px solid #E4E4E4;
 		background: transparent;
 		flex-grow: 1;
@@ -1018,6 +1018,8 @@ body{
 		flex-shrink: 1;
 		margin-bottom: 18px;
 		max-width: inherit;
+
+		box-shadow: none;
 
 		&_f{
 			background: #fff;
