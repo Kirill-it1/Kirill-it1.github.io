@@ -1010,7 +1010,7 @@ body{
 			display: none;
 		}
 	}
-	.services-card, .services-card_f{
+	.services-card{
 		border: 1px solid #E4E4E4;
 		background: transparent;
 		flex-grow: 1;
@@ -1019,7 +1019,7 @@ body{
 		margin-bottom: 18px;
 		max-width: inherit;
 
-		&:active{
+		&_f, &:active{
 			background: #fff;
 			border-top: 3px solid $green;
 			box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.10);
@@ -1089,12 +1089,6 @@ body{
 		&__image{
 			width: 67px;
 			height: 75px;
-		}
-		&__img{
-			display: none;
-		}
-		&__img_g{
-			display: block;
 		}
 	}
 	

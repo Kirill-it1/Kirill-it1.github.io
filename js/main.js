@@ -1,5 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
   const width = window.innerWidth;
+  const serv_w = document.querySelector('.services-w');
+  const serv_card = document.querySelectorAll('.services-card');
+  if (width <= 687){
+    
+    let servi = []
+    serv_card.forEach((el) => {
+      servi.push(el.getBoundingClientRect().top - el.offsetHeight / 2)
+    });
+    document.addEventListener('scroll', () => {
+      let sc = 0;
+      servi.forEach((el, ind) => {
+
+        if (window.scrollY >= el) {
+          sc = ind
+        }
+      });
+      serv_card.forEach((el) => {
+        el.classList.remove('services-card_f')
+      });
+      serv_card[sc].classList.add('services-card_f')
+    });
+
+  } 
   if (width > 1377) {
     const swiper = new Swiper('.swiper', {
       // Optional parameters
@@ -183,7 +206,6 @@ const introButton = () => {
   }
 }
 setInterval(introButton, 5000);
-
 
 
 
