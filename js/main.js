@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       activeC(i)
     });
   });
-  if (width <= 687){
+  if (width <= 671){
   
     let servi = []
     serv_card.forEach((el) => {

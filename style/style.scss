@@ -307,6 +307,14 @@ body{
 		max-width: 123px;
 	}
 }
+
+@media screen and (max-width: 768px){
+	.approach{
+		&__desc{
+			max-width: 360px;
+		}
+	}
+}
 .team {
 	position: relative;
 	padding: 40px 0 80px;
@@ -1049,7 +1057,7 @@ body{
 		}
 	}
 }
-@media screen and (max-width: 1067px) and (min-width: 670px){
+@media screen and (max-width: 1067px) and (min-width: 684px){
 	.services-card{
 		margin-right: 16px;
 
@@ -1342,11 +1350,25 @@ body{
 		&-card{
 			min-height: 394px;
 			flex-basis: inherit;
+			border: 1px solid #e4e4e4;
+			background: transparent;
+			box-shadow: none;
+			transition: 0s all, .2s background, .2s border;
 			&:not(:last-child){
 				margin-right: 0;
 				margin-bottom: 20px;
 			}
-
+			&_f{
+				background: white;
+				border: 0;
+				border-top: 1px solid var(--Green, #29AD26);
+				background: var(--White, #FFF);
+				box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.08);
+			}
+			&__image{
+				width: 118px;
+				height: 123px;
+			}
 			&__text{
 				font-size: 14px;
 				line-height: normal;
@@ -1356,6 +1378,7 @@ body{
 				line-height: normal
 			}
 		}
+		
 	}
 }
 .img {
@@ -2035,6 +2058,95 @@ a.planetarium__planet_g{
 .text {
 }
 
+
+@media screen and (max-width: 1024px){
+	.planets-wrapper{
+		display: none;
+	}
+	.planets{
+
+	}
+	.grid{
+		&-swiper-wrapper{
+			flex-direction: column;
+		}
+		&-swiper{
+			margin-bottom: 0;
+		}
+		&-card{
+			position: relative;
+			border: 0;
+			background: $gray_bg;
+			border-radius: 28px;
+			padding: 17px 40px 17px 56px;
+			max-height: 56px;
+			overflow: hidden;
+			transition: max-height 0.4s;
+			&:not(:last-child){
+				margin-bottom: 12px;
+			}
+
+			&::before{
+				content: '';
+				position: absolute;
+				top: 12px;
+				left: 12px;
+				border-radius: 50%;
+				width: 32px;
+				height: 32px;
+				filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.10));;
+			}
+			&_g::before{
+				background: linear-gradient(135deg, #61E85E 0%, #219F1E 100%);
+			}
+			&_dg::before{
+				background: linear-gradient(144deg, #44CF8F 5.31%, #1C8856 94.16%);
+			}
+			&_vdg::before{
+				background: linear-gradient(144deg, #23B27A 5.31%, #00663E 94.16%);				;
+			}
+
+			&::after{
+				content: '';
+				position: absolute;
+				top: 18px;
+				right: 20px;
+				width: 20px;
+				height: 20px;
+				background-image: url(/img/icons/mini-bottom-arrow.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+
+				transition: .3s;
+			}
+
+			&__title{
+				font-size: 16px;
+				margin-bottom: 12px;
+			}
+			&__text{
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 150%
+			}
+
+			&__image{
+				display: none;
+			}
+		}
+		&-card_active{
+
+			&::after{
+				background-image: url(/img/icons/mini-top-arrow_dis.svg);
+			}
+
+			& .grid-card__title{
+				color: $green_dark;
+				
+			}
+		}
+	}
+}
 
 .default-section-main {
 	background-color: #fff;
