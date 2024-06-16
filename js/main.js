@@ -2,8 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const width = window.innerWidth;
   const serv_w = document.querySelector('.services-w');
   const serv_card = document.querySelectorAll('.services-card');
+  const activeC = (i) => {
+    serv_card.forEach((el) => {
+      el.classList.remove('services-card_f')
+    });
+    serv_card[i].classList.add('services-card_f')
+  }
+
+  serv_card.forEach((el, i)=>{
+    el.addEventListener('click', () => {
+      activeC(i)
+    });
+  });
   if (width <= 687){
-    
+  
     let servi = []
     serv_card.forEach((el) => {
       servi.push(el.getBoundingClientRect().top - el.offsetHeight / 1.5)
@@ -15,12 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (window.scrollY >= el) {
           sc = ind
         }
+
       });
-      serv_card.forEach((el) => {
-        el.classList.remove('services-card_f')
-      });
-      serv_card[sc].classList.add('services-card_f')
+      activeC(sc)
+      
+      
     });
+
 
   } 
   if (width > 1377) {
