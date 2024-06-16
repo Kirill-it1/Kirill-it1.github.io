@@ -34,7 +34,7 @@ body{
 	justify-content: flex-start;
 	min-height: 100.1vh;
 
-	background-color: $gray_bg;
+	background-color: white;
 }
 .subtitle{
 	
@@ -166,6 +166,7 @@ body{
 
 }
 .main {
+	background-color: $gray_bg;
 }
 .def-section {
 	position: relative;

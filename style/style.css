@@ -36,7 +36,7 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   min-height: 100.1vh;
-  background-color: #F9F9FB;
+  background-color: white;
 }
 
 .checkbox {
@@ -161,6 +161,10 @@ body {
   font-weight: 500;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.main {
+  background-color: #F9F9FB;
 }
 
 .def-section {
