@@ -2092,6 +2092,10 @@ a.planetarium__planet_g.planetarium__planet_active::after {
   .planets-wrapper {
     display: none;
   }
+  .planets__text {
+    font-size: 16px;
+    line-height: 162.5%;
+  }
   .grid-swiper-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

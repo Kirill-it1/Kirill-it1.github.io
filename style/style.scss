@@ -2066,7 +2066,10 @@ a.planetarium__planet_g{
 		display: none;
 	}
 	.planets{
-
+		&__text{
+			font-size: 16px;
+			line-height: 162.5%;
+		}
 	}
 	.grid{
 		&-swiper-wrapper{
