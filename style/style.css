@@ -1349,6 +1349,9 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  .team {
+    padding-bottom: 60px;
+  }
   .team-grid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1487,7 +1490,10 @@ body {
     margin-bottom: 20px;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
+  .values {
+    padding: 60px 0 80px;
+  }
   .values-main {
     background-image: url(/img/team/bg_s.svg);
     padding-bottom: 197px;
