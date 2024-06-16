@@ -479,7 +479,7 @@ body {
     display: none;
   }
   .main {
-    padding-top: 63px;
+    margin-top: 63px;
   }
   .header {
     width: 100%;

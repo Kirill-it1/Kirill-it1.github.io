@@ -476,7 +476,7 @@ body{
 	}
 	$header_height: 58px;
 	.main{
-		padding-top: calc($header_height + 5px);
+		margin-top: calc($header_height + 5px);
 	}
 	.header{
 		width: 100%;
