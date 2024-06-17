@@ -22,7 +22,6 @@ const hid_nav = () => {
 
 
 document.addEventListener('click', (e) => {
-	console.log(activeNav)
 	if (activeNav && !e.target.closest('.header'))
 		hid_nav()
 });

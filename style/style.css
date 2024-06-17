@@ -1488,9 +1488,12 @@ body {
 }
 
 @media screen and (max-width: 1341px) {
+  .values {
+    padding-bottom: 99px;
+  }
   .values-main {
-    background-image: url(/img/team/bg_m.svg);
-    padding-bottom: 197px;
+    background-image: url("/img/team/bg_m.svg");
+    padding-bottom: 173px;
     max-width: 725px;
     margin: 0 auto;
   }
@@ -1516,8 +1519,8 @@ body {
     padding: 60px 0 80px;
   }
   .values-main {
-    background-image: url(/img/team/bg_s.svg);
-    padding-bottom: 197px;
+    background-image: url("/img/team/bg_s.svg");
+    padding-bottom: 173px;
     max-width: 345px;
     margin: 0 auto;
   }
@@ -1544,6 +1547,13 @@ body {
   }
   .values-grid__card:not(:last-child) {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 374px) {
+  .values-main {
+    background-image: url("/img/team/bg_xs.svg");
+    background-size: 100px 88px;
+    background-position: center calc(100% - 20px);
   }
 }
 .pl-c {
@@ -2293,6 +2303,33 @@ a.planetarium__planet_g.planetarium__planet_active::after {
   margin-top: 48px;
 }
 
+@media screen and (max-width: 768px) {
+  .default-section {
+    padding: 60px 0 99px;
+  }
+  .default-section-main {
+    padding: 40px 20px;
+  }
+  .default-section-row {
+    margin-top: 32px;
+  }
+  .default-section__title {
+    font-size: 24px;
+  }
+  .default-section__text:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .default-section__text_spec-top {
+    margin-top: 16px;
+  }
+  .default-section__text_lst {
+    margin-top: 16px;
+  }
+  .default-section__subtitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
 .attention {
   color: #656565;
   font-size: 16px;
