@@ -2111,11 +2111,24 @@ a.planetarium__planet_g{
 		}
 	}
 	.grid{
+		position: relative;
+		
 		&-swiper-wrapper{
 			flex-direction: column;
 		}
 		&-swiper{
 			margin-bottom: 0;
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 27px;
+				width: 1px;
+				height: 100%;
+				background: #bababa;
+			}
 		}
 		&-card{
 			position: relative;
@@ -2139,6 +2152,9 @@ a.planetarium__planet_g{
 				width: 32px;
 				height: 32px;
 				filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.10));;
+			}
+			&:not(:last-child).grid-card_last{
+				margin-bottom: 32px;
 			}
 			&_g::before{
 				background: linear-gradient(135deg, #61E85E 0%, #219F1E 100%);
