@@ -251,7 +251,7 @@ body{
 			padding-top: 60px;
 			background-position: calc(100% + 333px);
 			background-size: auto 100%;
-			min-height: 503px;
+			min-height: unset;
 		}
 	}
 }
@@ -298,11 +298,24 @@ body{
 }	
 
 .approach{
+	position: relative;
+	&::after{
+		display: block;
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 120px;
+		width: 100%;
+		background: linear-gradient(180deg, rgba(249, 249, 251, 0.00) 0%, #FFF 100%);
+	}
 	&__container-l{
 		background-image: url('../img/strategy/intro-bg.webp');
 	}
 	&__desc{
 		max-width: 596px;
+		position: relative;
+		z-index: 100;
 	}
 	&__btn{
 		max-width: 123px;
@@ -313,6 +326,18 @@ body{
 	.approach{
 		&__desc{
 			max-width: 360px;
+			padding-bottom: 0;
+		}
+		&__container-l{
+			padding-bottom: 112px;
+		}
+	}
+}
+@media screen and (max-width: 430px){
+	.approach{
+		&__container-l{
+			padding-bottom: 62px;
+			
 		}
 	}
 }
@@ -320,16 +345,7 @@ body{
 	position: relative;
 	padding: 40px 0 80px;
 	background-color: #ffffff;;
-	&::before{
-		display: block;
-		content: '';
-		position: absolute;
-		top: -120px;
-		left: 0;
-		height: 120px;
-		width: 100%;
-		background: linear-gradient(180deg, rgba(249, 249, 251, 0.00) 0%, #FFF 100%);
-	}
+
 	&::after{
 		content: '';
 		position: absolute;
@@ -1544,16 +1560,7 @@ $pl_sz: 48px;
 	background-color: #fff;
 	padding-top: 80px;
 	padding-bottom: 60px;
-	&::before{
-		display: block;
-		content: '';
-		position: absolute;
-		top: -120px;
-		left: 0;
-		height: 120px;
-		width: 100%;
-		background: linear-gradient(180deg, rgba(249, 249, 251, 0.00) 0%, #FFF 100%);
-	}
+
 	&__container{
 		max-width: 1316px;
 		position: relative;
@@ -2073,6 +2080,7 @@ a.planetarium__planet_g{
 
 @media screen and (max-width: 1024px){
 	.planets{
+		padding-top: 60px;
 		&__title{
 			margin-bottom: 24px;
 		}
@@ -2525,12 +2533,43 @@ a.planetarium__planet_g{
 
 
 .vision{
+	position: relative;
+	&::after{
+		display: block;
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 120px;
+		width: 100%;
+		background: linear-gradient(180deg, rgba(249, 249, 251, 0.00) 0%, #FFF 100%);
+	}
 	&__container-l{
 		background-image: url('../img/team/intro-bg.webp');
 	}
+	&__desc{
+		position: relative;
+		z-index: 100;
+	}
+}
+@media screen and (max-width: 768px){
+	.vision{
+		&__desc{
+			padding-bottom: 0;
+		}
+		&__container-l{
+			padding-bottom: 98px;
+		}
+	}
 }
 
-
+@media screen and (max-width: 420px){
+	.vision{
+		&__container-l{
+			padding-bottom: 62px;
+		}
+	}
+}
 
 
 

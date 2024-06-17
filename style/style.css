@@ -245,7 +245,7 @@ body {
     padding-top: 60px;
     background-position: calc(100% + 333px);
     background-size: auto 100%;
-    min-height: 503px;
+    min-height: unset;
   }
 }
 @media screen and (max-width: 768px) {
@@ -285,11 +285,27 @@ body {
     margin-bottom: 40px;
   }
 }
+.approach {
+  position: relative;
+}
+.approach::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 251, 0)), to(#FFF));
+  background: linear-gradient(180deg, rgba(249, 249, 251, 0) 0%, #FFF 100%);
+}
 .approach__container-l {
   background-image: url("../img/strategy/intro-bg.webp");
 }
 .approach__desc {
   max-width: 596px;
+  position: relative;
+  z-index: 100;
 }
 .approach__btn {
   max-width: 123px;
@@ -298,23 +314,21 @@ body {
 @media screen and (max-width: 768px) {
   .approach__desc {
     max-width: 360px;
+    padding-bottom: 0;
+  }
+  .approach__container-l {
+    padding-bottom: 112px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .approach__container-l {
+    padding-bottom: 62px;
   }
 }
 .team {
   position: relative;
   padding: 40px 0 80px;
   background-color: #ffffff;
-}
-.team::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: -120px;
-  left: 0;
-  height: 120px;
-  width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 251, 0)), to(#FFF));
-  background: linear-gradient(180deg, rgba(249, 249, 251, 0) 0%, #FFF 100%);
 }
 .team::after {
   content: "";
@@ -1551,17 +1565,6 @@ body {
   padding-top: 80px;
   padding-bottom: 60px;
 }
-.planets::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: -120px;
-  left: 0;
-  height: 120px;
-  width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 251, 0)), to(#FFF));
-  background: linear-gradient(180deg, rgba(249, 249, 251, 0) 0%, #FFF 100%);
-}
 .planets__container {
   max-width: 1316px;
   position: relative;
@@ -2100,6 +2103,9 @@ a.planetarium__planet_g.planetarium__planet_active::after {
 }
 
 @media screen and (max-width: 1024px) {
+  .planets {
+    padding-top: 60px;
+  }
   .planets__title {
     margin-bottom: 24px;
   }
@@ -2526,10 +2532,41 @@ a.planetarium__planet_g.planetarium__planet_active::after {
   left: -1px;
 }
 
+.vision {
+  position: relative;
+}
+.vision::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 251, 0)), to(#FFF));
+  background: linear-gradient(180deg, rgba(249, 249, 251, 0) 0%, #FFF 100%);
+}
 .vision__container-l {
   background-image: url("../img/team/intro-bg.webp");
 }
+.vision__desc {
+  position: relative;
+  z-index: 100;
+}
 
+@media screen and (max-width: 768px) {
+  .vision__desc {
+    padding-bottom: 0;
+  }
+  .vision__container-l {
+    padding-bottom: 98px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .vision__container-l {
+    padding-bottom: 62px;
+  }
+}
 @media screen and (max-width: 611px) {
   .def-section__container-l {
     background-image: inherit;
