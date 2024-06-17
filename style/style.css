@@ -505,7 +505,7 @@ body {
   }
   .nav {
     position: absolute;
-    top: 58px;
+    top: 63px;
     left: 0;
     width: 100%;
     -webkit-transform: translateX(-100%);
@@ -1356,6 +1356,9 @@ body {
   .team {
     padding-bottom: 60px;
   }
+  .team__text {
+    display: none;
+  }
   .team-grid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1562,6 +1565,10 @@ body {
 .planets__container {
   max-width: 1316px;
   position: relative;
+}
+.planets__title::after {
+  display: none;
+  margin-bottom: 24px;
 }
 .planets__text {
   color: #333;
@@ -2093,6 +2100,12 @@ a.planetarium__planet_g.planetarium__planet_active::after {
 }
 
 @media screen and (max-width: 1024px) {
+  .planets__title {
+    margin-bottom: 24px;
+  }
+  .planets__text {
+    margin-bottom: 24px;
+  }
   .planets-wrapper {
     display: none;
   }
