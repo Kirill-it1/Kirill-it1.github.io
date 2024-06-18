@@ -22,12 +22,13 @@ const gridSwiper = new Swiper('.grid-swiper', {
   //   nextEl: '.swiper-button-next',
   //   prevEl: '.swiper-button-prev',
   // },
+  allowTouchMove: false,
   simulateTouch: false,
   slidesPerView: 1,
   slideToClickedSlide: false,
   centeredSlides: false,
   loopedSlides: 0,
-  spaceBetween: 200,
+  spaceBetween: 0,
 });
 // auto changing planets
 number = 0
