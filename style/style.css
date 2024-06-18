@@ -1269,7 +1269,7 @@ body {
     font-size: 16px;
   }
   .footer-left {
-    margin-bottom: 32px;
+    margin-bottom: 50px;
   }
   .footer-right {
     margin-bottom: 50px;
@@ -1278,6 +1278,11 @@ body {
 @media screen and (max-width: 600px) {
   .footer {
     min-height: 201px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-left {
+    margin-bottom: 32px;
   }
 }
 @media screen and (max-width: 420px) {

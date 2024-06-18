@@ -1261,7 +1261,7 @@ body{
 			font-size: 16px;
 		}
 		&-left{
-			margin-bottom: 32px;
+			margin-bottom: 50px;
 
 		}
 		&-right{
@@ -1276,7 +1276,11 @@ body{
 		min-height: 201px;
 	}
 }
-
+@media screen and (max-width: 600px){
+	.footer-left{
+		margin-bottom: 32px;
+	}
+}
 @media screen and (max-width: 420px){
 	.footer{
 		&__allrights {
