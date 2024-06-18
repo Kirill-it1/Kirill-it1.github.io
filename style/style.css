@@ -2192,6 +2192,12 @@ a.planetarium__planet_g.planetarium__planet_active::after {
   .grid-card_vdg::before {
     background: linear-gradient(144deg, #23B27A 5.31%, #00663E 94.16%);
   }
+  .grid-card_active.grid-card_dg .grid-card__title {
+    color: #30AB72;
+  }
+  .grid-card_active.grid-card_vdg .grid-card__title {
+    color: #14905F;
+  }
   .grid-card::after {
     content: "";
     position: absolute;

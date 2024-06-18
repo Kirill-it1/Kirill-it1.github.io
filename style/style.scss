@@ -2166,6 +2166,13 @@ a.planetarium__planet_g{
 				background: linear-gradient(144deg, #23B27A 5.31%, #00663E 94.16%);				;
 			}
 
+			&_active.grid-card_dg .grid-card__title{
+				color: #30AB72;
+			}
+			&_active.grid-card_vdg .grid-card__title{
+				color: #14905F;;
+			}
+
 			&::after{
 				content: '';
 				position: absolute;
