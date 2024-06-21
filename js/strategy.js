@@ -28,7 +28,7 @@ const gridSwiper = new Swiper('.grid-swiper', {
   slideToClickedSlide: false,
   centeredSlides: false,
   loopedSlides: 0,
-  spaceBetween: 0,
+  spaceBetween: 290,
 });
 // auto changing planets
 number = 0
