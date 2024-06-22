@@ -1,0 +1,140 @@
+.footer {
+	background: #000;
+	padding: 32px 0;
+	flex-grow: 4;
+	flex-basis: 96px;
+	&__container {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	&__privacy {
+		position: relative;
+		color: #fff;
+		line-height: .85em;
+		transition: .1s;
+		&:hover{
+			color: $green
+		}
+
+	}
+	&__privacy:nth-child(1){
+		padding-right: 32px;
+		border-right: 1px solid #fff;
+	
+	}
+	&__privacy:nth-child(2){
+		padding-left: 32px;
+		
+	}
+	&__allrights {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 0 auto;
+	}
+	&__link-btn {
+		width: 32px;
+		height: 32px;
+		background-size: 12.8px;
+	}
+}
+.footer-left {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-right: 20px;
+
+}
+.privacy {
+	font-size: 14px;
+
+}
+.allrights {
+	color: #858B9C;
+	font-size: 14px;
+
+}
+.footer-right {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 84px;
+}
+.link-btn_dark {
+	border-color: #fff;
+	&:hover{
+		background-color: #fff;
+	}
+}
+.link-btn_linkedin.link-btn_dark{
+	background-image: url('../img/icons/linkedin_hover.svg');
+	&:hover{
+		background-image: url('../img/icons/linkedin.svg');
+	}
+
+}
+.link-btn_mail.link-btn_dark{
+	background-image: url('../img/icons/mail_hover.svg');
+	&:hover{
+		background-image: url('../img/icons/mail.svg');
+	}
+}
+.link-btn_mail {
+	background-image: url('../img/icons/mail.svg')
+}
+
+
+
+
+@media screen and (max-width: 790px){
+	.footer{
+		min-height: 147px;
+		padding: 32px 0;
+		position: relative;
+		&__container{
+			position: initial;
+		}
+		&__allrights {
+			position: absolute;
+			left: 36px;
+			bottom: 36px;
+			transform: translateX(0);
+			margin: 0 auto;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: normal;
+		}
+		&__privacy {
+			font-size: 16px;
+		}
+		&-left{
+			margin-bottom: 50px;
+
+		}
+		&-right{
+			margin-bottom: 50px;
+		}
+
+	}
+}
+
+@media screen and (max-width: 600px){
+	.footer{
+		min-height: 201px;
+	}
+}
+@media screen and (max-width: 397px){
+	.footer-left{
+		margin-bottom: 32px;
+	}
+}
+@media screen and (max-width: 420px){
+	.footer{
+		&__allrights {
+			left: 15px;
+		}
+	}
+}

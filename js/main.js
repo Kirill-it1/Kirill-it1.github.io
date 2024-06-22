@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     serv_card.forEach((el) => {
       el.classList.remove('services-card_f')
     });
-    serv_card[i].classList.add('services-card_f')
+    if (i >= 0) serv_card[i].classList.add('services-card_f')
   }
 
   serv_card.forEach((el, i)=>{
@@ -14,28 +14,52 @@ document.addEventListener("DOMContentLoaded", () => {
       activeC(i)
     });
   });
-  if (width <= 671){
-  
-    let servi = []
-    serv_card.forEach((el) => {
-      servi.push(el.getBoundingClientRect().top - el.offsetHeight / 1.5)
-    });
+  let servi = []
+  const maxWidth = serv_card[0].offsetWidth
+  let mhgt = 0
+  let oldServi = []
+  let lastY = 0
+  serv_card.forEach((el) => {
+    el.style.maxWidth = `${maxWidth}px`
+    mhgt = Math.max(mhgt, el.offsetHeight)
+    
+  });
+  serv_card.forEach(el => {
+    el.style.height = `${mhgt}px`
+    let cordY = el.getBoundingClientRect().top - mhgt / 1.7;
+    oldServi.push(cordY);
+    if (lastY == cordY){
+      servi.push(cordY + el.offsetHeight / 4)
+      col2 = true
+    } else {
+      servi.push(cordY)
+    }
+    lastY = cordY
+
+  });
+  let col3 = false
+  for (let i = 0; i < oldServi.length - 2; i++){
+    if(oldServi[i] == oldServi[i + 1] && oldServi[i + 1] == oldServi[i + 2]){
+      col3 = true
+      break;
+    }
+  }
+  if (!col3){
     document.addEventListener('scroll', () => {
       let sc = 0;
       servi.forEach((el, ind) => {
-
         if (window.scrollY >= el) {
           sc = ind
         }
 
       });
       activeC(sc)
-      
-      
     });
+  } else if (width <= 1377) {
+    activeC(-1)
+  }
 
 
-  } 
   if (width > 1377) {
     const swiper = new Swiper('.swiper', {
       // Optional parameters

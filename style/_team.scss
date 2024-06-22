@@ -1,0 +1,124 @@
+.team {
+	position: relative;
+	padding: 40px 0 80px;
+	background-color: #ffffff;;
+
+	&::after{
+		content: '';
+		position: absolute;
+		bottom: -162px;
+		left: 0;
+		height: 162px;
+		width: 100%;
+		background: linear-gradient(0deg, rgba(249, 249, 251, 0) 0%, #FFFFFF 100%);
+	}
+
+	&__title {
+		font-weight: 600;
+		color: black;
+		margin-bottom: 24px;
+	}
+	&__text {
+		margin-bottom: 44px;
+		color: #333333;
+		line-height: 162.5%;
+	}
+}
+.team-grid {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	filter: drop-shadow( 0px 20px 50px rgba(0, 0, 0, 0.08));
+	position: relative;
+	max-width: 966px;
+	margin: 0 auto;
+	z-index: 100;
+
+}
+.team-card {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 636px;
+	background-color: #fff;
+	padding: 48px 24px 37px;
+	border-top: 3px solid $green;
+	&:not(:last-child){
+		margin-right: 24px;
+	}
+	&__image {
+		margin: 0 auto 32px;
+		max-width: 160px;
+		height: 166px;
+	}
+
+	&__subtitle {
+		margin-bottom: 16px;
+		font-size: 22px;
+		line-height: 136%;
+		color: #333333;
+		font-weight: 600;
+	}
+	&__text {
+		line-height: 162.5%;
+		color: #6f6f6f;
+		margin-bottom: 26px;
+	}
+	&__down-block {
+		align-self: flex-start;
+		margin-top: auto;
+		display: block;
+		padding: 10px 0;
+		border-bottom: 1px solid $green;
+	}
+	&__down-text{
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 150%;
+		color: #6f6f6f;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.team{
+		padding-bottom: 60px;
+		&__text{
+			display: none;
+		}
+		&-grid{
+			flex-direction: column;
+
+		}
+		&-card{
+			min-height: 394px;
+			flex-basis: inherit;
+			border: 1px solid #e4e4e4;
+			background: transparent;
+			box-shadow: none;
+			transition: 0s all, .2s background, .2s border;
+			&:not(:last-child){
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+			&_f{
+				background: white;
+				border: 0;
+				border-top: 1px solid var(--Green, #29AD26);
+				background: var(--White, #FFF);
+				box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.08);
+			}
+			&__image{
+				width: 118px;
+				height: 123px;
+			}
+			&__text{
+				font-size: 14px;
+				line-height: normal;
+			}
+			&__down-text{
+				font-size: 14px;
+				line-height: normal
+			}
+		}
+		
+	}
+}

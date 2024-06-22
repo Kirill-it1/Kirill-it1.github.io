@@ -1,0 +1,398 @@
+.services {
+	position: relative;
+	background: $gray_bg;
+	
+	&__container {
+		position: relative;
+		padding: 0;
+		max-width: 1320px;
+		padding-bottom: 40.5px;
+		&::before{
+			position: absolute;
+			content: '';
+			display: block;
+			width: 4px;
+			height: 100%;
+			background: $gray_bg;
+			left: 0;
+			top: 0;
+			z-index: 100;
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			display: block;
+			width: 4px;
+			height: 100%;
+			background: $gray_bg;
+			right: 0;
+			top: 0;
+			z-index: 100;
+		}
+	}
+	&__subtitle {
+		color: #333333;
+		margin-bottom: 20px;
+		font-weight: 600;
+	}
+	&__text {
+		line-height: 162.5%;
+		font-size: 16px;
+		color: #949494;
+		margin-bottom: 44px;
+	}
+	&__button {
+		margin-top: auto;
+		display: block;
+		width: 100%;
+		padding: 12px 20px;
+		color: $gray;
+		line-height: 133.5%;
+		border: 1px solid $green_dark;
+		border-radius: 8px;
+		font-size: 18px;
+		font-weight: 600;
+		text-align: center;
+		cursor: pointer;
+		transition: .2s;
+		&:hover{
+			background: $green_dark;
+			color: #fff;
+		}
+	}
+	div.swiper-pagination.services__pagination {
+		bottom: var(--swiper-pagination-bottom, 32.5px);
+	}
+
+	&__nxt{
+		right: 0px;
+	}
+	&__prv{
+		transform: rotate(180deg);
+		left: 0px;
+	}
+}
+.swiper {
+	user-select: none;
+}
+.services-w{
+	position: relative;
+	padding: 0 84px;
+	margin: 0 auto;
+	max-width: 1488px;
+	padding-bottom: 37.5px;
+}
+
+.swiper-wrapper {
+	display: flex;
+	align-items: stretch;
+	flex-direction: row;
+}
+.services-card {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 35px 44px 52px;
+	border-top: 3px solid $gray_bg;
+	background: $gray_bg;
+	transition: 0s all, .2s background, .2s border;
+	min-height: 497px;
+	border-right: 1px solid rgba(0,0,0,0.15);
+	max-width: 440px;
+	flex-grow: 2;
+	&__img {
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
+		&_g{
+			display: none;
+		}
+	}
+	&_f{
+		background: #fff;
+		border-top: 3px solid $green;
+		box-shadow: 0 0 30px 4px rgba(0,0,0,0.08);
+		z-index: 1000;
+		& .card__img{
+			display: none;
+		}
+		& .services-card__img_g{
+			display: block;
+		}
+	}
+	&__image {
+		margin: 0 auto 26px;
+		width: 134px;
+		height: 150px;
+	}
+
+}
+
+.card {
+	&__img {
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
+		object-position: center;
+		transition: .2s;
+	}
+}
+.subtitle {
+	font-size: 28px;
+	line-height: 136%;
+}
+
+.services__pagination {
+	&_hidden{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+
+.services-close{
+	transition: .2s;
+	cursor: pointer;
+	position: absolute;
+	right: 90px;
+	top: 0;
+	width: 30px;
+	height: 30px;
+	background-image: url('../img/icons/close.svg');
+	background-size: 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 10000;
+	&:hover{
+		background-image: url('../img/icons/close_hover.svg');
+	}
+}
+.services-hidden {
+	transition: .3s;
+	visibility: hidden;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background: rgba(0,0,0,0.6);
+	z-index: 1000;
+	user-select: none;
+	&_visible{
+		visibility: visible;
+		opacity: 1;
+	}
+	&__container {
+		position: absolute;
+		max-width: 1036px;
+		overflow-x: hidden;
+		padding: 44px 90px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__container.container_blur {	
+		filter: unset
+	}
+
+	&__pagination.swiper-pagination{
+		bottom: 9px;
+		filter: unset;
+		& .swiper-pagination-bullet{
+			border-radius: 0;
+			width: 20px;
+			height: 3px;
+			margin: 0 6px;
+		}
+	}
+
+
+	&__image{
+		position: absolute;
+		top: 44px;
+		left: 60px;
+		width: 67px;
+		height: 75px;
+	}
+	&__img{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	&__subtitle {
+		text-align: center;
+
+		&::after{
+			content: '';
+			display: block;
+			width: 66px;
+			height: 3px;
+			background: $green;
+			margin: 24px auto;
+		}
+	}
+	&__text {
+		max-width: 550px;
+		font-weight: 500;
+		font-size: 16px;
+		font-weight: 150%;
+		color: #333333;
+		text-align: center;
+		margin: 0 auto 52px;
+	}
+	&__li {
+			list-style-image: url('../img/icons/li-cube.svg');
+			color: #6F6F6F;
+			font-size: 16px;
+			line-height: 163%;
+			text-align: left;
+			margin-bottom: 16px;
+			padding-left: 8px;
+			font-weight: 400;
+	}
+
+}
+
+.services-hidden-card {
+	position: relative;
+	border-top: 3px solid $green;
+	background-color: #fff;
+	background-image: url('../img/main/bg-h-serv.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	padding: 60px;
+	height: 590px;
+}
+
+
+@media screen and (max-width: 1377px){
+	.services{
+
+		&__button{
+			background: $green;
+			color: #fff;
+			border: 0;
+		}
+		&-w{
+			padding: 0 10px;
+		}
+		&__pagination{
+			display: none;
+		}
+		&__prev{
+			display: none;
+		}
+		&__next{
+			display: none;
+		}
+	}
+	
+	.services-card{
+		border: 1px solid #E4E4E4;
+		background: transparent;
+		flex-grow: 1;
+		flex-basis: 340px;
+		flex-shrink: 1;
+		margin-bottom: 18px;
+		max-width: inherit;
+
+		box-shadow: none;
+
+		
+
+	}
+	.services-card_f{
+		background: #fff;
+		border-top: 3px solid $green;
+		box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.10);
+	}
+	.services-wrapper{
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+}
+@media screen and (max-width: 1377px) and (min-width: 1068px){
+	.services-card{
+		margin-right: 16px;
+
+		&:nth-child(3n){
+			margin-right: 0;
+		}
+	}
+}
+@media screen and (max-width: 1067px) and (min-width: 684px){
+	.services-card{
+		margin-right: 16px;
+
+		&:nth-child(2n){
+			margin-right: 0;
+		}
+	}
+}
+@media screen and (max-width: 850px){
+	.services-card{
+		padding: 40px 20px 32px;
+		flex-basis: 300px;
+		min-height: auto;
+
+	}
+	
+}
+
+
+@media screen and (max-width: 768px){
+	.services{
+		padding-top: 60px;
+		&__container{
+			padding: 0 36px;
+		}
+		&-w{
+			padding: 0
+		}
+		&__subtitle{
+			margin-bottom: 12px;
+		}
+		&__text{
+			margin-bottom: 20px;
+		}
+		&__container{
+			padding-bottom: 78px;
+		}
+		&__button{
+			width: auto;
+			
+		}
+	}
+	.services-card{
+		&__image{
+			width: 67px;
+			height: 75px;
+		}
+	}
+	
+	.button{
+		font-size: 16px;
+		line-height: normal;
+	}
+	.subtitle{
+		font-size: 24px;
+	}
+	.text{
+		font-size: 14px;
+	}
+}
+
+
+
+@media screen and (max-width: 420px){
+	.services{
+		&__container{
+			padding: 0 15px 78px;
+		}
+	}
+}
