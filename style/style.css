@@ -1635,6 +1635,41 @@ body {
   left: -1px;
 }
 
+.vision {
+  position: relative;
+}
+.vision::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 251, 0)), to(#FFF));
+  background: linear-gradient(180deg, rgba(249, 249, 251, 0) 0%, #FFF 100%);
+}
+.vision__container-l {
+  background-image: url("../img/team/intro-bg.webp");
+}
+.vision__desc {
+  position: relative;
+  z-index: 100;
+}
+
+@media screen and (max-width: 768px) {
+  .vision__desc {
+    padding-bottom: 0;
+  }
+  .vision__container-l {
+    padding-bottom: 98px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .vision__container-l {
+    padding-bottom: 62px;
+  }
+}
 .pl-c {
   position: absolute;
   top: 50%;
