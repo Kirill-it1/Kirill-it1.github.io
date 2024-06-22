@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   serv_card.forEach(el => {
     el.style.height = `${mhgt}px`
-    let cordY = el.getBoundingClientRect().top - mhgt / 1.7;
+    let cordY = el.getBoundingClientRect().top - mhgt / 1.3;
     oldServi.push(cordY);
     if (lastY == cordY){
-      servi.push(cordY + el.offsetHeight / 4)
+      servi.push(cordY + el.offsetHeight / 1.7)
       col2 = true
     } else {
       servi.push(cordY)
