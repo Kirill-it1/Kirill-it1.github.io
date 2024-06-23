@@ -91,5 +91,5 @@ const slideTo = (i) => {
   gridSwiper.slideToLoop(i, 0);
 }
 
-window.addEventListener('resize', () => {slideTo(0)})
+window.addEventListener('resize', () => {slideTo(0); clearInterval(ip)})
 
