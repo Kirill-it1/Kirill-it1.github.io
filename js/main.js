@@ -36,7 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     lastY = cordY
   });
-  window.addEventListener('resize', () => {window.location.reload()})
+  window.addEventListener('resize', () => {
+    if (window.innerWidth != width) window.location.reload()
+  })
   let col3 = false
   for (let i = 0; i < oldServi.length - 2; i++){
     if(oldServi[i] == oldServi[i + 1] && oldServi[i + 1] == oldServi[i + 2]){
