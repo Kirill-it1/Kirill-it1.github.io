@@ -1,3 +1,34 @@
+@font-face{
+	font-family: 'Open Sans';
+	src: url('/fonts/Open_Sans/static/OpenSans-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'Open Sans';
+	src: url('/fonts/Open_Sans/static/OpenSans-Bold.ttf');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'Open Sans';
+	src: url('/fonts/Open_Sans/static/OpenSans-ExtraBold.ttf');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'Open Sans';
+	src: url('/fonts/Open_Sans/static/OpenSans-Light.ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'Open Sans';
+	src: url('/fonts/Open_Sans/static/OpenSans-SemiBold.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+
 *, *:focus{
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
@@ -7,6 +38,7 @@
 *, *:focus, *:active, *:hover{
 	outline: none;
 }
+
 a{
 	text-decoration: none;
 }
