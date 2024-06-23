@@ -133,12 +133,12 @@ body {
   background-color: #29AD26;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .to-top_hid {
     display: none;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .to-top {
     width: 44px;
     height: 44px;
@@ -160,7 +160,7 @@ body {
 .container {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 35px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -511,7 +511,7 @@ body {
   background-position: center right 18px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1424px) {
   .def-section__container-l {
     padding-top: 60px;
     background-position: calc(100% + 333px);
@@ -519,7 +519,7 @@ body {
     min-height: unset;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .def-section__container-l {
     padding-top: 45px;
     padding-bottom: 52px;
@@ -644,7 +644,7 @@ body {
   padding-top: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1424px) {
   .intro__container-l {
     padding-top: 60px;
     background-position: calc(100% + 333px);
@@ -652,7 +652,7 @@ body {
     min-height: 503px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .intro__container-l {
     padding-bottom: 60px;
   }
@@ -673,7 +673,7 @@ body {
     margin-bottom: 40px;
   }
 }
-@media screen and (max-width: 611px) {
+@media screen and (max-width: 700px) {
   .intro__container-l {
     padding-top: 60px;
     background-image: inherit;
@@ -707,7 +707,7 @@ body {
   max-width: 123px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .approach__desc {
     max-width: 360px;
     padding-bottom: 0;
@@ -2356,7 +2356,7 @@ a.planetarium__planet_g.planetarium__planet_active::after {
   }
   .grid-card__title {
     font-size: 16px;
-    margin-bottom: 12px;
+    margin-bottom: 12.5px;
   }
   .grid-card__text {
     font-size: 14px;
@@ -2609,7 +2609,7 @@ a.planetarium__planet_g.planetarium__planet_active::after {
   background-image: url("../img/icons/mail.svg");
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 900px) {
   .footer {
     min-height: 147px;
     padding: 32px 0;
@@ -2634,19 +2634,23 @@ a.planetarium__planet_g.planetarium__planet_active::after {
   }
   .footer-left {
     margin-bottom: 50px;
+    margin-right: 40px;
   }
   .footer-right {
     margin-bottom: 50px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 448px) {
   .footer {
     min-height: 201px;
   }
-}
-@media screen and (max-width: 397px) {
   .footer-left {
     margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .footer-left {
+    margin-right: 10px;
   }
 }
 @media screen and (max-width: 420px) {
@@ -2661,7 +2665,7 @@ a.planetarium__planet_g.planetarium__planet_active::after {
   color: #333;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .section-text {
     font-size: 16px;
     line-height: normal;
@@ -2676,7 +2680,7 @@ a.planetarium__planet_g.planetarium__planet_active::after {
   line-height: 150%;
 }
 
-@media screen and (max-width: 611px) {
+@media screen and (max-width: 700px) {
   .def-section__container-l {
     background-image: inherit;
   }

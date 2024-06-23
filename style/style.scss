@@ -126,13 +126,13 @@ body{
 	}
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1025px){
 	.to-top_hid{
 		display: none;
 	}
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
 	.to-top{
 		width: 44px;
 		height: 44px;
@@ -157,7 +157,7 @@ body{
 .container{
 	max-width: 1320px;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0 35px;
 	transition: .3s;
 }
 
@@ -234,7 +234,7 @@ body{
 	color: #333;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 	.section-text {
 		font-size: 16px;
 		line-height: normal;
@@ -250,7 +250,7 @@ body{
 	line-height: 150%
 
 }
-@media screen and (max-width: 611px){
+@media screen and (max-width: 700px){
 	.def-section{
 		&__container-l{
 			background-image: inherit

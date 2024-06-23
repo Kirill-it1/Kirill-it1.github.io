@@ -89,7 +89,7 @@
 
 
 
-@media screen and (max-width: 790px){
+@media screen and (max-width: 900px){
 	.footer{
 		min-height: 147px;
 		padding: 32px 0;
@@ -112,6 +112,7 @@
 		}
 		&-left{
 			margin-bottom: 50px;
+			margin-right: 40px;
 
 		}
 		&-right{
@@ -121,14 +122,18 @@
 	}
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 448px){
 	.footer{
 		min-height: 201px;
 	}
-}
-@media screen and (max-width: 397px){
 	.footer-left{
 		margin-bottom: 32px;
+	}
+}
+@media screen and (max-width: 340px){
+	.footer-left{
+		margin-right: 10px;
+
 	}
 }
 @media screen and (max-width: 420px){
