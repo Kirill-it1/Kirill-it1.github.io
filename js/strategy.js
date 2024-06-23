@@ -65,17 +65,20 @@ if (width > 1024) {
     }
   }
   incrPlanet(0);
-
-if (width <= 1024) {
   const gridCards = document.querySelectorAll('.grid-card');
   gridCards.forEach((card) => {
     card.addEventListener('click', () => {
-      let u = card.classList.toggle('grid-card_active')
-      lheight = card.offsetHeight + card.querySelector('.grid-card__text').offsetHeight + 15;
-      card.style.maxHeight = u ? `${lheight}px` : ``;
+      const width = window.innerWidth;
+      if (width <= 1024) {
+        
+        let u = card.classList.toggle('grid-card_active')
+        lheight = card.offsetHeight + card.querySelector('.grid-card__text').offsetHeight + 15;
+        card.style.maxHeight = u ? `${lheight}px` : ``;
+      }
     });
   });
-}
+
+
 const planetHover = (n) => {
   slideTo(n)
   clearInterval(ip)
@@ -87,4 +90,6 @@ const slideTo = (i) => {
   // });
   gridSwiper.slideToLoop(i, 0);
 }
+
+window.addEventListener('resize', () => {slideTo(0)})
 
