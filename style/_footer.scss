@@ -108,23 +108,22 @@
 			line-height: normal;
 		}
 		&-left{
-			margin-bottom: 50px;
-			margin-right: 40px;
+			margin-right: 60px;
 
-		}
-		&-right{
-			margin-bottom: 50px;
 		}
 
 	}
 }
 
-@media screen and (max-width: 448px){
+@media screen and (max-width: 454px){
 	.footer{
 		min-height: 201px;
-	}
-	.footer-left{
-		margin-bottom: 32px;
+		&-left{
+			margin-bottom: 36px;
+		}
+		&-right{
+			margin-right: 20px;
+		}
 	}
 }
 @media screen and (max-width: 340px){

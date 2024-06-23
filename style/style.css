@@ -2630,19 +2630,18 @@ a.planetarium__planet_g.planetarium__planet_active::after {
     line-height: normal;
   }
   .footer-left {
-    margin-bottom: 50px;
-    margin-right: 40px;
-  }
-  .footer-right {
-    margin-bottom: 50px;
+    margin-right: 60px;
   }
 }
-@media screen and (max-width: 448px) {
+@media screen and (max-width: 454px) {
   .footer {
     min-height: 201px;
   }
   .footer-left {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
+  }
+  .footer-right {
+    margin-right: 20px;
   }
 }
 @media screen and (max-width: 340px) {
