@@ -1038,6 +1038,9 @@ body {
   .services__next {
     display: none;
   }
+  .services__button {
+    width: auto;
+  }
   .services-card {
     border: 1px solid #E4E4E4;
     background: transparent;
@@ -1113,9 +1116,6 @@ body {
   }
   .services__container {
     padding-bottom: 78px;
-  }
-  .services__button {
-    width: auto;
   }
   .services-card__image {
     width: 67px;
@@ -2628,9 +2628,6 @@ a.planetarium__planet_g.planetarium__planet_active::after {
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
-  }
-  .footer__privacy {
-    font-size: 16px;
   }
   .footer-left {
     margin-bottom: 50px;

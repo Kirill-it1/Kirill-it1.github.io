@@ -288,6 +288,9 @@
 		&__next{
 			display: none;
 		}
+		&__button{
+			width: auto;
+		}
 	}
 	
 	.services-card{
@@ -301,7 +304,7 @@
 
 		box-shadow: none;
 
-		
+
 
 	}
 	.services-card_f{
@@ -363,10 +366,7 @@
 		&__container{
 			padding-bottom: 78px;
 		}
-		&__button{
-			width: auto;
-			
-		}
+
 	}
 	.services-card{
 		&__image{
