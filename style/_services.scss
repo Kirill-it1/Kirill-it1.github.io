@@ -270,13 +270,16 @@
 
 @media screen and (max-width: 1377px){
 	.services{
-
+		padding-top: 50px;
 		&__button{
 			background: $green;
 			color: #fff;
 			border: 0;
 		}
 		&-w{
+			padding: 0;
+		}
+		&__container{
 			padding: 0 10px;
 		}
 		&__pagination{
@@ -350,7 +353,7 @@
 
 @media screen and (max-width: 768px){
 	.services{
-		padding-top: 60px;
+		padding-top: 50px;
 		&__container{
 			padding: 0 36px;
 		}
@@ -364,7 +367,7 @@
 			margin-bottom: 20px;
 		}
 		&__container{
-			padding-bottom: 78px;
+			padding: 0 15px 78px;
 		}
 
 	}

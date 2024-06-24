@@ -17,6 +17,7 @@
 		max-width: 596px;
 		position: relative;
 		z-index: 100;
+
 	}
 	&__btn{
 		max-width: 123px;
@@ -26,6 +27,7 @@
 @media screen and (max-width: 1024px){
 	.approach{
 		&__desc{
+			padding-top: 64px;
 			max-width: 360px;
 			padding-bottom: 0;
 		}

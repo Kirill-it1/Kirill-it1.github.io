@@ -654,7 +654,7 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .intro__container-l {
-    padding-bottom: 60px;
+    padding-bottom: 71px;
   }
   .intro__desc {
     max-width: 345px;
@@ -709,6 +709,7 @@ body {
 
 @media screen and (max-width: 1024px) {
   .approach__desc {
+    padding-top: 64px;
     max-width: 360px;
     padding-bottom: 0;
   }
@@ -1021,12 +1022,18 @@ body {
 }
 
 @media screen and (max-width: 1377px) {
+  .services {
+    padding-top: 50px;
+  }
   .services__button {
     background: #29AD26;
     color: #fff;
     border: 0;
   }
   .services-w {
+    padding: 0;
+  }
+  .services__container {
     padding: 0 10px;
   }
   .services__pagination {
@@ -1100,7 +1107,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .services {
-    padding-top: 60px;
+    padding-top: 50px;
   }
   .services__container {
     padding: 0 36px;
@@ -1115,7 +1122,7 @@ body {
     margin-bottom: 20px;
   }
   .services__container {
-    padding-bottom: 78px;
+    padding: 0 15px 78px;
   }
   .services-card__image {
     width: 67px;
