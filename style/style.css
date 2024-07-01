@@ -511,7 +511,7 @@ body {
   background-position: center right 18px;
 }
 
-@media screen and (max-width: 1424px) {
+@media screen and (max-width: 1700px) {
   .def-section__container-l {
     padding-top: 60px;
     background-position: calc(100% + 333px);
@@ -644,7 +644,7 @@ body {
   padding-top: 0;
 }
 
-@media screen and (max-width: 1424px) {
+@media screen and (max-width: 1700px) {
   .intro__container-l {
     padding-top: 60px;
     background-position: calc(100% + 333px);
@@ -673,7 +673,7 @@ body {
     margin-bottom: 40px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 730px) {
   .intro__container-l {
     padding-top: 60px;
     background-image: inherit;
@@ -2686,7 +2686,7 @@ a.planetarium__planet_g.planetarium__planet_active::after {
   line-height: 150%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 730px) {
   .def-section__container-l {
     background-image: inherit;
   }
